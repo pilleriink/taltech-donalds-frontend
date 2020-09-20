@@ -1,7 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1464eb38-cd67-4591-a93b-29d67e986b2b" name="Default Changelist" comment="" />
+    <list default="true" id="1464eb38-cd67-4591-a93b-29d67e986b2b" name="Default Changelist" comment="angular initial setup">
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/burgers/burgers.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/burgers/burgers.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/burgers/burgers.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/burgers/burgers.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/cart/cart.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/cart/cart.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/cart/cart.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/cart/cart.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/drinks/drinks.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/drinks/drinks.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/drinks/drinks.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/drinks/drinks.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/fingerfood/fingerfood.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/fingerfood/fingerfood.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/fingerfood/fingerfood.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/fingerfood/fingerfood.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/header/header.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/header/header.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/header/header.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/header/header.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/homepage/homepage.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/homepage/homepage.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/homepage/homepage.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/homepage/homepage.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team31-frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team31-frontend/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team31-frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/team31-frontend/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team31-frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team31-frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team31-frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/team31-frontend/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team31-frontend/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/team31-frontend/src/styles.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,17 +42,22 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1hUfPpbWY2mcT4o6FtV7mK5C7S8" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../iti0203-2020-team31-backend" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="C:\Users\37253\IdeaProjects\iti0203-2020-team31-frontend\team31-frontend\node_modules\typescript\lib" />
   </component>
@@ -47,7 +83,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600070569912</updated>
-      <workItem from="1600070575036" duration="848000" />
+      <workItem from="1600070575036" duration="2013000" />
+      <workItem from="1600082525328" duration="38000" />
+      <workItem from="1600522822886" duration="5285000" />
     </task>
     <task id="LOCAL-00001" summary="angular initial setup">
       <created>1600071154889</created>
@@ -56,13 +94,21 @@
       <option name="project" value="LOCAL" />
       <updated>1600071154889</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="angular initial setup">
+      <created>1600071444908</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1600071444908</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="angular initial setup" />
     <option name="LAST_COMMIT_MESSAGE" value="angular initial setup" />
   </component>
@@ -71,13 +117,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="828" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600071420930" />
-    <state x="982" y="29" key="CommitChangelistDialog2" timestamp="1600071154442">
+    <state x="968" y="29" key="CommitChangelistDialog2" timestamp="1600071480929">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="982" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600071154442" />
-    <state x="1032" y="250" key="Vcs.Push.Dialog.v2" timestamp="1600071164591">
+    <state x="968" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600071480929" />
+    <state x="1220" y="276" key="FileChooserDialogImpl" timestamp="1600072085161">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1032" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600071164591" />
+    <state x="1220" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600072085161" />
+    <state x="1100" y="139" key="NewModule_or_Project.wizard" timestamp="1600071835581">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1100" y="139" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1600071835581" />
+    <state x="1032" y="250" key="Vcs.Push.Dialog.v2" timestamp="1600071533859">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1032" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600071533859" />
+    <state x="1116" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1600082527034">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1116" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600082527034" />
   </component>
 </project>
