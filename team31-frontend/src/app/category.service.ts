@@ -4,9 +4,10 @@ import {MessageService} from "./message.service";
 import {Observable, of} from "rxjs";
 import {catchError, tap} from "rxjs/operators";
 import {Category} from "./category";
+import {environment} from "../environments/environment";
 
 @Injectable({ providedIn: 'root' })
-export class ProductService {
+export class CategoryService {
 
   private categoriesUrl = 'api/categories';
 
@@ -19,7 +20,7 @@ export class ProductService {
     private messageService: MessageService) { }
 
   getCategoryById(id: number): Observable<Category> {
-    const url = `${this.categoriesUrl}/${id}`;
+    const url = `${environment.apiUrl}${this.categoriesUrl}/${id}`;
     return this.http.get<Category>(url).pipe(
       tap(_ => this.log(`fetched category id=${id}`)),
       catchError(this.handleError<Category>(`getCategory id=${id}`))
@@ -27,7 +28,7 @@ export class ProductService {
   }
 
   getCategories(): Observable<Category[]> {
-    return this.http.get<Category[]>(this.categoriesUrl)
+    return this.http.get<Category[]>(environment.apiUrl + this.categoriesUrl)
       .pipe(
         tap(_ => this.log('fetched categories')),
         catchError(this.handleError<Category[]>('getCategories', []))

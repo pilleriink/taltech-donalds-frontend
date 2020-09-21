@@ -9,6 +9,7 @@ import { LocationsComponent } from './views/locations/locations.component';
 import { CartComponent } from './views/cart/cart.component';
 import { CategoryComponent } from './views/category/category.component';
 import { ProductComponent } from './views/product/product.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProductComponent } from './views/product/product.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

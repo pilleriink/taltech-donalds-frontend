@@ -11,14 +11,14 @@
         <a routerLinkActive="active" routerLink="homepage" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
 
-      <li routerLinkActive="active" class="nav-item dropdown">
+      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Menu
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a routerLink="menu" class="dropdown-item" href="#">Burgers</a>
-          <a routerLink="menu" class="dropdown-item" href="#">Finger food</a>
-          <a routerLink="menu" class="dropdown-item" href="#">Drinks</a>
+          <a *ngFor="let category of categories"
+             routerLink="categories/{{category.id}}" class="nav-category" href="#">{{category.name}}<br>
+          </a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
