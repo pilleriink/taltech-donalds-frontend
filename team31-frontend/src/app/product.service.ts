@@ -4,6 +4,7 @@ import {MessageService} from "./message.service";
 import {Observable, of} from "rxjs";
 import {catchError, tap} from "rxjs/operators";
 import {Product} from "./product";
+import {environment} from "../environments/environment";
 
 @Injectable({ providedIn: 'root' })
 export class ProductService {
@@ -19,7 +20,7 @@ export class ProductService {
     private messageService: MessageService) { }
 
   getProductById(id: number): Observable<Product> {
-    const url = `${this.productsUrl}/${id}`;
+    const url = `${environment.apiUrl}${this.productsUrl}/${id}`;
     return this.http.get<Product>(url).pipe(
       tap(_ => this.log(`fetched product id=${id}`)),
       catchError(this.handleError<Product>(`getProduct id=${id}`))
