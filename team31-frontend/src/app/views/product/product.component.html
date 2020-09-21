@@ -1,1 +1,17 @@
-<h1>{{product?.name}}</h1>
+
+<div class="card mb-12">
+  <div class="row no-gutters">
+    <div class="col-md-6">
+      <img [src]="product.image ? product.image : defaultImage" class="img-fluid" alt="...">
+    </div>
+    <div class="col-md-6">
+      <div class="card-body">
+        <h1 class="card-title">{{product.name}}</h1>
+        <p class="card-text">{{product.description}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="button-div">
+    <a href="#" class="btn btn-success button-left">Add to cart</a>
+  </div>
+</div>
