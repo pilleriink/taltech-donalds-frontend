@@ -7,7 +7,8 @@ import { HeaderComponent } from './views/header/header.component';
 import { HomepageComponent } from './views/homepage/homepage.component';
 import { LocationsComponent } from './views/locations/locations.component';
 import { CartComponent } from './views/cart/cart.component';
-import { MenuComponent } from './views/menu/menu.component';
+import { CategoryComponent } from './views/category/category.component';
+import { ProductComponent } from './views/product/product.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MenuComponent } from './views/menu/menu.component';
     HomepageComponent,
     LocationsComponent,
     CartComponent,
-    MenuComponent
+    CategoryComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
