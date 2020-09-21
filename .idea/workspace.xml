@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1464eb38-cd67-4591-a93b-29d67e986b2b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team31-frontend/src/app/product.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team31-frontend/src/app/product.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/team31-frontend/src/app/views/product/product.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/product/product.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/team31-frontend/src/app/views/product/product.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/product/product.component.html" afterDir="false" />
     </list>
@@ -83,7 +84,7 @@
       <workItem from="1600070575036" duration="2013000" />
       <workItem from="1600082525328" duration="38000" />
       <workItem from="1600522822886" duration="5285000" />
-      <workItem from="1600665199830" duration="25778000" />
+      <workItem from="1600665199830" duration="26285000" />
     </task>
     <task id="LOCAL-00001" summary="angular initial setup">
       <created>1600071154889</created>
@@ -162,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600694757321</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added product view layout">
+      <created>1600697149042</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1600697149042</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,10 +194,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="828" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600071420930" />
-    <state x="968" y="29" key="CommitChangelistDialog2" timestamp="1600694756638">
+    <state x="968" y="29" key="CommitChangelistDialog2" timestamp="1600697148072">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="968" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600694756638" />
+    <state x="968" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600697148072" />
     <state x="1220" y="276" key="FileChooserDialogImpl" timestamp="1600072085161">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -214,10 +222,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1100" y="139" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1600071835581" />
-    <state x="1032" y="250" key="Vcs.Push.Dialog.v2" timestamp="1600694759279">
+    <state x="1032" y="250" key="Vcs.Push.Dialog.v2" timestamp="1600697150898">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1032" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600694759279" />
+    <state x="1032" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600697150898" />
     <state x="1116" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1600082527034">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
