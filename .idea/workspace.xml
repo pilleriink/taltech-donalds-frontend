@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1464eb38-cd67-4591-a93b-29d67e986b2b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/category/category.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/category/category.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/category/category.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/category/category.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/locations/locations.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/locations/locations.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/locations/locations.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/locations/locations.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +85,7 @@
       <workItem from="1600070575036" duration="2013000" />
       <workItem from="1600082525328" duration="38000" />
       <workItem from="1600522822886" duration="5285000" />
-      <workItem from="1600665199830" duration="27142000" />
+      <workItem from="1600665199830" duration="27251000" />
     </task>
     <task id="LOCAL-00001" summary="angular initial setup">
       <created>1600071154889</created>
@@ -178,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600697560159</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added category component to git">
+      <created>1600704678847</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1600704678847</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,17 +203,18 @@
     <MESSAGE value="products page works" />
     <MESSAGE value="added product view layout" />
     <MESSAGE value="added price to products" />
-    <option name="LAST_COMMIT_MESSAGE" value="added price to products" />
+    <MESSAGE value="added category component to git" />
+    <option name="LAST_COMMIT_MESSAGE" value="added category component to git" />
   </component>
   <component name="WindowStateProjectService">
     <state x="828" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600071420930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="828" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600071420930" />
-    <state x="968" y="29" key="CommitChangelistDialog2" timestamp="1600697559307">
+    <state x="968" y="29" key="CommitChangelistDialog2" timestamp="1600704688981">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="968" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600697559307" />
+    <state x="968" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600704688981" />
     <state x="1220" y="276" key="FileChooserDialogImpl" timestamp="1600072085161">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -231,10 +239,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1100" y="139" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1600071835581" />
-    <state x="1032" y="250" key="Vcs.Push.Dialog.v2" timestamp="1600697561920">
+    <state x="1032" y="250" key="Vcs.Push.Dialog.v2" timestamp="1600704702763">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1032" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600697561920" />
+    <state x="1032" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600704702763" />
     <state x="1116" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1600082527034">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
