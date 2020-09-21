@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/team31-frontend/src/app/views/product/product.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/product/product.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/team31-frontend/src/app/views/product/product.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/product/product.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team31-frontend/src/app/views/product/product.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/product/product.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +83,7 @@
       <workItem from="1600070575036" duration="2013000" />
       <workItem from="1600082525328" duration="38000" />
       <workItem from="1600522822886" duration="5285000" />
-      <workItem from="1600665199830" duration="24444000" />
+      <workItem from="1600665199830" duration="25778000" />
     </task>
     <task id="LOCAL-00001" summary="angular initial setup">
       <created>1600071154889</created>
@@ -156,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600690938947</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added product view layout">
+      <created>1600694757321</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1600694757321</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,17 +178,18 @@
     <MESSAGE value="add product placement cards" />
     <MESSAGE value="added default image size to the product cards" />
     <MESSAGE value="products page works" />
-    <option name="LAST_COMMIT_MESSAGE" value="products page works" />
+    <MESSAGE value="added product view layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="added product view layout" />
   </component>
   <component name="WindowStateProjectService">
     <state x="828" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600071420930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="828" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600071420930" />
-    <state x="968" y="29" key="CommitChangelistDialog2" timestamp="1600690938184">
+    <state x="968" y="29" key="CommitChangelistDialog2" timestamp="1600694756638">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="968" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600690938184" />
+    <state x="968" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600694756638" />
     <state x="1220" y="276" key="FileChooserDialogImpl" timestamp="1600072085161">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -207,10 +214,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1100" y="139" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1600071835581" />
-    <state x="1032" y="250" key="Vcs.Push.Dialog.v2" timestamp="1600690940626">
+    <state x="1032" y="250" key="Vcs.Push.Dialog.v2" timestamp="1600694759279">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1032" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600690940626" />
+    <state x="1032" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600694759279" />
     <state x="1116" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1600082527034">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
