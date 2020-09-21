@@ -81,7 +81,7 @@
       <workItem from="1600070575036" duration="2013000" />
       <workItem from="1600082525328" duration="38000" />
       <workItem from="1600522822886" duration="5285000" />
-      <workItem from="1600665199830" duration="13063000" />
+      <workItem from="1600665199830" duration="13940000" />
     </task>
     <task id="LOCAL-00001" summary="angular initial setup">
       <created>1600071154889</created>
@@ -132,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600681441585</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add product placement cards">
+      <created>1600681792562</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1600681792562</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,17 +152,18 @@
     <MESSAGE value="added category.service.ts" />
     <MESSAGE value="added menu asking categories from backend" />
     <MESSAGE value="display products under categories" />
-    <option name="LAST_COMMIT_MESSAGE" value="display products under categories" />
+    <MESSAGE value="add product placement cards" />
+    <option name="LAST_COMMIT_MESSAGE" value="add product placement cards" />
   </component>
   <component name="WindowStateProjectService">
     <state x="828" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600071420930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="828" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600071420930" />
-    <state x="968" y="29" key="CommitChangelistDialog2" timestamp="1600681441184">
+    <state x="968" y="29" key="CommitChangelistDialog2" timestamp="1600681792188">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="968" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600681441184" />
+    <state x="968" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600681792187" />
     <state x="1220" y="276" key="FileChooserDialogImpl" timestamp="1600072085161">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -180,10 +188,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1100" y="139" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1600071835581" />
-    <state x="1032" y="250" key="Vcs.Push.Dialog.v2" timestamp="1600681443430">
+    <state x="1032" y="250" key="Vcs.Push.Dialog.v2" timestamp="1600681794029">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1032" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600681443430" />
+    <state x="1032" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600681794029" />
     <state x="1116" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1600082527034">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
