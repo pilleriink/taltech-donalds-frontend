@@ -11,8 +11,8 @@ const routes: Routes = [
   { path: '', redirectTo: '/homepage', pathMatch: 'full' },
   { path: 'homepage', component: HomepageComponent },
   { path: 'cart', component: CartComponent },
-  { path: 'category', component: CategoryComponent },
-  { path: 'category/product', component: ProductComponent },
+  { path: 'categories/:id', component: CategoryComponent },
+  { path: 'categories/', component: ProductComponent },
   { path: 'locations', component: LocationsComponent }];
 
 @NgModule({
