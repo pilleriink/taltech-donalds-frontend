@@ -1,0 +1,48 @@
+import { Injectable } from '@angular/core';
+import {Cart, CartProduct} from "./cart";
+
+@Injectable({
+  providedIn: 'root'
+})
+export class CartService {
+
+  cart: Cart = new Cart();
+
+  constructor() {
+  }
+
+  getAndSetCart() {
+    if (sessionStorage.getItem("cart")) {
+      this.cart = JSON.parse(sessionStorage.getItem("cart"));
+      console.log(this.cart);
+    }
+  }
+
+  addProduct(product) {
+    let cartProduct: CartProduct;
+    if (this.cart.products) {
+      cartProduct = this.cart.products.find(cartProduct => cartProduct.product.id === product.id);
+    }
+    if (cartProduct) {
+      cartProduct.quantity++;
+    } else {
+      const newProduct: CartProduct = {
+        product: product,
+        quantity: 1
+      };
+      this.cart.products.push(newProduct)
+    }
+    this.calculatePrice();
+    sessionStorage.setItem("cart", JSON.stringify(this.cart));
+
+  }
+
+  calculatePrice() {
+    if (this.cart.products) {
+      this.cart.price = 0;
+      this.cart.products.forEach(cartProduct => {
+        this.cart.price += cartProduct.quantity * cartProduct.product.price;
+      })
+    }
+  }
+}
