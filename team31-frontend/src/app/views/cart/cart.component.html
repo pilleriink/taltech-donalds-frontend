@@ -1,1 +1,21 @@
 <p>cart works!</p>
+<div *ngFor="let product of cartService.cart.products" class="card mb-3 col-lg-6 col-sm-6">
+  <div class="row no-gutters">
+    <div class="col-md-4 image-div">
+      <img [src]="product.product.image ? product.product.image : defaultImage" class="card-img" alt="...">
+    </div>
+    <div class="col-md-4">
+      <div class="card-body">
+        <h5 class="card-title">{{product.product.name}}</h5>
+        <p class="card-text">{{product.product.description}}</p>
+        <p class="card-text">{{product.product.price}}</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card-body">
+        <p class="card-text">{{product.product.removableIngredients}}</p>
+      </div>
+    </div>
+
+  </div>
+</div>

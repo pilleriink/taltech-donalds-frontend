@@ -19,22 +19,13 @@ export class CartService {
   }
 
   addProduct(product) {
-    let cartProduct: CartProduct;
-    if (this.cart.products) {
-      cartProduct = this.cart.products.find(cartProduct => cartProduct.product.id === product.id);
-    }
-    if (cartProduct) {
-      cartProduct.quantity++;
-    } else {
-      const newProduct: CartProduct = {
-        product: product,
-        quantity: 1
-      };
-      this.cart.products.push(newProduct)
-    }
+    const newProduct: CartProduct = {
+      product: product,
+      quantity: 1
+    };
+    this.cart.products.push(newProduct);
     this.calculatePrice();
     sessionStorage.setItem("cart", JSON.stringify(this.cart));
-
   }
 
   calculatePrice() {
@@ -45,4 +36,5 @@ export class CartService {
       })
     }
   }
+
 }
