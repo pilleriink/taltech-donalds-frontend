@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1464eb38-cd67-4591-a93b-29d67e986b2b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/locations/locations.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/locations/locations.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/locations/locations.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/locations/locations.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team31-frontend/src/app/views/locations/locations.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/locations/locations.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team31-frontend/src/app/views/locations/locations.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/locations/locations.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +20,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -38,6 +35,17 @@
     <property name="ts.external.directory.path" value="C:\Users\37253\IdeaProjects\iti0203-2020-team31-frontend\team31-frontend\node_modules\typescript\lib" />
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="E2E Tests (angular-frontend)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/team31-frontend/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
@@ -59,18 +67,6 @@
       <envs />
       <method v="2" />
     </configuration>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
