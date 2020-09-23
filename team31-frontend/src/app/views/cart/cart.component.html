@@ -1,4 +1,5 @@
-<p>cart works!</p>
+<h1 *ngIf="cartService.cart.products.length == 0">Cart is empty!</h1>
+<h1 *ngIf="cartService.cart.products > 0">Cart</h1>
 <div *ngFor="let cartProduct of cartService.cart.products; let i=index" class="card mb-3 col-lg-6 col-sm-6">
   <div class="row no-gutters">
     <div class="col-md-4 image-div">
@@ -13,10 +14,10 @@
       <mat-card-actions>
         <div class="example-flex-container">
           <div class="example-button-container">
-            <button (click)="cartService.addProduct(cartProduct.product)" mat-fab color="primary" aria-label="Add to cart">
+            <button (click)="cartService.addProduct(cartProduct.product)" mat-fab color="accent" aria-label="Add to cart">
               <mat-icon>add_shopping_cart</mat-icon>
             </button>
-            <button (click)="cartService.removeProduct(i)" class="info-button"  mat-fab color="primary" aria-label="Remove from cart">
+            <button (click)="cartService.removeProduct(i)" class="info-button"  mat-fab color="warn" aria-label="Remove from cart">
               <mat-icon>remove_shopping_cart</mat-icon>
             </button>
           </div>

@@ -1,5 +1,6 @@
 .card {
-  margin-left: 26%;
+  margin-left: 25%;
+  margin-top: 50px;
 }
 
 .example-flex-container {
@@ -18,6 +19,11 @@
 
 .info-button {
   margin-left: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin: 50px;
 }
 
 
