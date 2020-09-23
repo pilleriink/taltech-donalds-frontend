@@ -3,20 +3,27 @@
   <div *ngIf="category && category.products" class="row">
     <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let product of category.products">
 
-      <div class="card" style="width: 18rem;">
+      <mat-card class="example-card card">
+        <mat-card-header>
+          <mat-card-title>{{product.name}}</mat-card-title>
+          <mat-card-subtitle>{{product.category.name}}</mat-card-subtitle>
+        </mat-card-header>
         <div class="image-div">
-          <img [src]="product.image ? product.image : defaultImage" class="card-img-top" alt="...">
+          <img mat-card-image [src]="product.image ? product.image : defaultImage" alt="{{product.name}}">
         </div>
-        <div class="card-body">
-          <h5 class="card-title">{{product.name}}</h5>
-          <p class="card-text">{{product.description}}</p>
-          <p class="card-text">Price: {{product.price}}€</p>
-          <div class="button-div">
-            <a (click)="cartService.addProduct(product)" class="btn btn-success button-left">Add to cart</a>
-            <a routerLink="/products/{{product.id}}" href="#" class="btn btn-info">Product info</a>
-          </div>
-        </div>
-      </div>
+        <mat-card-content>
+          <p>
+            {{product.description}}
+          </p>
+          <p class="price">
+            Price: {{product.price}}€
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button (click)="cartService.addProduct(product)" mat-button>Add to cart</button>
+          <button routerLink="/products/{{product.id}}" mat-button>Product info</button>
+        </mat-card-actions>
+      </mat-card>
 
     </div>
   </div>
