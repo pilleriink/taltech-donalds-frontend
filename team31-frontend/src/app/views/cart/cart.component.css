@@ -2,4 +2,22 @@
   margin-left: 26%;
 }
 
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  height: 80px;
+}
+
+.info-button {
+  margin-left: 20px;
+}
+
 

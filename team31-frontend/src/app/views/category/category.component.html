@@ -9,7 +9,7 @@
           <mat-card-subtitle>{{product.category.name}}</mat-card-subtitle>
         </mat-card-header>
         <div class="image-div">
-          <img mat-card-image [src]="product.image ? product.image : defaultImage" alt="{{product.name}}">
+          <img routerLink="/products/{{product.id}}" mat-card-image [src]="product.image ? product.image : defaultImage" alt="{{product.name}}">
         </div>
         <mat-card-content>
           <p>
@@ -20,8 +20,16 @@
           </p>
         </mat-card-content>
         <mat-card-actions>
-          <button (click)="cartService.addProduct(product)" mat-button>Add to cart</button>
-          <button routerLink="/products/{{product.id}}" mat-button>Product info</button>
+          <div class="example-flex-container">
+            <div class="example-button-container">
+              <button (click)="cartService.addProduct(product)" mat-fab color="primary" aria-label="Add to cart">
+                <mat-icon>add_shopping_cart</mat-icon>
+              </button>
+              <button class="info-button" routerLink="/products/{{product.id}}" mat-fab color="primary" aria-label="Add to cart">
+                <mat-icon>info</mat-icon>
+              </button>
+            </div>
+          </div>
         </mat-card-actions>
       </mat-card>
 

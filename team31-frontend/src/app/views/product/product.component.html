@@ -14,6 +14,12 @@
     </p>
   </mat-card-content>
   <mat-card-actions>
-    <button (click)="cartService.addProduct(product)" mat-button>Add to cart</button>
+    <div class="example-flex-container">
+      <div class="example-button-container">
+        <button (click)="cartService.addProduct(product)" mat-fab color="primary" aria-label="Add to cart">
+          <mat-icon>add_shopping_cart</mat-icon>
+        </button>
+      </div>
+    </div>
   </mat-card-actions>
 </mat-card>

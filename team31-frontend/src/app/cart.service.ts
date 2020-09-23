@@ -23,7 +23,14 @@ export class CartService {
       product: product,
       quantity: 1
     };
+    console.log(this.cart.products);
     this.cart.products.push(newProduct);
+    this.calculatePrice();
+    sessionStorage.setItem("cart", JSON.stringify(this.cart));
+  }
+
+  removeProduct(i) {
+    this.cart.products.splice(i, 1);
     this.calculatePrice();
     sessionStorage.setItem("cart", JSON.stringify(this.cart));
   }
