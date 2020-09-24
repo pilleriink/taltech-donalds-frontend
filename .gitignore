@@ -15,8 +15,9 @@ chrome-profiler-events*.json
 speed-measure-plugin*.json
 
 # IDEs and editors
-/.idea
+/.idea/
 .project
+iti0203-2020-team31-frontend.iml
 .classpath
 .c9/
 *.launch
@@ -44,3 +45,4 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+

@@ -19,6 +19,7 @@ import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import {MatTabsModule} from "@angular/material/tabs";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {FormsModule} from "@angular/forms";
+import { MarkerService } from "./_services/marker.service";
 
 @NgModule({
   declarations: [
@@ -44,7 +45,9 @@ import {FormsModule} from "@angular/forms";
     MatCheckboxModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    MarkerService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
