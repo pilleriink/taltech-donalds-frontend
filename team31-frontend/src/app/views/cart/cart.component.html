@@ -27,7 +27,7 @@
     <div class="col-md-4">
 
       <div class="card-body">
-        <p class="card-text">{{cartProduct.product.removableIngredients}}</p>
+        <p class="card-text" *ngFor="let ingredient of cartProduct.product.removableIngredients">{{ingredient.name}}</p>
       </div>
     </div>
 

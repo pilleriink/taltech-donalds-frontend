@@ -1,8 +1,8 @@
 import {Product} from "./product";
 
 export class CartProduct {
-  quantity: number;
   product: Product;
+  quantity: number;
 }
 
 export class Cart {

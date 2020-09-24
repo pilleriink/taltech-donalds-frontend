@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1464eb38-cd67-4591-a93b-29d67e986b2b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/team31-frontend/src/app/ingredient.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team31-frontend/src/app/cart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team31-frontend/src/app/cart.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team31-frontend/src/app/product.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team31-frontend/src/app/product.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/team31-frontend/src/app/views/cart/cart.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/cart/cart.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team31-frontend/src/app/views/cart/cart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/cart/cart.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team31-frontend/src/app/views/header/header.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/header/header.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team31-frontend/src/app/views/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/team31-frontend/src/app/views/header/header.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +15,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1hUfPpbWY2mcT4o6FtV7mK5C7S8" />
   <component name="ProjectLevelVcsManager">
@@ -32,7 +33,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../iti0203-2020-team31-backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../iti0200-2020-project" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="C:\Users\37253\IdeaProjects\iti0203-2020-team31-frontend\team31-frontend\node_modules\typescript\lib" />
@@ -85,7 +86,8 @@
       <workItem from="1600070575036" duration="2013000" />
       <workItem from="1600082525328" duration="38000" />
       <workItem from="1600522822886" duration="5285000" />
-      <workItem from="1600665199830" duration="51810000" />
+      <workItem from="1600665199830" duration="53330000" />
+      <workItem from="1600943539250" duration="2079000" />
     </task>
     <task id="LOCAL-00001" summary="angular initial setup">
       <created>1600071154889</created>
@@ -234,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600849864987</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="changed header color">
+      <created>1600854496307</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1600854496307</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,48 +267,58 @@
     <MESSAGE value="change category and product page to use angular material" />
     <MESSAGE value="change cart to use angular material" />
     <MESSAGE value="added icons to header" />
-    <option name="LAST_COMMIT_MESSAGE" value="added icons to header" />
+    <MESSAGE value="changed header color" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed header color" />
   </component>
   <component name="WindowStateProjectService">
     <state x="828" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600071420930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="828" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600071420930" />
-    <state x="968" y="29" key="CommitChangelistDialog2" timestamp="1600849864375">
+    <state x="968" y="29" key="CommitChangelistDialog2" timestamp="1600854495612">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="968" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600849864375" />
-    <state x="1220" y="276" key="FileChooserDialogImpl" timestamp="1600072085161">
+    <state x="968" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1600854495612" />
+    <state x="1220" y="276" key="FileChooserDialogImpl" timestamp="1600867488435">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1220" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600072085161" />
-    <state width="916" height="258" key="GridCell.Tab.0.bottom" timestamp="1600839379700">
+    <state x="1220" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600867488435" />
+    <state width="1877" height="260" key="GridCell.Tab.0.bottom" timestamp="1600945374479">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="916" height="258" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600839379700" />
-    <state width="916" height="258" key="GridCell.Tab.0.center" timestamp="1600839379695">
+    <state width="1877" height="260" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1600945374479" />
+    <state width="1877" height="260" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600866578058" />
+    <state width="1877" height="260" key="GridCell.Tab.0.center" timestamp="1600945374477">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="916" height="258" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600839379695" />
-    <state width="916" height="258" key="GridCell.Tab.0.left" timestamp="1600839379694">
+    <state width="1877" height="260" key="GridCell.Tab.0.center/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1600945374477" />
+    <state width="1877" height="260" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600866578058" />
+    <state width="1877" height="260" key="GridCell.Tab.0.left" timestamp="1600945374476">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="916" height="258" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600839379694" />
-    <state width="916" height="258" key="GridCell.Tab.0.right" timestamp="1600839379695">
+    <state width="1877" height="260" key="GridCell.Tab.0.left/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1600945374476" />
+    <state width="1877" height="260" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600866578058" />
+    <state width="1877" height="260" key="GridCell.Tab.0.right" timestamp="1600945374478">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="916" height="258" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600839379695" />
+    <state width="1877" height="260" key="GridCell.Tab.0.right/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1600945374478" />
+    <state width="1877" height="260" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600866578058" />
     <state x="1100" y="139" key="NewModule_or_Project.wizard" timestamp="1600071835581">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1100" y="139" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1600071835581" />
-    <state x="1032" y="250" key="Vcs.Push.Dialog.v2" timestamp="1600849866712">
+    <state x="1032" y="250" key="Vcs.Push.Dialog.v2" timestamp="1600854499003">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1032" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600849866712" />
-    <state x="1116" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1600082527034">
+    <state x="1032" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600854499003" />
+    <state x="1116" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1600943552875">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="1116" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1600943552875" />
     <state x="1116" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600082527034" />
+    <state x="767" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600945691182">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="767" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1600945691182" />
   </component>
 </project>
