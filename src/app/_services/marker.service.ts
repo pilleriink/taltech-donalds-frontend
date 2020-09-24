@@ -7,16 +7,17 @@ import * as L from 'leaflet';
 })
 export class MarkerService {
 
-  capitals: string = '/assets/data/us_capitals.geojson';
+  capitals: string = '/assets/data/locations.geojson';
 
   constructor(private http: HttpClient) {
   }
 
   makeCapitalMarkers(map: L.Map): void {
     this.http.get(this.capitals).subscribe((res: any) => {
-      for (const c of res.features) {
-        const lat = c.geometry.coordinates[0];
-        const lon = c.geometry.coordinates[1];
+      for (const c of res.results) {
+        console.log(c);
+        const lat = c.lat;
+        const lon = c.lon;
         const marker = L.marker([lon, lat]).addTo(map);
       }
     });

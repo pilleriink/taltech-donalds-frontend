@@ -1,0 +1,16 @@
+{
+    "results": [
+        {
+            "name":"branch1",
+            "address":"Ehitajate tee 5, 19086 Tallinn Estonia",
+            "lat": 24.668998869937695,
+            "lon": 59.3943529
+        },
+        {
+            "name":"branch2",
+            "address": "Raja 4, 12616 Tallinn",
+            "lat": 24.6640777,
+            "lon": 59.391073
+        }
+    ]
+}
