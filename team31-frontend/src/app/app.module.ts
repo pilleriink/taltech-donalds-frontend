@@ -17,6 +17,8 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatBadgeModule} from "@angular/material/badge";
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import {MatTabsModule} from "@angular/material/tabs";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import {MatTabsModule} from "@angular/material/tabs";
     MatIconModule,
     MatBadgeModule,
     MatButtonToggleModule,
-    MatTabsModule
+    MatTabsModule,
+    MatCheckboxModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
