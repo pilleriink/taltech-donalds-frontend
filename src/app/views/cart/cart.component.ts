@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {CartService} from "../../cart.service";
+import {CartService} from '../../cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -8,7 +8,6 @@ import {CartService} from "../../cart.service";
 })
 export class CartComponent implements OnInit {
   defaultImage = 'https://longsshotokan.com/wp-content/uploads/2017/04/default-image-620x600.jpg';
-  checked = false;
 
 
   constructor(private cartService: CartService) {
