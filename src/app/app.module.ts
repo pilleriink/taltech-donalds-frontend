@@ -25,7 +25,16 @@ import { MarkerService } from "./marker.service";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule,
+    MatIconModule,
+    MatBadgeModule,
+    MatButtonToggleModule,
+    MatTabsModule,
+    MatCheckboxModule,
+    FormsModule
   ],
   providers: [
     MarkerService

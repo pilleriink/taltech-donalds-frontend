@@ -10,19 +10,22 @@ p {
   font-size: 25px;
 }
 
-.card {
-  margin-top: 100px;
-  width: 50%;
-  height: 75%;
-  margin-left: 25%;
-  margin-right: 25%;
+.example-card {
+  margin: 50px auto;
 }
 
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
-.button-left {
-  width: 100%;
-  padding: 20px;
-  font-size: 25px;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+  height: 80px;
 }
 
 

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, ParamMap} from "@angular/router";
 import {ProductService} from "../../product.service";
 import {Product} from "../../product";
+import {CartService} from "../../cart.service";
 
 @Component({
   selector: 'app-product',
@@ -14,7 +15,7 @@ export class ProductComponent implements OnInit {
   defaultImage = 'https://longsshotokan.com/wp-content/uploads/2017/04/default-image-620x600.jpg';
 
   constructor(private route: ActivatedRoute,
-              private productService: ProductService) { }
+              private productService: ProductService, private cartService: CartService) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) =>  {
@@ -31,5 +32,6 @@ export class ProductComponent implements OnInit {
       }
     )
   }
+
 
 }

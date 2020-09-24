@@ -7,13 +7,35 @@ h1 {
   margin: 50px;
 }
 
-.button-left {
-  margin-right: 20px;
+.price {
+  font-size: 18px;
 }
 
 .image-div {
   width: 100%;
   height: 250px;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 
+.example-card {
+  max-width: 400px;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  height: 80px;
+}
+
+.info-button {
+  margin-left: 20px;
+}

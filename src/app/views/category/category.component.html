@@ -3,20 +3,35 @@
   <div *ngIf="category && category.products" class="row">
     <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let product of category.products">
 
-      <div class="card" style="width: 18rem;">
+      <mat-card class="example-card card">
+        <mat-card-header>
+          <mat-card-title>{{product.name}}</mat-card-title>
+          <mat-card-subtitle>{{product.category.name}}</mat-card-subtitle>
+        </mat-card-header>
         <div class="image-div">
-          <img [src]="product.image ? product.image : defaultImage" class="card-img-top" alt="...">
+          <img routerLink="/products/{{product.id}}" mat-card-image [src]="product.image ? product.image : defaultImage" alt="{{product.name}}">
         </div>
-        <div class="card-body">
-          <h5 class="card-title">{{product.name}}</h5>
-          <p class="card-text">{{product.description}}</p>
-          <p class="card-text">Price: {{product.price}}€</p>
-          <div class="button-div">
-            <a href="#" class="btn btn-success button-left">Add to cart</a>
-            <a routerLink="/products/{{product.id}}" href="#" class="btn btn-info">Product info</a>
+        <mat-card-content>
+          <p>
+            {{product.description}}
+          </p>
+          <p class="price">
+            Price: {{product.price}}€
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <div class="example-flex-container">
+            <div class="example-button-container">
+              <button (click)="cartService.addProduct(product)" mat-fab color="accent" aria-label="Add to cart">
+                <mat-icon>add_shopping_cart</mat-icon>
+              </button>
+              <button class="info-button" routerLink="/products/{{product.id}}" mat-fab color="primary" aria-label="Add to cart">
+                <mat-icon>info</mat-icon>
+              </button>
+            </div>
           </div>
-        </div>
-      </div>
+        </mat-card-actions>
+      </mat-card>
 
     </div>
   </div>
