@@ -5,6 +5,7 @@ import {environment} from "../environments/environment";
 import { catchError, map, tap } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 import * as L from 'leaflet';
+import { PopUpService } from './pop-up.service';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +21,8 @@ export class MarkerService {
 
   constructor(
     private http: HttpClient,
-    private messageService: MessageService) { }
+    private messageService: MessageService,
+    private popupService: PopUpService) { }
 
     getLocations(): Observable<Location[]> {
       return this.http.get<Location[]>(environment.apiUrl + this.locationsUrl)
@@ -35,6 +37,8 @@ export class MarkerService {
       const lat = l['lat'];
       const lon = l['lon'];
       const marker = L.marker([lon, lat]).addTo(map);
+      marker.bindPopup(this.popupService.makeCapitalPopup(l));
+      marker.addTo(map);
    }))
   }
 

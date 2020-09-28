@@ -13,6 +13,7 @@ import { CategoryComponent } from './views/category/category.component';
 import { ProductComponent } from './views/product/product.component';
 import {HttpClientModule} from "@angular/common/http";
 import { MarkerService } from "./marker.service";
+import { PopUpService } from './pop-up.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { MarkerService } from "./marker.service";
     FormsModule
   ],
   providers: [
-    MarkerService
+    MarkerService,
+    PopUpService
   ],
   bootstrap: [AppComponent]
 })
