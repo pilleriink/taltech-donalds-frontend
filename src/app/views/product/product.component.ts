@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, ParamMap} from "@angular/router";
-import {ProductService} from "../../product.service";
-import {Product} from "../../product";
-import {CartService} from "../../cart.service";
+import {Product} from '../../product';
+import {ActivatedRoute, ParamMap} from '@angular/router';
+import {ProductService} from '../../product.service';
+import {CartService} from '../../cart.service';
 
 @Component({
   selector: 'app-product',
@@ -30,7 +30,7 @@ export class ProductComponent implements OnInit {
         this.product = data;
         console.log(data);
       }
-    )
+    );
   }
 
 

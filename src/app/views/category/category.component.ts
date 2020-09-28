@@ -14,7 +14,7 @@ import {MatCardModule} from '@angular/material/card';
 
 export class CategoryComponent implements OnInit {
   categoryId;
-  category:Category;
+  category: Category;
   defaultImage = 'https://longsshotokan.com/wp-content/uploads/2017/04/default-image-620x600.jpg';
 
   constructor(private route: ActivatedRoute,
@@ -33,7 +33,7 @@ export class CategoryComponent implements OnInit {
         this.category = data;
         console.log(data);
       }
-    )
+    );
   }
 
 }
