@@ -1,1 +1,10 @@
-<p>homepage works!</p>
+<div class="carousel">
+    <ol class="carousel__viewport">
+        <li class="carousel__slide"
+            tabindex="0"
+            *ngFor="let ad of ads">
+            <img src="{{ad}}" alt="">
+            <div class="carousel__snapper"></div>
+        </li>
+    </ol>
+</div>

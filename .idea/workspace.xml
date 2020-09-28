@@ -2,23 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7882603-7932-41fe-aa26-4bbf608cd699" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/views/cart/cart.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/cart/cart.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/views/cart/cart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/cart/cart.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team31-frontend/src/app/views/cart/cart.component.css" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/ttd1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/ttd2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/ttd3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/homepage/homepage.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/homepage/homepage.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/homepage/homepage.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/homepage/homepage.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/homepage/homepage.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/homepage/homepage.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1i8OE8wfqjC3lesxDzbG6etjCeA" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -26,7 +32,12 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="C:\Users\37253\IdeaProjects\iti0203-2020-team31-frontend\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Users\Laptop\IdeaProjects\TalTechDonalds\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Laptop\IdeaProjects\TalTechDonalds\src\assets" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
     <configuration name="E2E Tests (angular-frontend)" type="JavaScriptTestRunnerProtractor">
@@ -51,18 +62,7 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -74,33 +74,44 @@
       <option name="presentableId" value="Default" />
       <updated>1600949118986</updated>
       <workItem from="1600949124401" duration="547000" />
+      <workItem from="1601285638870" duration="5012000" />
+      <workItem from="1601299060895" duration="5819000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="502" y="29" key="CommitChangelistDialog2" timestamp="1600949703905">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="667" y="1080" key="CommitChangelistDialog2" timestamp="1601298957969">
+      <screen x="310" y="1080" width="1366" height="728" />
     </state>
     <state x="502" y="29" key="CommitChangelistDialog2/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1600949703905" />
-    <state width="1877" height="216" key="GridCell.Tab.0.bottom" timestamp="1600949311776">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="667" y="1080" key="CommitChangelistDialog2/310.1080.1366.728/0.0.1920.1040@310.1080.1366.728" timestamp="1601298957969" />
+    <state x="402" y="1172" width="1182" height="544" key="DiffContextDialog" timestamp="1601299516977">
+      <screen x="310" y="1080" width="1366" height="728" />
+    </state>
+    <state x="402" y="1172" width="1182" height="544" key="DiffContextDialog/310.1080.1366.728/0.0.1920.1040@310.1080.1366.728" timestamp="1601299516977" />
+    <state width="1323" height="281" key="GridCell.Tab.0.bottom" timestamp="1601299033171">
+      <screen x="310" y="1080" width="1366" height="728" />
     </state>
     <state width="1877" height="216" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1600949311776" />
-    <state width="1877" height="216" key="GridCell.Tab.0.center" timestamp="1600949311776">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1323" height="281" key="GridCell.Tab.0.bottom/310.1080.1366.728/0.0.1920.1040@310.1080.1366.728" timestamp="1601299033171" />
+    <state width="1323" height="281" key="GridCell.Tab.0.center" timestamp="1601299033171">
+      <screen x="310" y="1080" width="1366" height="728" />
     </state>
     <state width="1877" height="216" key="GridCell.Tab.0.center/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1600949311776" />
-    <state width="1877" height="216" key="GridCell.Tab.0.left" timestamp="1600949311775">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1323" height="281" key="GridCell.Tab.0.center/310.1080.1366.728/0.0.1920.1040@310.1080.1366.728" timestamp="1601299033171" />
+    <state width="1323" height="281" key="GridCell.Tab.0.left" timestamp="1601299033171">
+      <screen x="310" y="1080" width="1366" height="728" />
     </state>
     <state width="1877" height="216" key="GridCell.Tab.0.left/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1600949311775" />
-    <state width="1877" height="216" key="GridCell.Tab.0.right" timestamp="1600949311776">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1323" height="281" key="GridCell.Tab.0.left/310.1080.1366.728/0.0.1920.1040@310.1080.1366.728" timestamp="1601299033171" />
+    <state width="1323" height="281" key="GridCell.Tab.0.right" timestamp="1601299033171">
+      <screen x="310" y="1080" width="1366" height="728" />
     </state>
     <state width="1877" height="216" key="GridCell.Tab.0.right/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1600949311776" />
+    <state width="1323" height="281" key="GridCell.Tab.0.right/310.1080.1366.728/0.0.1920.1040@310.1080.1366.728" timestamp="1601299033171" />
     <state x="184" y="92" key="MergeDialog" timestamp="1600949629383">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -109,9 +120,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="664" y="228" key="MultipleFileMergeDialog/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1600949629403" />
+    <state x="402" y="1172" width="1182" height="544" key="ShowDiffWithBranchDialog" timestamp="1601299516977">
+      <screen x="310" y="1080" width="1366" height="728" />
+    </state>
+    <state x="402" y="1172" width="1182" height="544" key="ShowDiffWithBranchDialog/310.1080.1366.728/0.0.1920.1040@310.1080.1366.728" timestamp="1601299516977" />
+    <state x="402" y="1172" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1601286060887">
+      <screen x="310" y="1080" width="1366" height="728" />
+    </state>
+    <state x="402" y="1172" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/310.1080.1366.728/0.0.1920.1040@310.1080.1366.728" timestamp="1601286060887" />
     <state x="767" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600949707078">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="767" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1600949707078" />
+    <state x="1014" y="0" width="678" height="1026" key="dock-window-1" timestamp="1601299033376">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="953" y="0" width="974" height="1047" key="dock-window-1/310.1080.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1601298480188" />
+    <state x="1014" y="0" width="678" height="1026" key="dock-window-1/310.1080.1366.728/0.0.1920.1040@310.1080.1366.728" timestamp="1601299033376" />
   </component>
 </project>
