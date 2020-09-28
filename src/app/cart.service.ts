@@ -16,20 +16,22 @@ export class CartService {
   getAndSetCart() {
     if (sessionStorage.getItem('cart')) {
       this.cart = JSON.parse(sessionStorage.getItem('cart'));
-      console.log(this.cart);
     }
   }
 
-  addProduct(product) {
+  addProduct(product: Product) {
+
     this.cart.products.push(product);
     this.calculatePrice();
     sessionStorage.setItem('cart', JSON.stringify(this.cart));
+    this.getAndSetCart();
   }
 
   removeProduct(i) {
     this.cart.products.splice(i, 1);
     this.calculatePrice();
     sessionStorage.setItem('cart', JSON.stringify(this.cart));
+    this.getAndSetCart();
   }
 
   clearProducts() {
