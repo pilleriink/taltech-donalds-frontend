@@ -1,20 +1,23 @@
 <h1 *ngIf="cartService.cart.products.length == 0">Cart is empty!</h1>
-<h1 *ngIf="cartService.cart.products > 0">Cart</h1>
+<div *ngIf="cartService.cart.products.length > 0" class="mb-3 col-lg-12 col-sm-12">
+  <button routerLink="/checkout" class="proceed" mat-raised-button color="primary">Proceed to checkout</button>
+  <button (click)="cartService.clearProducts()" class="proceed" mat-raised-button color="primary">Clear cart</button>
+</div>
 <div *ngFor="let cartProduct of cartService.cart.products; let i=index" class="card mb-3 col-lg-6 col-sm-6">
   <div class="row no-gutters">
     <div class="col-md-4 image-div">
-      <img [src]="cartProduct.product.image ? cartProduct.product.image : defaultImage" class="card-img" alt="...">
+      <img [src]="cartProduct.image ? cartProduct.image : defaultImage" class="card-img" alt="...">
     </div>
     <div class="col-md-4">
       <div class="card-body">
-        <h5 class="card-title">{{cartProduct.product.name}}</h5>
-        <p class="card-text">{{cartProduct.product.description}}</p>
-        <p class="card-text">{{cartProduct.product.price}}</p>
+        <h5 class="card-title">{{cartProduct.name}}</h5>
+        <p class="card-text">{{cartProduct.description}}</p>
+        <p class="card-text">{{cartProduct.price}}</p>
       </div>
       <mat-card-actions>
         <div class="example-flex-container">
           <div class="example-button-container">
-            <button (click)="cartService.addProduct(cartProduct.product)" mat-fab color="accent" aria-label="Add to cart">
+            <button (click)="cartService.addProduct(cartProduct)" mat-fab color="accent" aria-label="Add to cart">
               <mat-icon>add_shopping_cart</mat-icon>
             </button>
             <button (click)="cartService.removeProduct(i)" class="info-button"  mat-fab color="warn" aria-label="Remove from cart">
@@ -28,11 +31,12 @@
 
       <div class="card-body">
         <h6>Removable ingredients:</h6>
-        <p class="removable" *ngFor="let ingredient of cartProduct.product.removableIngredients">
-          <mat-checkbox class="example-margin" [(ngModel)]="ingredient.removed">{{ingredient.name}}</mat-checkbox>
+        <p class="removable" *ngFor="let ingredient of cartProduct.removableIngredients; let j=index">
+          <mat-checkbox class="example-margin" [(ngModel)]="ingredient.removed" (ngModelChange)="save()">{{ingredient.name}}</mat-checkbox>
         </p>
       </div>
     </div>
 
   </div>
 </div>
+

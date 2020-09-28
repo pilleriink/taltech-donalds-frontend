@@ -1,6 +1,5 @@
 .card {
     margin-left: 25%;
-    margin-top: 50px;
 }
 
 .example-flex-container {
@@ -30,3 +29,9 @@ h1 {
     margin: 0;
 }
 
+.proceed {
+    height: 40px;
+    width: 20%;
+    margin: 15px 40%;
+    font-size: 25px;
+}

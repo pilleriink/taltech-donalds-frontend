@@ -1,6 +1,7 @@
-import { TestBed } from '@angular/core/testing';
+
 
 import { PopUpService } from './pop-up.service';
+import {TestBed} from '@angular/core/testing';
 
 describe('PopUpService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
