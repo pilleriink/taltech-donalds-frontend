@@ -18,13 +18,13 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {
-  MatBadgeModule,
-  MatButtonModule,
-  MatButtonToggleModule,
-  MatCardModule,
-  MatCheckboxModule,
-  MatIconModule,
-  MatTabsModule
+    MatBadgeModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule, MatFormFieldModule,
+    MatIconModule, MatInputModule, MatSelectModule, MatTableModule,
+    MatTabsModule
 } from '@angular/material';
 
 @NgModule({
@@ -38,20 +38,24 @@ import {
     ProductComponent,
     CheckoutComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MatCardModule,
-    MatButtonModule,
-    MatIconModule,
-    MatBadgeModule,
-    MatButtonToggleModule,
-    MatTabsModule,
-    MatCheckboxModule,
-    FormsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MatCardModule,
+        MatButtonModule,
+        MatIconModule,
+        MatBadgeModule,
+        MatButtonToggleModule,
+        MatTabsModule,
+        MatCheckboxModule,
+        FormsModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        MatInputModule,
+        MatTableModule
+    ],
   providers: [
     MarkerService
   ],
