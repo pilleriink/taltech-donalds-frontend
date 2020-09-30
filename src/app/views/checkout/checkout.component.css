@@ -1,7 +1,6 @@
 .checkout {
     margin-left: 25%;
     width: 50%;
-    margin-bottom: 100px;
 }
 
 table {
@@ -31,9 +30,21 @@ table {
     height: 40px;
     width: 200px;
     font-size: 25px;
+    margin-top: 50px;
+    margin-bottom: 200px;
 }
 
 .card-div {
     margin-left: 25%;
 }
 
+.error-msg {
+    position: absolute;
+    top: 38px;
+    font-size: 0.8rem;
+    color: darkred;
+}
+
+.form {
+    margin-bottom: 20px;
+}

@@ -1,48 +1,31 @@
-import { Observable, of } from 'rxjs';
-import * as L from 'leaflet';
-import { PopUpService } from './pop-up.service';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Injectable} from '@angular/core';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {MessageService} from './message.service';
+import {Observable, of} from 'rxjs';
+import {Product} from './product';
 import {environment} from '../environments/environment';
 import {catchError, tap} from 'rxjs/operators';
-import {Location} from './location';
+import {Order} from './order';
 
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable({ providedIn: 'root' })
+export class OrderService {
 
-export class MarkerService {
-    private locationsUrl = '/api/locations';
+    private orderUrl = 'api/orders';
 
     httpOptions = {
         headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
 
-    locations: Observable<Location[]> = this.getLocations();
-
     constructor(
         private http: HttpClient,
-        private messageService: MessageService,
-        private popupService: PopUpService) { }
+        private messageService: MessageService) { }
 
-    getLocations(): Observable<Location[]> {
-        return this.http.get<Location[]>(environment.apiUrl + this.locationsUrl)
+    sendOrder(order: Order): Observable<Order> {
+        const url = `${environment.apiUrl}${this.orderUrl}`;
+        return this.http.post<Order>(url, order)
             .pipe(
-                tap(_ => this.log('fetched categories')),
-                catchError(this.handleError<Location[]>('getCategories', []))
+                catchError(this.handleError('sendOrder', order))
             );
-    }
-
-    makeCapitalMarkers(map: L.Map): void {
-        // tslint:disable-next-line:no-shadowed-variable
-        this.locations.forEach(l => l.map(l => {
-            const lat = l.lat;
-            const lon = l.lon;
-            const marker = L.marker([lon, lat]).addTo(map);
-            marker.bindPopup(this.popupService.makeCapitalPopup(l));
-            marker.addTo(map);
-        }));
     }
 
     /**
@@ -67,7 +50,8 @@ export class MarkerService {
 
     /** Log a HeroService message with the MessageService */
     private log(message: string) {
-        this.messageService.add(`ProductService: ${message}`);
+        this.messageService.add(`OrderService: ${message}`);
     }
+
 
 }

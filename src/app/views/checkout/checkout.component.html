@@ -1,4 +1,3 @@
-
 <table mat-table [dataSource]="cartService.cart.products" class="mat-elevation-z8">
 
     <ng-container matColumnDef="position">
@@ -33,7 +32,6 @@
         <th mat-header-cell *matHeaderCellDef> Price </th>
         <td mat-cell *matCellDef="let cartProduct"> {{cartProduct.price}} </td>
     </ng-container>
-
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
@@ -41,25 +39,34 @@
 
 <div class="card-div mb-3 col-lg-6 col-sm-6">
     <div class="checkout col-md-6">
-        <mat-form-field appearance="fill">
-            <mat-label>Email</mat-label>
-            <input matInput>
-        </mat-form-field>
-        <br>
-        <mat-form-field appearance="fill">
-            <mat-label>Phone number</mat-label>
-            <input matInput>
-        </mat-form-field>
-        <br>
-        <mat-form-field appearance="fill">
-            <mat-label>Location</mat-label>
-            <mat-select>
-                <mat-option value="option">Option</mat-option>
-            </mat-select>
-        </mat-form-field>
-        <br>
+        <form>
+
+            <mat-form-field appearance="fill" class="form">
+                <mat-label >Email</mat-label>
+                <input matInput name="email" [(ngModel)]="order.email" required>
+                <p class="error-msg">{{controlEmail()}}</p>
+            </mat-form-field>
+            <br>
+
+            <mat-form-field appearance="fill" class="form">
+                <mat-label>Phone number</mat-label>
+                <input matInput name="phoneNumber" [(ngModel)]="order.phoneNumber" required>
+                <p class="error-msg">{{controlPhoneNumber()}}</p>
+            </mat-form-field>
+            <br>
+
+            <mat-form-field appearance="fill" class="form">
+                <mat-label>Location</mat-label>
+                <mat-select name="location" [(ngModel)]="order.location" required>
+                    <mat-option *ngFor="let location of locations" [value]="location">{{location.name}}</mat-option>
+                </mat-select>
+                <p class="error-msg">{{controlLocation()}}</p>
+            </mat-form-field>
+        </form>
+
     </div>
     <div class="checkout col-md-6">
-        <button (click)="sendOrder()" routerLink="/homepage" class="proceed" mat-raised-button color="primary">Place an order</button>
+        <button class="proceed" mat-raised-button color="primary" (click)="sendOrder()">Place an order</button>
     </div>
 </div>
+
