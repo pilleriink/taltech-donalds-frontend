@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7882603-7932-41fe-aa26-4bbf608cd699" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/ttd1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/ttd2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/ttd3.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/views/homepage/homepage.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/homepage/homepage.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/views/homepage/homepage.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/homepage/homepage.component.html" afterDir="false" />
@@ -75,19 +72,35 @@
       <updated>1600949118986</updated>
       <workItem from="1600949124401" duration="547000" />
       <workItem from="1601285638870" duration="5012000" />
-      <workItem from="1601299060895" duration="5819000" />
+      <workItem from="1601299060895" duration="8591000" />
+      <workItem from="1601400705249" duration="5073000" />
     </task>
+    <task id="LOCAL−00001" summary="WIP: huge ads on homepage">
+      <created>1601305085958</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1601305085958</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="WIP: huge ads on homepage" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP: huge ads on homepage" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="667" y="1080" key="CommitChangelistDialog2" timestamp="1601298957969">
+    <state x="738" y="1268" key="#Notifications" timestamp="1601305096643">
+      <screen x="310" y="1080" width="1366" height="728" />
+    </state>
+    <state x="738" y="1268" key="#Notifications/310.1080.1366.728/0.0.1920.1040@310.1080.1366.728" timestamp="1601305096643" />
+    <state x="667" y="1080" key="CommitChangelistDialog2" timestamp="1601305085074">
       <screen x="310" y="1080" width="1366" height="728" />
     </state>
     <state x="502" y="29" key="CommitChangelistDialog2/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1600949703905" />
-    <state x="667" y="1080" key="CommitChangelistDialog2/310.1080.1366.728/0.0.1920.1040@310.1080.1366.728" timestamp="1601298957969" />
+    <state x="667" y="1080" key="CommitChangelistDialog2/310.1080.1366.728/0.0.1920.1040@310.1080.1366.728" timestamp="1601305085074" />
     <state x="402" y="1172" width="1182" height="544" key="DiffContextDialog" timestamp="1601299516977">
       <screen x="310" y="1080" width="1366" height="728" />
     </state>
@@ -124,6 +137,10 @@
       <screen x="310" y="1080" width="1366" height="728" />
     </state>
     <state x="402" y="1172" width="1182" height="544" key="ShowDiffWithBranchDialog/310.1080.1366.728/0.0.1920.1040@310.1080.1366.728" timestamp="1601299516977" />
+    <state x="585" y="1164" key="Vcs.Push.Dialog.v2" timestamp="1601305089537">
+      <screen x="310" y="1080" width="1366" height="728" />
+    </state>
+    <state x="585" y="1164" key="Vcs.Push.Dialog.v2/310.1080.1366.728/0.0.1920.1040@310.1080.1366.728" timestamp="1601305089537" />
     <state x="402" y="1172" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1601286060887">
       <screen x="310" y="1080" width="1366" height="728" />
     </state>
