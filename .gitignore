@@ -15,7 +15,7 @@ chrome-profiler-events*.json
 speed-measure-plugin*.json
 
 # IDEs and editors
-/.idea/
+.idea/
 .project
 iti0203-2020-team31-frontend.iml
 .classpath
