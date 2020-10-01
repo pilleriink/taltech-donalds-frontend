@@ -1,0 +1,50 @@
+.checkout {
+    margin-left: 25%;
+    width: 50%;
+}
+
+table {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 50px;
+}
+
+.image {
+    height: 100px;
+}
+
+.image-div {
+    width: 120px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.footer {
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 50px;
+    text-align: right;
+}
+
+.proceed {
+    height: 40px;
+    width: 200px;
+    font-size: 25px;
+    margin-top: 50px;
+    margin-bottom: 200px;
+}
+
+.card-div {
+    margin-left: 25%;
+}
+
+.error-msg {
+    position: absolute;
+    top: 38px;
+    font-size: 0.8rem;
+    color: darkred;
+}
+
+.form {
+    margin-bottom: 20px;
+}

@@ -1,1 +1,72 @@
-<p>checkout works!</p>
+<table mat-table [dataSource]="cartService.cart.products" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="position">
+        <th class="header" mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell *matCellDef="let i=index"> {{i + 1}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="image">
+        <th mat-header-cell *matHeaderCellDef> Image </th>
+        <td mat-cell *matCellDef="let cartProduct">
+            <div class="image-div">
+                <img class="image" mat-card-image [src]="cartProduct.image ? cartProduct.image : defaultImage" alt="{{cartProduct.name}}">
+            </div>
+        </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let cartProduct"> {{cartProduct.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="removedIngredients">
+        <th mat-header-cell *matHeaderCellDef> Removed ingredients </th>
+        <td mat-cell *matCellDef="let cartProduct">
+            <div *ngFor="let ingredient of cartProduct.removableIngredients">
+                <p *ngIf="ingredient.removed == true">{{ingredient.name}}</p>
+            </div>
+        </td>
+    </ng-container>
+
+    <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef> Price </th>
+        <td mat-cell *matCellDef="let cartProduct"> {{cartProduct.price}} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<mat-card class="footer">Total: {{cartService.cart.price}}€</mat-card>
+
+<div class="card-div mb-3 col-lg-6 col-sm-6">
+    <div class="checkout col-md-6">
+        <form>
+
+            <mat-form-field appearance="fill" class="form">
+                <mat-label >Email</mat-label>
+                <input matInput name="email" [(ngModel)]="order.email" required>
+                <p class="error-msg">{{controlEmail()}}</p>
+            </mat-form-field>
+            <br>
+
+            <mat-form-field appearance="fill" class="form">
+                <mat-label>Phone number</mat-label>
+                <input matInput name="phoneNumber" [(ngModel)]="order.phoneNumber" required>
+                <p class="error-msg">{{controlPhoneNumber()}}</p>
+            </mat-form-field>
+            <br>
+
+            <mat-form-field appearance="fill" class="form">
+                <mat-label>Location</mat-label>
+                <mat-select name="location" [(ngModel)]="order.location" required>
+                    <mat-option *ngFor="let location of locations" [value]="location">{{location.name}}</mat-option>
+                </mat-select>
+                <p class="error-msg">{{controlLocation()}}</p>
+            </mat-form-field>
+        </form>
+
+    </div>
+    <div class="checkout col-md-6">
+        <button class="proceed" mat-raised-button color="primary" (click)="sendOrder()">Place an order</button>
+    </div>
+</div>
+

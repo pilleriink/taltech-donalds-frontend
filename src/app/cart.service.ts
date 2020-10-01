@@ -20,7 +20,6 @@ export class CartService {
   }
 
   addProduct(product: Product) {
-
     this.cart.products.push(product);
     this.calculatePrice();
     sessionStorage.setItem('cart', JSON.stringify(this.cart));

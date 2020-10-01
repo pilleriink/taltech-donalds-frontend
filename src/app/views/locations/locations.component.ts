@@ -1,5 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
-import  * as L from 'leaflet';
+import * as L from 'leaflet';
 import 'mapbox-gl-leaflet';
 import { MarkerService } from '../../marker.service';
 
@@ -41,7 +41,7 @@ export class LocationsComponent implements AfterViewInit {
     tiles.addTo(this.map);
   }
   ngAfterViewInit(): void {
-    this.initMap()
+    this.initMap();
     this.markerService.makeCapitalMarkers(this.map);
   }
 

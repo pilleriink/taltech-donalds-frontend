@@ -11,7 +11,7 @@ import {CartService} from '../../cart.service';
 })
 export class ProductComponent implements OnInit {
   productId;
-  product:Product;
+  product: Product;
   defaultImage = 'https://longsshotokan.com/wp-content/uploads/2017/04/default-image-620x600.jpg';
 
   constructor(private route: ActivatedRoute,

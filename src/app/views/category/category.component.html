@@ -2,7 +2,6 @@
 <div class="container">
   <div *ngIf="category && category.products" class="row">
     <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let product of category.products">
-
       <mat-card class="example-card card">
         <mat-card-header>
           <mat-card-title>{{product.name}}</mat-card-title>
@@ -32,7 +31,6 @@
           </div>
         </mat-card-actions>
       </mat-card>
-
     </div>
   </div>
 </div>
