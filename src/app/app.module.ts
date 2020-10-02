@@ -7,9 +7,7 @@ import { LocationsComponent } from './views/locations/locations.component';
 import { CartComponent } from './views/cart/cart.component';
 import { CategoryComponent } from './views/category/category.component';
 import { ProductComponent } from './views/product/product.component';
-
 import { CheckoutComponent } from './views/checkout/checkout.component';
-
 import {HttpClientModule} from '@angular/common/http';
 import { MarkerService } from './marker.service';
 import { PopUpService } from './pop-up.service';
@@ -54,7 +52,7 @@ import {
         MatFormFieldModule,
         MatSelectModule,
         MatInputModule,
-        MatTableModule
+        MatTableModule,
     ],
   providers: [
     MarkerService

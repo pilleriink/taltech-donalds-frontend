@@ -27,6 +27,13 @@ export class ProductService {
     );
   }
 
+  addComment(comment: Comment): Observable<Comment> {
+    const url = `${environment.apiUrl}${this.productsUrl}/${comment.productId}/comments`;
+    return this.http.post<Comment>(url, comment)
+          .pipe(
+            catchError(this.handleError('addComment', comment))
+          );
+  }
   /**
    * Handle Http operation that failed.
    * Let the app continue.

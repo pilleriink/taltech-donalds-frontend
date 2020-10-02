@@ -11,3 +11,4 @@ export interface Product {
   image: string;
   category: Category;
 }
+
