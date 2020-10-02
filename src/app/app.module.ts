@@ -14,6 +14,7 @@ import { ProductComponent } from './views/product/product.component';
 import {HttpClientModule} from '@angular/common/http';
 import { MarkerService } from './marker.service';
 import { AdSliderComponent } from './views/homepage/ad-slider/ad-slider.component';
+import { CardsComponent } from './views/homepage/cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { AdSliderComponent } from './views/homepage/ad-slider/ad-slider.componen
     CategoryComponent,
     ProductComponent,
     AdSliderComponent,
+    CardsComponent,
   ],
   imports: [
     BrowserModule,
