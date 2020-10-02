@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {FormsModule}   from '@angular/forms';
+import {FormsModule} from '@angular/forms';
 import {MatButtonModule, MatIconModule, MatBadgeModule, MatButtonToggleModule, MatTabsModule, MatCardModule, MatCheckboxModule} from '@angular/material'; 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,8 +11,9 @@ import { LocationsComponent } from './views/locations/locations.component';
 import { CartComponent } from './views/cart/cart.component';
 import { CategoryComponent } from './views/category/category.component';
 import { ProductComponent } from './views/product/product.component';
-import {HttpClientModule} from "@angular/common/http";
-import { MarkerService } from "./marker.service";
+import {HttpClientModule} from '@angular/common/http';
+import { MarkerService } from './marker.service';
+import { AdSliderComponent } from './views/homepage/ad-slider/ad-slider.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MarkerService } from "./marker.service";
     LocationsComponent,
     CartComponent,
     CategoryComponent,
-    ProductComponent
+    ProductComponent,
+    AdSliderComponent,
   ],
   imports: [
     BrowserModule,
