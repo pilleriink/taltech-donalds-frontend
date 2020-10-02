@@ -6,8 +6,6 @@ import {CartService} from '../../cart.service';
 import { Comment } from '../../comment' ;
 import { HttpClient } from "@angular/common/http";
 import {Router} from '@angular/router';
-import { Comment } from '@angular/compiler';
-import { format } from 'url';
 
 @Component({
   selector: 'app-product',
