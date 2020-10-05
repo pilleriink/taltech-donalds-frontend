@@ -26,10 +26,10 @@
     </div>
   </mat-card-actions>
 </mat-card>
-<mat-card class="example-card col-sm-12 col-md-6 col-lg-4" *ngIf="product">
+<mat-card class="example-card col-sm-12 col-md-6 col-lg-4" *ngIf="product?.comments.length!==0">
   <mat-card-title>Comments:</mat-card-title>
   <mat-card-content>
-    <p *ngFor="let comment of product.comments">
+    <p *ngFor="let comment of product?.comments">
         {{ comment.comment }}
     </p>
   </mat-card-content>
@@ -46,7 +46,7 @@
         <!--
         <label for="comment">Comment:</label>
         -->
-        <textarea class="form-control" id="comment" placeholder="Enter your comment:" name="comment" [(ngModel)]="this.model.comment" required></textarea>
+        <textarea class="form-control" id="comment" placeholder="Enter your comment:" name="comment" [(ngModel)]="this.commentToAdd.comment" required></textarea>
       </div>
       <button type="submit" class="btn btn-primary">Post comment</button>
     </form>

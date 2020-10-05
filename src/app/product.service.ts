@@ -17,23 +17,23 @@ export class ProductService {
   };
 
   constructor(
-    private http: HttpClient,
-    private messageService: MessageService) { }
+      private http: HttpClient,
+      private messageService: MessageService) { }
 
   getProductById(id: number): Observable<Product> {
     const url = `${environment.apiUrl}${this.productsUrl}/${id}`;
     return this.http.get<Product>(url).pipe(
-      tap(_ => this.log(`fetched product id=${id}`)),
-      catchError(this.handleError<Product>(`getProduct id=${id}`))
+        tap(_ => this.log(`fetched product id=${id}`)),
+        catchError(this.handleError<Product>(`getProduct id=${id}`))
     );
   }
 
-  addComment(comment: Comment): Observable<Comment> {
-    const url = `${environment.apiUrl}${this.productsUrl}/${comment.productId}/comments`;
+  addComment(productId, comment: Comment): Observable<Comment> {
+    const url = `${environment.apiUrl}${this.productsUrl}/${productId}/comments`;
     return this.http.post<Comment>(url, comment)
-          .pipe(
+        .pipe(
             catchError(this.handleError('addComment', comment))
-          );
+        );
   }
   /**
    * Handle Http operation that failed.
