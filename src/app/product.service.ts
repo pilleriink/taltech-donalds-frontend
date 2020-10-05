@@ -5,6 +5,7 @@ import {Observable, of} from "rxjs";
 import {catchError, tap} from "rxjs/operators";
 import {Product} from "./product";
 import {environment} from "../environments/environment";
+import {Comment} from './comment';
 
 @Injectable({ providedIn: 'root' })
 export class ProductService {

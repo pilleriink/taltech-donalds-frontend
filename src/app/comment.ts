@@ -1,7 +1,5 @@
-import { Product } from './product';
-
-export interface Comment {
-    id: number;
-    comment: string;
-    productId: number;
+export class Comment {
+    id = null;
+    comment = null;
+    productId = null;
   }

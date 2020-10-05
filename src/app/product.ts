@@ -1,5 +1,6 @@
 import {Ingredient} from './ingredient';
 import {Category} from './category';
+import {Comment} from './comment';
 
 
 export interface Product {
@@ -10,5 +11,6 @@ export interface Product {
   removableIngredients: Ingredient[];
   image: string;
   category: Category;
+  comments: Comment[];
 }
 
