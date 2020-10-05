@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e7882603-7932-41fe-aa26-4bbf608cd699" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/views/locations/locations.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/locations/locations.component.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +90,7 @@
       <updated>1600949118986</updated>
       <workItem from="1600949124401" duration="54953000" />
       <workItem from="1601879013490" duration="666000" />
-      <workItem from="1601879905931" duration="10971000" />
+      <workItem from="1601879905931" duration="12391000" />
     </task>
     <task id="LOCAL-00001" summary="merged develop into master">
       <created>1600949728940</created>
@@ -156,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601895461470</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="made location map responsive to the menu">
+      <created>1601897814156</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1601897814156</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,14 +201,15 @@
     <MESSAGE value="added checkout form fields check and sending order to backend" />
     <MESSAGE value="change comment into class to fix errors" />
     <MESSAGE value="fix comment errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix comment errors" />
+    <MESSAGE value="made location map responsive to the menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="made location map responsive to the menu" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="502" y="29" key="CommitChangelistDialog2" timestamp="1601895460733">
+    <state x="502" y="29" key="CommitChangelistDialog2" timestamp="1601897813713">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="502" y="29" key="CommitChangelistDialog2/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1600949727707" />
-    <state x="502" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1601895460733" />
+    <state x="502" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1601897813713" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1601276546022">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -245,11 +252,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="620" y="139" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1601882692158" />
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1601895463812">
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1601897815653">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1600949739032" />
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601895463812" />
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601897815653" />
     <state x="767" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601879908678">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
