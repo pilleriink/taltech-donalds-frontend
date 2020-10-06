@@ -35,7 +35,7 @@ export class CheckoutComponent implements OnInit {
         this.markerService.getLocations().subscribe(data => this.locations = data);
         this.order.price = this.cartService.cart.price;
         for (const product of this.cartService.cart.products) {
-            this.order.orderProducts.push(new OrderProduct(product.name, product.price, product.removableIngredients.toString()));
+            this.order.orderProducts.push(new OrderProduct(product.name, product.price, product.removableIngredients.filter(y => y.removed).map(x => x.name).join(", ")));
         }
     }
 
