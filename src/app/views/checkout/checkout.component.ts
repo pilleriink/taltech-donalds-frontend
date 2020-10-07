@@ -25,6 +25,7 @@ export class CheckoutComponent implements OnInit {
     defaultImage = 'https://longsshotokan.com/wp-content/uploads/2017/04/default-image-620x600.jpg';
     order: Order = new Order();
     locations: Location[];
+    buttonPressed = false;
 
     constructor(private cartService: CartService,
                 private markerService: MarkerService,
@@ -40,7 +41,8 @@ export class CheckoutComponent implements OnInit {
     }
 
     sendOrder() {
-        if (this.fieldsAreFilled()) {
+        if (this.fieldsAreFilled() && !this.buttonPressed) {
+            this.buttonPressed = true;
             this.orderService.sendOrder(this.order).subscribe(() => {
                 this.cartService.clearProducts();
                 this.router.navigate(['/homepage']);
@@ -53,21 +55,22 @@ export class CheckoutComponent implements OnInit {
             && this.order.phoneNumber !== ''
             && this.order.location !== null
             && this.order.price !== 0
-            && this.order.orderProducts.length !== 0;
+            && this.order.orderProducts.length !== 0
+            && this.order.email.match("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$") !== null
+            && this.order.phoneNumber.length === 8 && this.order.phoneNumber.match("\\b5\\d{7}(?:\\D|$)") !== null;
     }
 
     controlEmail() {
         if (this.order.email === '') { return 'Insert email!'; }
+        if (this.order.email.match("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$") === null) {return 'Incorrect email!'}
     }
 
     controlPhoneNumber() {
         if (this.order.phoneNumber === '') { return 'Insert phone number!'; }
+        if (this.order.phoneNumber.length !== 8 || this.order.phoneNumber.match("\\b5\\d{7}(?:\\D|$)") === null) {return 'Incorrect phone number!'};
     }
 
     controlLocation() {
         if (this.order.location === null) { return 'Choose pick-up location!'; }
     }
-
-
-
 }
