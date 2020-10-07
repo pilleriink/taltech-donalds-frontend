@@ -35,7 +35,7 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
-<mat-card class="footer">Total: {{cartService.cart.price}}€</mat-card>
+<mat-card class="footer">Total: {{cartService.cart.price.toPrecision(3)}}€</mat-card>
 
 <div class="card-div mb-3 col-lg-6 col-sm-6">
     <div class="checkout col-md-6">
@@ -66,7 +66,7 @@
 
     </div>
     <div class="checkout col-md-6">
-        <button class="proceed" mat-raised-button color="primary" (click)="sendOrder()">Place an order</button>
+        <button class="proceed" [disabled]="buttonPressed" mat-raised-button color="primary" (click)="sendOrder()">Place an order</button>
     </div>
 </div>
 

@@ -56,8 +56,7 @@ export class CheckoutComponent implements OnInit {
             && this.order.location !== null
             && this.order.price !== 0
             && this.order.orderProducts.length !== 0
-            && this.order.email.match("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$") !== null
-            && this.order.phoneNumber.length === 8 && this.order.phoneNumber.match("\\b5\\d{7}(?:\\D|$)") !== null;
+            && this.order.email.match("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$") !== null;
     }
 
     controlEmail() {
@@ -67,7 +66,6 @@ export class CheckoutComponent implements OnInit {
 
     controlPhoneNumber() {
         if (this.order.phoneNumber === '') { return 'Insert phone number!'; }
-        if (this.order.phoneNumber.length !== 8 || this.order.phoneNumber.match("\\b5\\d{7}(?:\\D|$)") === null) {return 'Incorrect phone number!'};
     }
 
     controlLocation() {

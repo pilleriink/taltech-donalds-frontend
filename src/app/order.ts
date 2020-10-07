@@ -14,7 +14,6 @@ export class OrderProduct {
     constructor(name: string, price: number, removedIngredients: string) {
         this.name = name;
         this.price = price;
-        this.price.toPrecision(3);
         this.removedIngredients = removedIngredients;
     }
 }
