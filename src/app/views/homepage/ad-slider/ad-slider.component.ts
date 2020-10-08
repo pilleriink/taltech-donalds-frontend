@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute, ParamMap} from '@angular/router';
 import {Advertisement} from '../../../advertisement';
 
 @Component({
@@ -10,6 +11,10 @@ export class AdSliderComponent implements OnInit {
 
   // TODO: Get ads from API
 
+  adId;
+  ad:Advertisement;
+
+  // OLD
   ad2: Advertisement = {
     image: '/assets/ttd2.jpg',
     link: 'https://gmail.com/',
@@ -35,9 +40,17 @@ export class AdSliderComponent implements OnInit {
   ];
 
   adsLoop: Advertisement[] = this.ads.slice(1, this.ads.length);
-  constructor() { }
+
+  constructor(private route: ActivatedRoute, private advertisementService: AdvertisementService) { }
 
   ngOnInit() {
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      this.adId = params.get('id');
+      this.getAdvertisement;
+    });
   }
 
+  getAdvertisement() {
+    this.advertisementService.find
+  }
 }
