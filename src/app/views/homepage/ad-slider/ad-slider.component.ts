@@ -12,7 +12,8 @@ export class AdSliderComponent implements OnInit {
 
   // TODO: Get ads from API
 
-  ads: Advertisement[];
+  ads: Advertisement[] = [];
+  data = '';
 
   // OLD
   // ad2: Advertisement = {
@@ -44,12 +45,13 @@ export class AdSliderComponent implements OnInit {
   constructor(private route: ActivatedRoute, private adService: AdvertisementService) { }
 
   ngOnInit() {
-    this.route.paramMap.subscribe((params: ParamMap) =>  {
-      this.ads = this.adService.getAds().subscribe(
-          data => {
-            this.ads = data;
-          }
-      );
-    });
+    this.adService.getAds().subscribe(
+        data => {
+          this.ads = data;
+          this.data = data.toString();
+        }
+    );
+    console.log(this.ads);
+    console.log('DATA: ' + this.data);
   }
 }
