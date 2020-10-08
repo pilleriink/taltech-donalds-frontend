@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CartService} from '../../cart.service';
+import {Ingredient} from '../../ingredient';
+import {Product} from '../../product';
 
 @Component({
   selector: 'app-cart',
@@ -9,12 +11,12 @@ import {CartService} from '../../cart.service';
 export class CartComponent implements OnInit {
   defaultImage = 'https://longsshotokan.com/wp-content/uploads/2017/04/default-image-620x600.jpg';
 
+  constructor(private cartService: CartService) {}
 
-  constructor(private cartService: CartService) {
+  ngOnInit() {}
 
-  }
-
-  ngOnInit() {
+  save() {
+    sessionStorage.setItem('cart', JSON.stringify(this.cartService.cart));
   }
 
 }

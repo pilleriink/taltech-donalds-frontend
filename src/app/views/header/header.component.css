@@ -6,6 +6,10 @@
   margin-bottom: 10px;
 }
 
+.navbar-brand {
+  font-size: 25px;
+}
+
 .navbar {
   background-color: #3F51B5;
 }

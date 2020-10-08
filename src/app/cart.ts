@@ -1,11 +1,10 @@
-import {Product} from "./product";
-
-export class CartProduct {
-  product: Product;
-  quantity: number;
-}
+import {Product} from './product';
 
 export class Cart {
-  products?: CartProduct[] = [];
-  price: number = 0;
+  products?: Product[] = [];
+  price = 0;
+
+  constructor() {
+    this.price.toPrecision(3);
+  }
 }

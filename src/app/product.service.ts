@@ -5,6 +5,7 @@ import {Observable, of} from "rxjs";
 import {catchError, tap} from "rxjs/operators";
 import {Product} from "./product";
 import {environment} from "../environments/environment";
+import {Comment} from './comment';
 
 @Injectable({ providedIn: 'root' })
 export class ProductService {
@@ -16,17 +17,24 @@ export class ProductService {
   };
 
   constructor(
-    private http: HttpClient,
-    private messageService: MessageService) { }
+      private http: HttpClient,
+      private messageService: MessageService) { }
 
   getProductById(id: number): Observable<Product> {
     const url = `${environment.apiUrl}${this.productsUrl}/${id}`;
     return this.http.get<Product>(url).pipe(
-      tap(_ => this.log(`fetched product id=${id}`)),
-      catchError(this.handleError<Product>(`getProduct id=${id}`))
+        tap(_ => this.log(`fetched product id=${id}`)),
+        catchError(this.handleError<Product>(`getProduct id=${id}`))
     );
   }
 
+  addComment(productId, comment: Comment): Observable<Comment> {
+    const url = `${environment.apiUrl}${this.productsUrl}/${productId}/comments`;
+    return this.http.post<Comment>(url, comment)
+        .pipe(
+            catchError(this.handleError('addComment', comment))
+        );
+  }
   /**
    * Handle Http operation that failed.
    * Let the app continue.

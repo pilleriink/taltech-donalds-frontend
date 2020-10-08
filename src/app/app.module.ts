@@ -15,6 +15,23 @@ import {HttpClientModule} from '@angular/common/http';
 import { MarkerService } from './marker.service';
 import { AdSliderComponent } from './views/homepage/ad-slider/ad-slider.component';
 import { CardsComponent } from './views/homepage/cards/cards.component';
+import { CheckoutComponent } from './views/checkout/checkout.component';
+import {HttpClientModule} from '@angular/common/http';
+import { MarkerService } from './marker.service';
+import { PopUpService } from './pop-up.service';
+import {FormsModule} from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {
+    MatBadgeModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule, MatFormFieldModule,
+    MatIconModule, MatInputModule, MatSelectModule, MatTableModule,
+    MatTabsModule
+} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -27,21 +44,27 @@ import { CardsComponent } from './views/homepage/cards/cards.component';
     ProductComponent,
     AdSliderComponent,
     CardsComponent,
+    ProductComponent,
+    CheckoutComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MatCardModule,
-    MatButtonModule,
-    MatIconModule,
-    MatBadgeModule,
-    MatButtonToggleModule,
-    MatTabsModule,
-    MatCheckboxModule,
-    FormsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MatCardModule,
+        MatButtonModule,
+        MatIconModule,
+        MatBadgeModule,
+        MatButtonToggleModule,
+        MatTabsModule,
+        MatCheckboxModule,
+        FormsModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        MatInputModule,
+        MatTableModule,
+    ],
   providers: [
     MarkerService
   ],
