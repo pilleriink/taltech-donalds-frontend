@@ -24,6 +24,8 @@ import {
     MatIconModule, MatInputModule, MatSelectModule, MatTableModule,
     MatTabsModule
 } from '@angular/material';
+import { MealsComponent } from './views/meals/meals.component';
+import { MealComponent } from './views/meals/meal/meal.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import {
     CartComponent,
     CategoryComponent,
     ProductComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    MealsComponent,
+    MealComponent
   ],
     imports: [
         BrowserModule,

@@ -1,0 +1,36 @@
+<h1>Meals</h1>
+<div class="container">
+    <div *ngIf="meals" class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let meal of meals">
+            <mat-card class="example-card card">
+                <mat-card-header>
+                    <mat-card-title>{{meal.name}}</mat-card-title>
+                    <mat-card-subtitle></mat-card-subtitle>
+                </mat-card-header>
+                <div class="image-div">
+                    <img routerLink="/products/{{meal.id}}" mat-card-image [src]="meal.image ? meal.image : defaultImage" alt="{{meal.name}}">
+                </div>
+                <mat-card-content>
+                    <p>
+                        {{meal.description}}
+                    </p>
+                    <p class="price">
+                        Price: {{meal.price | currency:"€"}}
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <div class="example-flex-container">
+                        <div class="example-button-container">
+                            <button  mat-fab color="accent" aria-label="Add to cart">
+                                <mat-icon>add_shopping_cart</mat-icon>
+                            </button>
+                            <button class="info-button" routerLink="/meals/{{meal.id}}" mat-fab color="primary" aria-label="Add to cart">
+                                <mat-icon>info</mat-icon>
+                            </button>
+                        </div>
+                    </div>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>

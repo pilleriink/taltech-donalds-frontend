@@ -12,7 +12,7 @@
       <div class="card-body">
         <h5 class="card-title">{{cartProduct.name}}</h5>
         <p class="card-text">{{cartProduct.description}}</p>
-        <p class="card-text">{{cartProduct.price}}</p>
+        <p class="card-text">{{cartProduct.price | currency:"€"}}</p>
       </div>
       <mat-card-actions>
         <div class="example-flex-container">
