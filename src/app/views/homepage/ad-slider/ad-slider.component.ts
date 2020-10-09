@@ -24,10 +24,12 @@ export class AdSliderComponent implements OnInit {
           this.ads = data;
           this.data = data.toString();
           this.bigAds = this.getBigAds();
+            console.log(this.ads);
+            console.log('DATA: ' + this.data);
+            console.log(data);
+            console.log(this.bigAds);
         }
     );
-    console.log(this.ads);
-    console.log('DATA: ' + this.data);
   }
 
     private getBigAds() {
