@@ -40,7 +40,6 @@ export class AdSliderComponent implements OnInit {
   //   this.ad4
   // ];
   //
-  // adsLoop: Advertisement[] = this.ads.slice(1, this.ads.length);
 
   constructor(private route: ActivatedRoute, private adService: AdvertisementService) { }
 

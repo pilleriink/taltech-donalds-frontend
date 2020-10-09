@@ -4,7 +4,7 @@ import {MessageService} from "./message.service";
 import {Observable, of} from "rxjs";
 import {catchError, tap} from "rxjs/operators";
 import {Advertisement} from './advertisement';
-import {environment} from "../environments/environment";
+import {environment} from '../environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class AdvertisementService {
