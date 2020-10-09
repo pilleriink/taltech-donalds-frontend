@@ -10,7 +10,6 @@ import {AdvertisementService} from '../../../advertisement.service';
 })
 export class AdSliderComponent implements OnInit {
 
-  // TODO: Get ads from API
 
   ads: Advertisement[] = [];
   bigAds: Advertisement[] = [];
