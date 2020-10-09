@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Cart} from './cart';
-import {Ingredient} from './ingredient';
 import {Product} from './product';
+import {Meal} from './meal';
 
 @Injectable({
   providedIn: 'root'
@@ -26,8 +26,22 @@ export class CartService {
     this.getAndSetCart();
   }
 
+  addMeal(meal: Meal) {
+    this.cart.meals.push(meal);
+    this.calculatePrice();
+    sessionStorage.setItem('cart', JSON.stringify(this.cart));
+    this.getAndSetCart();
+  }
+
   removeProduct(i) {
     this.cart.products.splice(i, 1);
+    this.calculatePrice();
+    sessionStorage.setItem('cart', JSON.stringify(this.cart));
+    this.getAndSetCart();
+  }
+
+  removeMeal(j) {
+    this.cart.meals.splice(j, 1);
     this.calculatePrice();
     sessionStorage.setItem('cart', JSON.stringify(this.cart));
     this.getAndSetCart();
@@ -44,7 +58,9 @@ export class CartService {
       this.cart.products.forEach(cartProduct => {
         this.cart.price += cartProduct.price;
       });
+      this.cart.meals.forEach(cartMeal => {
+        this.cart.price += cartMeal.price;
+      })
     }
   }
-
 }

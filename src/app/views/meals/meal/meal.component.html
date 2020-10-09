@@ -11,6 +11,10 @@
         <p>
             {{meal.description}}
         </p>
+        <p>Products:</p>
+        <div *ngFor="let product of meal.products">
+            <p>{{product.name}}</p>
+        </div>
         <p class="price">
             Price: {{meal.price | currency:"€"}}€
         </p>
@@ -19,7 +23,7 @@
     <mat-card-actions>
         <div class="example-flex-container">
             <div class="example-button-container">
-                <button  mat-fab color="accent" aria-label="Add to cart">
+                <button  (click)="cartService.addMeal(meal)" mat-fab color="accent" aria-label="Add to cart">
                     <mat-icon>add_shopping_cart</mat-icon>
                 </button>
             </div>

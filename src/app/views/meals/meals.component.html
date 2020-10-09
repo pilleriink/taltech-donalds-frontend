@@ -21,7 +21,7 @@
                 <mat-card-actions>
                     <div class="example-flex-container">
                         <div class="example-button-container">
-                            <button  mat-fab color="accent" aria-label="Add to cart">
+                            <button (click)="cartService.addMeal(meal)" mat-fab color="accent" aria-label="Add to cart">
                                 <mat-icon>add_shopping_cart</mat-icon>
                             </button>
                             <button class="info-button" routerLink="/meals/{{meal.id}}" mat-fab color="primary" aria-label="Add to cart">
