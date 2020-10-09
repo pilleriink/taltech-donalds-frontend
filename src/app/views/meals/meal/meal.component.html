@@ -1,0 +1,32 @@
+<mat-card *ngIf="meal" class="example-card col-sm-12 col-md-6 col-lg-4">
+
+    <mat-card-header>
+        <mat-card-title>{{meal.name}}</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+    </mat-card-header>
+
+    <img mat-card-image [src]="meal.image ? meal.image : defaultImage" alt="{{meal.name}}">
+
+    <mat-card-content>
+        <p>
+            {{meal.description}}
+        </p>
+        <p>Products:</p>
+        <div *ngFor="let product of meal.products">
+            <p>{{product.name}}</p>
+        </div>
+        <p class="price">
+            Price: {{meal.price | currency:"€"}}€
+        </p>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <div class="example-flex-container">
+            <div class="example-button-container">
+                <button  (click)="cartService.addMeal(meal)" mat-fab color="accent" aria-label="Add to cart">
+                    <mat-icon>add_shopping_cart</mat-icon>
+                </button>
+            </div>
+        </div>
+    </mat-card-actions>
+</mat-card>

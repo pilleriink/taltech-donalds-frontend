@@ -1,41 +1,83 @@
-<table mat-table [dataSource]="cartService.cart.products" class="mat-elevation-z8">
+<div *ngIf="cartService.cart.products.length > 0">
 
-    <ng-container matColumnDef="position">
-        <th class="header" mat-header-cell *matHeaderCellDef> No. </th>
-        <td mat-cell *matCellDef="let i=index"> {{i + 1}} </td>
-    </ng-container>
+    <h3>Products</h3>
+    <table mat-table [dataSource]="cartService.cart.products" class="mat-elevation-z8">
+        <ng-container matColumnDef="position">
+            <th class="header" mat-header-cell *matHeaderCellDef> No. </th>
+            <td mat-cell *matCellDef="let i=index"> {{i + 1}} </td>
+        </ng-container>
+        <ng-container matColumnDef="image">
+            <th mat-header-cell *matHeaderCellDef> Image </th>
+            <td mat-cell *matCellDef="let cartProduct">
+                <div class="image-div">
+                    <img class="image" mat-card-image [src]="cartProduct.image ? cartProduct.image : defaultImage" alt="{{cartProduct.name}}">
+                </div>
+            </td>
+        </ng-container>
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let cartProduct"> {{cartProduct.name}} </td>
+        </ng-container>
+        <ng-container matColumnDef="removedIngredients">
+            <th mat-header-cell *matHeaderCellDef> Removed ingredients </th>
+            <td mat-cell *matCellDef="let cartProduct">
+                <div *ngFor="let ingredient of cartProduct.removableIngredients">
+                    <p *ngIf="ingredient.removed == true">{{ingredient.name}}</p>
+                </div>
+            </td>
+        </ng-container>
+        <ng-container matColumnDef="price">
+            <th mat-header-cell *matHeaderCellDef> Price </th>
+            <td mat-cell *matCellDef="let cartProduct"> {{cartProduct.price | currency:"€"}} </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
 
-    <ng-container matColumnDef="image">
-        <th mat-header-cell *matHeaderCellDef> Image </th>
-        <td mat-cell *matCellDef="let cartProduct">
-            <div class="image-div">
-                <img class="image" mat-card-image [src]="cartProduct.image ? cartProduct.image : defaultImage" alt="{{cartProduct.name}}">
-            </div>
-        </td>
-    </ng-container>
+</div>
 
-    <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef> Name </th>
-        <td mat-cell *matCellDef="let cartProduct"> {{cartProduct.name}} </td>
-    </ng-container>
+<div *ngIf="cartService.cart.meals.length > 0">
 
-    <ng-container matColumnDef="removedIngredients">
-        <th mat-header-cell *matHeaderCellDef> Removed ingredients </th>
-        <td mat-cell *matCellDef="let cartProduct">
-            <div *ngFor="let ingredient of cartProduct.removableIngredients">
-                <p *ngIf="ingredient.removed == true">{{ingredient.name}}</p>
-            </div>
-        </td>
-    </ng-container>
+    <h3>Meals</h3>
+    <table mat-table [dataSource]="cartService.cart.meals" class="mat-elevation-z8">
+        <ng-container matColumnDef="position">
+            <th class="header" mat-header-cell *matHeaderCellDef> No. </th>
+            <td mat-cell *matCellDef="let i=index"> {{i + 1}} </td>
+        </ng-container>
+        <ng-container matColumnDef="image">
+            <th mat-header-cell *matHeaderCellDef> Image </th>
+            <td mat-cell *matCellDef="let cartMeal">
+                <div class="image-div">
+                    <img class="image" mat-card-image [src]="cartMeal.image ? cartMeal.image : defaultImage" alt="{{cartMeal.name}}">
+                </div>
+            </td>
+        </ng-container>
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let cartMeal"> {{cartMeal.name}} </td>
+        </ng-container>
+        <ng-container matColumnDef="removedIngredients">
+            <th mat-header-cell *matHeaderCellDef> Removed ingredients </th>
+            <td mat-cell *matCellDef="let cartMeal">
+                <div *ngFor="let product of cartMeal.products">
+                    <div *ngFor="let ingredient of product.removableIngredients">
+                        <p *ngIf="ingredient.removed == true">{{product.name}}: {{ingredient.name}}</p>
+                    </div>
+                </div>
+            </td>
+        </ng-container>
+        <ng-container matColumnDef="price">
+            <th mat-header-cell *matHeaderCellDef> Price </th>
+            <td mat-cell *matCellDef="let cartMeal"> {{cartMeal.price | currency:"€"}} </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
 
-    <ng-container matColumnDef="price">
-        <th mat-header-cell *matHeaderCellDef> Price </th>
-        <td mat-cell *matCellDef="let cartProduct"> {{cartProduct.price}} </td>
-    </ng-container>
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
-<mat-card class="footer">Total: {{cartService.cart.price.toPrecision(3)}}€</mat-card>
+</div>
+<div>
+    <mat-card class="footer">Total: {{cartService.cart.price | currency:"€"}}</mat-card>
+</div>
 
 <div class="card-div mb-3 col-lg-6 col-sm-6">
     <div class="checkout col-md-6">
@@ -45,13 +87,6 @@
                 <mat-label >Email</mat-label>
                 <input matInput name="email" [(ngModel)]="order.email" required>
                 <p class="error-msg">{{controlEmail()}}</p>
-            </mat-form-field>
-            <br>
-
-            <mat-form-field appearance="fill" class="form">
-                <mat-label>Phone number</mat-label>
-                <input matInput name="phoneNumber" [(ngModel)]="order.phoneNumber" required>
-                <p class="error-msg">{{controlPhoneNumber()}}</p>
             </mat-form-field>
             <br>
 

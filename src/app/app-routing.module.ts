@@ -6,6 +6,8 @@ import {CategoryComponent} from './views/category/category.component';
 import {ProductComponent} from './views/product/product.component';
 import {LocationsComponent} from './views/locations/locations.component';
 import {CheckoutComponent} from './views/checkout/checkout.component';
+import {MealsComponent} from './views/meals/meals.component';
+import {MealComponent} from './views/meals/meal/meal.component';
 
 
 const routes: Routes = [
@@ -15,6 +17,8 @@ const routes: Routes = [
   { path: 'categories/:id', component: CategoryComponent },
   { path: 'products/:id', component: ProductComponent },
   { path: 'locations', component: LocationsComponent },
+  { path: 'meals', component: MealsComponent},
+  { path: 'meals/:id', component: MealComponent},
   { path: 'checkout', component: CheckoutComponent }];
 
 @NgModule({

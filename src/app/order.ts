@@ -1,9 +1,9 @@
 export class Order {
     email = '';
-    phoneNumber = '';
     price = 0;
     location = null;
     orderProducts: OrderProduct[] = [];
+    orderMeals: OrderMeal[] = [];
 }
 
 export class OrderProduct {
@@ -15,5 +15,17 @@ export class OrderProduct {
         this.name = name;
         this.price = price;
         this.removedIngredients = removedIngredients;
+    }
+}
+
+export class OrderMeal {
+    private name: string;
+    private price: number;
+    private products: OrderProduct[] = [];
+
+    constructor(name: string, price: number, products: OrderProduct[]) {
+        this.name = name;
+        this.price = price;
+        this.products = products;
     }
 }

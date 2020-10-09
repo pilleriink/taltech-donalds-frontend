@@ -1,11 +1,13 @@
 import {Component, OnInit} from '@angular/core';
 import {CartService} from '../../cart.service';
 import {Ingredient} from '../../ingredient';
-import {Order, OrderProduct} from '../../order';
+import {Order, OrderMeal, OrderProduct} from '../../order';
 import {MarkerService} from '../../marker.service';
 import {Location} from '../../location';
 import {OrderService} from '../../order.service';
 import {Router} from '@angular/router';
+import {Meal} from '../../meal';
+import {Product} from '../../product';
 
 export interface PeriodicElement {
     name: string;
@@ -26,6 +28,7 @@ export class CheckoutComponent implements OnInit {
     order: Order = new Order();
     locations: Location[];
     buttonPressed = false;
+    mealProducts: OrderProduct[];
 
     constructor(private cartService: CartService,
                 private markerService: MarkerService,
@@ -37,6 +40,13 @@ export class CheckoutComponent implements OnInit {
         this.order.price = this.cartService.cart.price;
         for (const product of this.cartService.cart.products) {
             this.order.orderProducts.push(new OrderProduct(product.name, product.price, product.removableIngredients.filter(y => y.removed).map(x => x.name).join(", ")));
+        }
+        for (const meal of this.cartService.cart.meals) {
+            this.mealProducts = [];
+            for (const mealProduct of meal.products) {
+                this.mealProducts.push(new OrderProduct(mealProduct.name, mealProduct.price, mealProduct.removableIngredients.filter(y => y.removed).map(x => x.name).join(", ")));
+            }
+            this.order.orderMeals.push(new OrderMeal(meal.name, meal.price, this.mealProducts))
         }
     }
 
@@ -52,20 +62,14 @@ export class CheckoutComponent implements OnInit {
 
     fieldsAreFilled() {
         return this.order.email !== ''
-            && this.order.phoneNumber !== ''
             && this.order.location !== null
             && this.order.price !== 0
-            && this.order.orderProducts.length !== 0
             && this.order.email.match("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$") !== null;
     }
 
     controlEmail() {
         if (this.order.email === '') { return 'Insert email!'; }
         if (this.order.email.match("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$") === null) {return 'Incorrect email!'}
-    }
-
-    controlPhoneNumber() {
-        if (this.order.phoneNumber === '') { return 'Insert phone number!'; }
     }
 
     controlLocation() {
