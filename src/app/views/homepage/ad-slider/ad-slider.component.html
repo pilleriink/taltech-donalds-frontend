@@ -2,10 +2,11 @@
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <!--        TODO: make it dynamically create links-->
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li *ngFor="let ad of bigAds; index as i"
+            data-target="#myCarousel"
+            [class.active]="ad === bigAds[0]">
+            data-slide-to="{{i}}"
+        </li>
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
