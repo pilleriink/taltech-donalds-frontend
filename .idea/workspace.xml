@@ -3,16 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e7882603-7932-41fe-aa26-4bbf608cd699" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/cart.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cart.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/cart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cart.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/order.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/order.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/views/cart/cart.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/cart/cart.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/views/checkout/checkout.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/checkout/checkout.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/views/checkout/checkout.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/checkout/checkout.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/views/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/views/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/header/header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/views/meals/meal/meal.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/meals/meal/meal.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/views/meals/meals.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/meals/meals.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +92,7 @@
       <workItem from="1600949124401" duration="54953000" />
       <workItem from="1601879013490" duration="666000" />
       <workItem from="1601879905931" duration="12998000" />
-      <workItem from="1601975259784" duration="24849000" />
+      <workItem from="1601975259784" duration="25852000" />
     </task>
     <task id="LOCAL-00001" summary="merged develop into master">
       <created>1600949728940</created>
@@ -208,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602165663242</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="changed checkout meal table">
+      <created>1602259456721</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1602259456721</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,14 +249,15 @@
     <MESSAGE value="added sending order confirmation email" />
     <MESSAGE value="added email and phone number validation" />
     <MESSAGE value="added order meal" />
-    <option name="LAST_COMMIT_MESSAGE" value="added order meal" />
+    <MESSAGE value="changed checkout meal table" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed checkout meal table" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="502" y="29" key="CommitChangelistDialog2" timestamp="1602165662617">
+    <state x="502" y="29" key="CommitChangelistDialog2" timestamp="1602259455622">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="502" y="29" key="CommitChangelistDialog2/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1602165662617" />
-    <state x="502" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1601992533695" />
+    <state x="502" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1602259455622" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1601276546022">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -267,54 +266,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601882764569" />
-    <state width="1877" height="125" key="GridCell.Tab.0.bottom" timestamp="1602258873279">
+    <state width="1877" height="465" key="GridCell.Tab.0.bottom" timestamp="1602259682283">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1602163397172" />
-    <state width="1877" height="125" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602258873279" />
-    <state width="1877" height="125" key="GridCell.Tab.0.center" timestamp="1602258873279">
+    <state width="1877" height="465" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602259682283" />
+    <state width="1877" height="465" key="GridCell.Tab.0.center" timestamp="1602259682283">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="283" key="GridCell.Tab.0.center/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1602163397172" />
-    <state width="1877" height="125" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602258873279" />
-    <state width="1877" height="125" key="GridCell.Tab.0.left" timestamp="1602258873279">
+    <state width="1877" height="465" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602259682283" />
+    <state width="1877" height="465" key="GridCell.Tab.0.left" timestamp="1602259682283">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="283" key="GridCell.Tab.0.left/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1602163397172" />
-    <state width="1877" height="125" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602258873279" />
-    <state width="1877" height="125" key="GridCell.Tab.0.right" timestamp="1602258873279">
+    <state width="1877" height="465" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602259682283" />
+    <state width="1877" height="465" key="GridCell.Tab.0.right" timestamp="1602259682283">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="283" key="GridCell.Tab.0.right/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1602163397172" />
-    <state width="1877" height="125" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602258873279" />
-    <state x="184" y="92" key="MergeDialog" timestamp="1601276132773">
+    <state width="1877" height="465" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602259682283" />
+    <state x="184" y="92" key="MergeDialog" timestamp="1602259623396">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="184" y="92" key="MergeDialog/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1600949629383" />
-    <state x="184" y="92" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601276132773" />
-    <state x="664" y="228" key="MultipleFileMergeDialog" timestamp="1601555311397">
+    <state x="184" y="92" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602259623396" />
+    <state x="664" y="228" key="MultipleFileMergeDialog" timestamp="1602260211259">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="664" y="228" key="MultipleFileMergeDialog/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1600949629403" />
-    <state x="664" y="228" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601555311397" />
+    <state x="664" y="228" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602260211259" />
     <state x="620" y="139" key="NewModule_or_Project.wizard" timestamp="1601882692158">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="620" y="139" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1601882692158" />
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1602165664758">
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1602259459702">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1602165664758" />
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601992537158" />
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602259459702" />
     <state x="636" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1601975303274">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="636" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1601975303274" />
-    <state x="767" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601879908678">
+    <state x="767" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602260198869">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="767" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1600949707078" />
-    <state x="767" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601879908678" />
+    <state x="767" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602260198869" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601275419568">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

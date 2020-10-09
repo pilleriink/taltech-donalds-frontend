@@ -1,8 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {FormsModule}   from '@angular/forms';
-import {MatButtonModule, MatIconModule, MatBadgeModule, MatButtonToggleModule, MatTabsModule, MatCardModule, MatCheckboxModule} from '@angular/material'; 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './views/header/header.component';
@@ -12,9 +8,6 @@ import { CartComponent } from './views/cart/cart.component';
 import { CategoryComponent } from './views/category/category.component';
 import { ProductComponent } from './views/product/product.component';
 import { CheckoutComponent } from './views/checkout/checkout.component';
-import {HttpClientModule} from '@angular/common/http';
-import { MarkerService } from './marker.service';
-import { PopUpService } from './pop-up.service';
 import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {BrowserModule} from '@angular/platform-browser';
