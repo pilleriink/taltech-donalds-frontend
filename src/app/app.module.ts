@@ -1,4 +1,8 @@
-
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {FormsModule}   from '@angular/forms';
+import {MatButtonModule, MatIconModule, MatBadgeModule, MatButtonToggleModule, MatTabsModule, MatCardModule, MatCheckboxModule} from '@angular/material'; 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './views/header/header.component';
@@ -26,6 +30,10 @@ import {
 } from '@angular/material';
 import { MealsComponent } from './views/meals/meals.component';
 import { MealComponent } from './views/meals/meal/meal.component';
+import {HttpClientModule} from '@angular/common/http';
+import { MarkerService } from './marker.service';
+import { AdSliderComponent } from './views/homepage/ad-slider/ad-slider.component';
+import { CardsComponent } from './views/homepage/cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +43,9 @@ import { MealComponent } from './views/meals/meal/meal.component';
     LocationsComponent,
     CartComponent,
     CategoryComponent,
+    ProductComponent,
+    AdSliderComponent,
+    CardsComponent,
     ProductComponent,
     CheckoutComponent,
     MealsComponent,
