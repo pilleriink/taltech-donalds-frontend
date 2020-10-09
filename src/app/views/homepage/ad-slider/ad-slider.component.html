@@ -2,20 +2,21 @@
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <!--        TODO: make it dynamically create links-->
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li *ngFor="let ad of bigAds; index as i"
+            data-target="#myCarousel"
+            [class.active]="ad === bigAds[0]">
+            data-slide-to="{{i}}"
+        </li>
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <a href="{{ads[0].link}}">
-                <img src="{{ads[0].image}}" alt="{{ads[0].alt}}" width="100%" height="100%">
+            <a href="{{bigAds[0].link}}">
+                <img src="{{bigAds[0].image}}" alt="{{bigAds[0].alt}}" width="100%" height="100%">
             </a>
             <div class="container">
             </div>
         </div>
-        <div class="carousel-item" *ngFor="let ad of adsLoop">
+        <div class="carousel-item" *ngFor="let ad of  bigAds.slice(1)">
             <a href="{{ad.link}}">
                 <img src="{{ad.image}}" alt="{{ad.alt}}" width="100%" height="100%">
             </a>
