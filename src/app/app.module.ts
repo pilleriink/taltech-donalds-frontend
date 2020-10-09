@@ -1,4 +1,3 @@
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './views/header/header.component';
@@ -7,6 +6,8 @@ import { LocationsComponent } from './views/locations/locations.component';
 import { CartComponent } from './views/cart/cart.component';
 import { CategoryComponent } from './views/category/category.component';
 import { ProductComponent } from './views/product/product.component';
+import { AdSliderComponent } from './views/homepage/ad-slider/ad-slider.component';
+import { CardsComponent } from './views/homepage/cards/cards.component';
 import { CheckoutComponent } from './views/checkout/checkout.component';
 import {HttpClientModule} from '@angular/common/http';
 import { MarkerService } from './marker.service';
@@ -36,9 +37,10 @@ import { MealComponent } from './views/meals/meal/meal.component';
     CartComponent,
     CategoryComponent,
     ProductComponent,
-    CheckoutComponent,
-    MealsComponent,
-    MealComponent
+    AdSliderComponent,
+    CardsComponent,
+    ProductComponent,
+    CheckoutComponent
   ],
     imports: [
         BrowserModule,
