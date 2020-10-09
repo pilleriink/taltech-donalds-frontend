@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, ParamMap} from '@angular/router';
+import {ActivatedRoute} from '@angular/router';
 import {Advertisement} from '../../../advertisement';
 import {AdvertisementService} from '../../../advertisement.service';
 
@@ -13,33 +13,9 @@ export class AdSliderComponent implements OnInit {
   // TODO: Get ads from API
 
   ads: Advertisement[] = [];
+  bigAds: Advertisement[] = [];
   data = '';
 
-  // OLD
-  // ad2: Advertisement = {
-  //   image: '/assets/ttd2.jpg',
-  //   link: 'https://gmail.com/',
-  //   alt: 'ad2'
-  // };
-  //
-  // ad3: Advertisement = {
-  //   image: '/assets/ttd3.jpg',
-  //   link: 'https://www.postimees.ee',
-  //   alt: 'ad3'
-  // };
-  //
-  // ad4: Advertisement = {
-  //   image: '/assets/ttd4.jpg',
-  //   link: 'https://www.facebook.com',
-  //   alt: 'ad4'
-  // };
-  //
-  // ads: Advertisement[] = [
-  //   this.ad2,
-  //   this.ad3,
-  //   this.ad4
-  // ];
-  //
 
   constructor(private route: ActivatedRoute, private adService: AdvertisementService) { }
 
@@ -48,9 +24,18 @@ export class AdSliderComponent implements OnInit {
         data => {
           this.ads = data;
           this.data = data.toString();
+          this.bigAds = this.getBigAds();
         }
     );
     console.log(this.ads);
     console.log('DATA: ' + this.data);
   }
+
+    private getBigAds() {
+        function isBigAd(ad) {
+            return (ad.alt.includes('big'));
+        }
+
+        return this.ads.filter(isBigAd);
+    }
 }
