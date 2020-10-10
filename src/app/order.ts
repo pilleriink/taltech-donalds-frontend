@@ -21,11 +21,11 @@ export class OrderProduct {
 export class OrderMeal {
     private name: string;
     private price: number;
-    private products: OrderProduct[] = [];
+    private orderProducts: OrderProduct[] = [];
 
     constructor(name: string, price: number, products: OrderProduct[]) {
         this.name = name;
         this.price = price;
-        this.products = products;
+        this.orderProducts = products;
     }
 }

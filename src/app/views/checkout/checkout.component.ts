@@ -52,6 +52,7 @@ export class CheckoutComponent implements OnInit {
 
     sendOrder() {
         if (this.fieldsAreFilled() && !this.buttonPressed) {
+            console.log(this.order);
             this.buttonPressed = true;
             this.orderService.sendOrder(this.order).subscribe(() => {
                 this.cartService.clearProducts();

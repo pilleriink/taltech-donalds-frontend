@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e7882603-7932-41fe-aa26-4bbf608cd699" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/views/homepage/ad-slider/ad-slider.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/homepage/ad-slider/ad-slider.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/views/homepage/ad-slider/ad-slider.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/homepage/ad-slider/ad-slider.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/meal.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/meal.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/order.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/order.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/cart/cart.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/cart/cart.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/checkout/checkout.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/checkout/checkout.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/checkout/checkout.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/checkout/checkout.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +96,7 @@
       <workItem from="1600949124401" duration="54953000" />
       <workItem from="1601879013490" duration="666000" />
       <workItem from="1601879905931" duration="12998000" />
-      <workItem from="1601975259784" duration="27036000" />
+      <workItem from="1601975259784" duration="29504000" />
     </task>
     <task id="LOCAL-00001" summary="merged develop into master">
       <created>1600949728940</created>
@@ -214,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602260226617</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="changed checkout meal table">
+      <created>1602263317581</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1602263317581</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,11 +271,11 @@
     <option name="LAST_COMMIT_MESSAGE" value="changed checkout meal table" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="502" y="29" key="CommitChangelistDialog2" timestamp="1602260225880">
+    <state x="502" y="29" key="CommitChangelistDialog2" timestamp="1602263316662">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="502" y="29" key="CommitChangelistDialog2/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1602165662617" />
-    <state x="502" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1602260225880" />
+    <state x="502" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1602263316662" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1601276546022">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -274,26 +284,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601882764569" />
-    <state width="1877" height="84" key="GridCell.Tab.0.bottom" timestamp="1602262389394">
+    <state width="1877" height="84" key="GridCell.Tab.0.bottom" timestamp="1602328937646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1602163397172" />
-    <state width="1877" height="84" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602262389394" />
-    <state width="1877" height="84" key="GridCell.Tab.0.center" timestamp="1602262389393">
+    <state width="1877" height="84" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602328937646" />
+    <state width="1877" height="84" key="GridCell.Tab.0.center" timestamp="1602328937645">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="283" key="GridCell.Tab.0.center/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1602163397172" />
-    <state width="1877" height="84" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602262389393" />
-    <state width="1877" height="84" key="GridCell.Tab.0.left" timestamp="1602262389393">
+    <state width="1877" height="84" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602328937645" />
+    <state width="1877" height="84" key="GridCell.Tab.0.left" timestamp="1602328937645">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="283" key="GridCell.Tab.0.left/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1602163397172" />
-    <state width="1877" height="84" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602262389393" />
-    <state width="1877" height="84" key="GridCell.Tab.0.right" timestamp="1602262389393">
+    <state width="1877" height="84" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602328937645" />
+    <state width="1877" height="84" key="GridCell.Tab.0.right" timestamp="1602328937646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="283" key="GridCell.Tab.0.right/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1602163397172" />
-    <state width="1877" height="84" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602262389393" />
+    <state width="1877" height="84" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602328937646" />
     <state x="184" y="92" key="MergeDialog" timestamp="1602259623396">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -308,11 +318,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="620" y="139" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1601882692158" />
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1602260228966">
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1602263320216">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1602165664758" />
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602260228966" />
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602263320216" />
     <state x="636" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1601975303274">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -322,6 +332,10 @@
     </state>
     <state x="767" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.3.1920.1080@0.0.1920.1040" timestamp="1600949707078" />
     <state x="767" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602260253976" />
+    <state x="637" y="294" key="git4idea.merge.GitPullDialog" timestamp="1602263333247">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="637" y="294" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602263333247" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601275419568">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -1,5 +1,4 @@
 import {Product} from './product';
-import {Ingredient} from './ingredient';
 
 export interface Meal {
     id: number;

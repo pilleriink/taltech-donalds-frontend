@@ -14,11 +14,11 @@ table {
 }
 
 .image {
-    height: 100px;
+    height: 120px;
 }
 
 .image-div {
-    width: 120px;
+    width: 100px;
     overflow: hidden;
     margin-top: 10px;
 }
