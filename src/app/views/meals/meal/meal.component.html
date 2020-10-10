@@ -2,7 +2,7 @@
 
     <mat-card-header>
         <mat-card-title>{{meal.name}}</mat-card-title>
-        <mat-card-subtitle></mat-card-subtitle>
+        <mat-card-subtitle>Meal</mat-card-subtitle>
     </mat-card-header>
 
     <img mat-card-image [src]="meal.image ? meal.image : defaultImage" alt="{{meal.name}}">
@@ -13,7 +13,7 @@
         </p>
         <p>Products:</p>
         <div *ngFor="let product of meal.products">
-            <p>{{product.name}}</p>
+            <a routerLink="/products/{{product.id}}">{{product.name}}</a>
         </div>
         <p class="price">
             Price: {{meal.price | currency:"€"}}€

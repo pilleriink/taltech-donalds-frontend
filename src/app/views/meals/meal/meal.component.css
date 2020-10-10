@@ -6,6 +6,11 @@ p {
     font-size: 20px;
 }
 
+a {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
 .price {
     font-size: 25px;
 }

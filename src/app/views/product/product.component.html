@@ -26,9 +26,9 @@
     </div>
   </mat-card-actions>
 </mat-card>
-<mat-card class="example-card col-sm-12 col-md-6 col-lg-4" *ngIf="product?.comments.length!==0">
+<mat-card class="example-card col-sm-12 col-md-6 col-lg-4">
   <mat-card-title>Comments:</mat-card-title>
-  <mat-card-content>
+  <mat-card-content *ngIf="product?.comments">
     <p *ngFor="let comment of product?.comments">
         {{ comment.comment }}
     </p>

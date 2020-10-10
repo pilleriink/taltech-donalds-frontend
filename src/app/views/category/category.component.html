@@ -11,9 +11,6 @@
           <img routerLink="/products/{{product.id}}" mat-card-image [src]="product.image ? product.image : defaultImage" alt="{{product.name}}">
         </div>
         <mat-card-content>
-          <p>
-            {{product.description}}
-          </p>
           <p class="price">
             Price: {{product.price | currency:"€"}}
           </p>
