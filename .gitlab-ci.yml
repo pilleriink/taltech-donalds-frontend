@@ -1,0 +1,27 @@
+stages:
+  - build
+  - deploy
+
+build donald:
+  stage: build
+  image: node:12-alpine
+  cache:
+    paths:
+      - node_modules
+  artifacts:
+    paths:
+      - dist
+  tags:
+    - donald
+  script:
+    - npm install
+    - npm run build
+
+deploy donald:
+  stage: deploy
+  tags:
+    - donald
+  script:
+    - mkdir -p ~/front-deployment
+    - rm -rf ~/front-deployment/*
+    - cp -r dist/. ~/front-deployment
