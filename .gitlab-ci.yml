@@ -18,7 +18,7 @@ build donald:
     - npm run build
 
 deploy donald:
-  stage: donald
+  stage: deploy
   tags:
     - donald
   script:
