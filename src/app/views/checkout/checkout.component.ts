@@ -30,7 +30,7 @@ export class CheckoutComponent implements OnInit {
     buttonPressed = false;
     mealProducts: OrderProduct[];
 
-    constructor(private cartService: CartService,
+    constructor(public cartService: CartService,
                 private markerService: MarkerService,
                 private orderService: OrderService,
                 private router: Router) {}

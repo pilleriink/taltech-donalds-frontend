@@ -14,7 +14,7 @@ export class MealsComponent implements OnInit {
   meals: Meal[] = [];
   defaultImage = 'https://longsshotokan.com/wp-content/uploads/2017/04/default-image-620x600.jpg';
 
-  constructor(private route: ActivatedRoute, private mealService: MealService, private cartService: CartService) { }
+  constructor(private route: ActivatedRoute, private mealService: MealService, public cartService: CartService) { }
 
   ngOnInit() {
     this.mealService.getMeals().subscribe(
