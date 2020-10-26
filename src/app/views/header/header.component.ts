@@ -11,7 +11,7 @@ import {CartService} from "../../cart.service";
 export class HeaderComponent implements OnInit {
   categories: Category[] = [];
 
-  constructor(private categoryService: CategoryService, private cartService: CartService) { }
+  constructor(private categoryService: CategoryService, public cartService: CartService) { }
 
   ngOnInit() {
     this.getCategories();

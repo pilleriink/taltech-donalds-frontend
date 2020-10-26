@@ -20,7 +20,7 @@ export class ProductComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               private productService: ProductService,
-              private cartService: CartService,
+              public cartService: CartService,
               private http: HttpClient,
               private router: Router) { }
 
