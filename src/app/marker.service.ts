@@ -13,7 +13,7 @@ import {Location} from './location';
 })
 
 export class MarkerService {
-    private locationsUrl = '/api/locations';
+    private locationsUrl = 'api/locations';
 
     httpOptions = {
         headers: new HttpHeaders({ 'Content-Type': 'application/json' })
