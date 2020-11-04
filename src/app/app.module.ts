@@ -27,6 +27,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { MarkerService } from './marker.service';
 import { AdSliderComponent } from './views/homepage/ad-slider/ad-slider.component';
 import { CardsComponent } from './views/homepage/cards/cards.component';
+import { LoginComponent } from './views/login/login.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { CardsComponent } from './views/homepage/cards/cards.component';
     ProductComponent,
     CheckoutComponent,
     MealsComponent,
-    MealComponent
+    MealComponent,
+    LoginComponent
   ],
     imports: [
         BrowserModule,
