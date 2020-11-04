@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { HeaderComponent } from './header.component';
 import {RouterTestingModule} from "@angular/router/testing";
@@ -10,7 +10,7 @@ describe('HeaderComponent', () => {
   let categoryService;
   let getCategoriesSpy
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     categoryService = jasmine.createSpyObj('CategoryService', ['getCategories']);
     getCategoriesSpy = categoryService.getCategories.and.returnValue();
     TestBed.configureTestingModule({

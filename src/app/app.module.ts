@@ -28,6 +28,8 @@ import { MarkerService } from './marker.service';
 import { AdSliderComponent } from './views/homepage/ad-slider/ad-slider.component';
 import { CardsComponent } from './views/homepage/cards/cards.component';
 import { LoginComponent } from './views/login/login.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatToolbarModule} from '@angular/material/toolbar'; 
 
 @NgModule({
   declarations: [
@@ -63,6 +65,8 @@ import { LoginComponent } from './views/login/login.component';
         MatSelectModule,
         MatInputModule,
         MatTableModule,
+        FlexLayoutModule,
+        MatToolbarModule
     ],
   providers: [
     MarkerService
