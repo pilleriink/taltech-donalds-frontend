@@ -62,7 +62,7 @@ import { CardsComponent } from './views/homepage/cards/cards.component';
         MatFormFieldModule,
         MatSelectModule,
         MatInputModule,
-        MatTableModule,
+        MatTableModule
     ],
   providers: [
     MarkerService
