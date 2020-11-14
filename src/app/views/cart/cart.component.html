@@ -1,4 +1,4 @@
-<h1 *ngIf="cartService.cart.products.length == 0 && cartService.cart.meals.length == 0">Cart is empty!</h1>
+<h1 *ngIf="cartService.cart.products.length == 0 && cartService.cart.meals.length == 0">Cart is empty!!</h1>
 <div *ngIf="cartService.cart.products.length > 0 || cartService.cart.meals.length > 0" class="mb-3 col-lg-12 col-sm-12">
   <button routerLink="/checkout" class="proceed" mat-raised-button color="primary">Proceed to checkout</button>
   <button (click)="cartService.clearProducts()" class="proceed" mat-raised-button color="primary">Clear cart</button>

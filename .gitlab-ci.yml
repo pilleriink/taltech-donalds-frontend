@@ -19,6 +19,9 @@ build donald:
 
 deploy donald:
   stage: deploy
+  only:
+    refs:
+      - master
   tags:
     - donald
   script:
