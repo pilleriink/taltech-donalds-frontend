@@ -22,7 +22,7 @@ export class MealComponent implements OnInit {
   constructor(private route: ActivatedRoute,
               private productService: ProductService,
               private mealService: MealService,
-              private cartService: CartService,
+              public cartService: CartService,
               private http: HttpClient,
               private router: Router) { }
 
