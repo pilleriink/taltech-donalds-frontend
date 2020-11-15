@@ -33,10 +33,10 @@ deploy dev-donald:
   stage: deploy
   only:
     refs:
-      - feature/ci-cd
+      - feature/*
   tags:
     - donald
   script:
     - mkdir -p ~/dev-front-deployment
-    - rm -rf ~/front-deployment/*
-    - cp -r dist/. ~/front-deployment
+    - rm -rf ~/dev-front-deployment/*
+    - cp -r dist/. ~/dev-front-deployment
