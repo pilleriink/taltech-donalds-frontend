@@ -12,15 +12,17 @@ import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {
-    MatBadgeModule,
-    MatButtonModule,
-    MatButtonToggleModule,
-    MatCardModule,
-    MatCheckboxModule, MatFormFieldModule,
-    MatIconModule, MatInputModule, MatSelectModule, MatTableModule,
-    MatTabsModule
-} from '@angular/material';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatTableModule } from '@angular/material/table';
+import { MatTabsModule } from '@angular/material/tabs';
 import { MealsComponent } from './views/meals/meals.component';
 import { MealComponent } from './views/meals/meal/meal.component';
 import {HttpClientModule} from '@angular/common/http';
