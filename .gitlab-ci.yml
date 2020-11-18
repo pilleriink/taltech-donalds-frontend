@@ -33,7 +33,7 @@ deploy dev-donald:
   stage: deploy
   only:
     refs:
-      - feature/\*
+      - feature/login-page
   tags:
     - donald
   script:
