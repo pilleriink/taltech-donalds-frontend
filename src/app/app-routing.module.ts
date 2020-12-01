@@ -9,6 +9,7 @@ import {CheckoutComponent} from './views/checkout/checkout.component';
 import {MealsComponent} from './views/meals/meals.component';
 import {MealComponent} from './views/meals/meal/meal.component';
 import {LoginComponent} from './views/login/login.component';
+import {RegisterComponent} from './views/register/register.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/homepage', pathMatch: 'full' },
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'meals', component: MealsComponent},
   { path: 'meals/:id', component: MealComponent},
   { path: 'checkout', component: CheckoutComponent },
-  { path: 'login', component: LoginComponent }];
+  { path: 'login', component: LoginComponent },
+  { path:  'register', component: RegisterComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],

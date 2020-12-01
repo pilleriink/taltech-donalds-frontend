@@ -8,7 +8,7 @@ import { CartComponent } from './views/cart/cart.component';
 import { CategoryComponent } from './views/category/category.component';
 import { ProductComponent } from './views/product/product.component';
 import { CheckoutComponent } from './views/checkout/checkout.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
@@ -31,6 +31,7 @@ import { AdSliderComponent } from './views/homepage/ad-slider/ad-slider.componen
 import { CardsComponent } from './views/homepage/cards/cards.component';
 import { LoginComponent } from './views/login/login.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {RegisterComponent} from './views/register/register.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     CheckoutComponent,
     MealsComponent,
     MealComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
     imports: [
         BrowserModule,
@@ -66,7 +68,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
         MatSelectModule,
         MatInputModule,
         MatTableModule,
-        MatToolbarModule
+        MatToolbarModule,
+        ReactiveFormsModule
     ],
   providers: [
     MarkerService

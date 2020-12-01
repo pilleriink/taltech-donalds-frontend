@@ -1,0 +1,22 @@
+<div fxLayoutAlign="center center" fxFlexFill>
+    <mat-card fxFlex="25">
+        <mat-card-title>Register to TalTechDonald</mat-card-title>
+        <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)" fxLayoutAlign="stretch" fxLayout="column">
+            <mat-form-field>
+                <label for="username">
+                    Username
+                </label>
+                <input id="username" type="text" formControlName="username" matInput required>
+            </mat-form-field>
+
+            <mat-form-field>
+                <label for="password">
+                    Password
+                </label>
+                <input id="password" type="text" formControlName="password" matInput required>
+            </mat-form-field>
+            <button mat-raised-button color="primary" type="submit">Register</button>
+            <div>Already have an account? Log in!</div>
+        </form>
+    </mat-card>
+</div>
