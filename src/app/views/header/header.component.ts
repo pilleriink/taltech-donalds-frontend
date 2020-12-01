@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {Category} from "../../category";
 import {CategoryService} from "../../category.service";
 import {CartService} from "../../cart.service";
+import {AuthenticationService} from '../../authentication.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +13,10 @@ import {CartService} from "../../cart.service";
 export class HeaderComponent implements OnInit {
   categories: Category[] = [];
 
-  constructor(private categoryService: CategoryService, public cartService: CartService) { }
+  constructor(private categoryService: CategoryService,
+              public authenticationService: AuthenticationService,
+              public router: Router,
+              public cartService: CartService) { }
 
   ngOnInit() {
     this.getCategories();
@@ -25,6 +30,12 @@ export class HeaderComponent implements OnInit {
         console.log(data);
       }
     );
+  }
+
+  logout(): void {
+    localStorage.clear();
+    this.authenticationService.currentUser = undefined;
+    location.reload();
   }
 
 }

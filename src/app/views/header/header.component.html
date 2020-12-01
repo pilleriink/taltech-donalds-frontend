@@ -40,8 +40,18 @@
     </ul>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a routerLinkActive="active" routerLink="/login" class="nav-link">
+        <a *ngIf="!authenticationService.currentUserValue" routerLinkActive="active" routerLink="/login" class="nav-link">
           <mat-icon>login</mat-icon>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a *ngIf="!authenticationService.currentUserValue" routerLinkActive="active" routerLink="/register" class="nav-link">
+          <mat-icon>create</mat-icon>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a *ngIf="authenticationService.currentUserValue" (click)="logout()" routerLinkActive="active" routerLink="/" class="nav-link">
+          <mat-icon>power_settings_new</mat-icon>
         </a>
       </li>
     </ul>
