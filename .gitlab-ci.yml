@@ -28,3 +28,15 @@ deploy donald:
     - mkdir -p ~/front-deployment
     - rm -rf ~/front-deployment/*
     - cp -r dist/. ~/front-deployment
+
+deploy dev-donald:
+  stage: deploy
+  only:
+    refs:
+      - feature/login-page
+  tags:
+    - donald
+  script:
+    - mkdir -p ~/dev-front-deployment
+    - rm -rf ~/dev-front-deployment/*
+    - cp -r dist/. ~/dev-front-deployment
