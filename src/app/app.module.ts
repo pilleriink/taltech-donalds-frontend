@@ -32,6 +32,8 @@ import { CardsComponent } from './views/homepage/cards/cards.component';
 import { LoginComponent } from './views/login/login.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {RegisterComponent} from './views/register/register.component';
+import { AdminComponent } from './views/admin/admin.component';
+import { ProfileComponent } from './views/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import {RegisterComponent} from './views/register/register.component';
     MealsComponent,
     MealComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AdminComponent,
+    ProfileComponent
   ],
     imports: [
         BrowserModule,

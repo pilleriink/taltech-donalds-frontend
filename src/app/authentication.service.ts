@@ -9,7 +9,7 @@ import {map} from 'rxjs/operators';
     providedIn: 'root'
 })
 export class AuthenticationService {
-    private currentUserSubject: BehaviorSubject<User>;
+    public currentUserSubject: BehaviorSubject<User>;
     public currentUser: Observable<User>;
 
     constructor(private userService: UserService) {

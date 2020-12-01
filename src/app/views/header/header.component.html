@@ -50,6 +50,16 @@
         </a>
       </li>
       <li class="nav-item">
+        <a *ngIf="authenticationService.currentUserValue && authenticationService.currentUserValue.role == 'ADMIN'" routerLinkActive="active" routerLink="/admin" class="nav-link">
+          <mat-icon>work</mat-icon>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a *ngIf="authenticationService.currentUserValue && authenticationService.currentUserValue.role == 'USER'" routerLinkActive="active" routerLink="/profile" class="nav-link">
+          <mat-icon>face</mat-icon>
+        </a>
+      </li>
+      <li class="nav-item">
         <a *ngIf="authenticationService.currentUserValue" (click)="logout()" routerLinkActive="active" routerLink="/" class="nav-link">
           <mat-icon>power_settings_new</mat-icon>
         </a>

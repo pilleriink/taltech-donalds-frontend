@@ -21,6 +21,8 @@ const routes: Routes = [
   { path: 'meals', component: MealsComponent},
   { path: 'meals/:id', component: MealComponent},
   { path: 'checkout', component: CheckoutComponent },
+  { path: 'admin', component: CheckoutComponent },
+  { path: 'profile', component: CheckoutComponent },
   { path: 'login', component: LoginComponent },
   { path:  'register', component: RegisterComponent }];
 
