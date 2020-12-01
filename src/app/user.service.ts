@@ -4,6 +4,9 @@ import {MessageService} from './message.service';
 import {Observable} from 'rxjs';
 import {User} from './user';
 import {UserPassword} from './user-password';
+import {environment} from '../environments/environment';
+import {Product} from './product';
+import {catchError, tap} from 'rxjs/operators';
 
 
 @Injectable({
@@ -22,10 +25,12 @@ export class UserService {
         private messageService: MessageService) { }
 
     register(userPassword: UserPassword): Observable<any> {
-        return this.http.post<UserPassword>(`${this.userUrl}/register`, userPassword, this.httpOptions);
+        const url = `${environment.apiUrl}${this.userUrl}`;
+        return this.http.post<UserPassword>(`${url}/register`, userPassword, this.httpOptions);
     }
 
     login(userPassword: UserPassword): Observable<User> {
-        return this.http.post<User>(`${this.userUrl}/login`, userPassword, this.httpOptions);
+        const url = `${environment.apiUrl}${this.userUrl}`;
+        return this.http.post<User>(`${url}/login`, userPassword, this.httpOptions);
     }
 }
