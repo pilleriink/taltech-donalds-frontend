@@ -6,6 +6,7 @@ import {environment} from '../environments/environment';
 import {catchError, tap} from 'rxjs/operators';
 import {Meal} from './meal';
 import {Product} from './product';
+import {Order} from './order';
 
 @Injectable({ providedIn: 'root' })
 export class MealService {
@@ -34,6 +35,20 @@ export class MealService {
             tap(_ => this.log(`fetched product id=${id}`)),
             catchError(this.handleError<Meal>(`getMeal id=${id}`))
         );
+    }
+
+    sendMeal(meal: Meal): Observable<Meal> {
+        const url = `${environment.apiUrl}${this.mealsUrl}`;
+        return this.http.post<Meal>(url, meal, this.httpOptions)
+            .pipe(
+                catchError(this.handleError('mealOrder', meal))
+            );
+    }
+
+    deleteMeal(meal: Meal): void {
+        const url = `${environment.apiUrl}${this.mealsUrl}`;
+        this.http.delete(url + "/" + meal.id)
+        .pipe(catchError(this.handleError('mealOrder', meal)));
     }
 
 

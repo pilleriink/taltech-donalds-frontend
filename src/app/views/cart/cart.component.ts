@@ -13,10 +13,12 @@ export class CartComponent implements OnInit {
 
   constructor(public cartService: CartService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   save() {
     sessionStorage.setItem('cart', JSON.stringify(this.cartService.cart));
+    console.log(this.cartService);
   }
 
 }

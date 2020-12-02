@@ -30,6 +30,7 @@ export class CheckoutComponent implements OnInit {
     buttonPressed = false;
     mealProducts: OrderProduct[];
 
+
     constructor(public cartService: CartService,
                 private markerService: MarkerService,
                 private orderService: OrderService,
@@ -46,7 +47,7 @@ export class CheckoutComponent implements OnInit {
             for (const mealProduct of meal.products) {
                 this.mealProducts.push(new OrderProduct(mealProduct.name, mealProduct.price, mealProduct.removableIngredients.filter(y => y.removed).map(x => x.name).join(", ")));
             }
-            this.order.orderMeals.push(new OrderMeal(meal.name, meal.price, this.mealProducts))
+            this.order.orderMeals.push(new OrderMeal(meal.name, meal.price, this.mealProducts));
         }
     }
 

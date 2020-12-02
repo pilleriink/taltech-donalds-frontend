@@ -25,7 +25,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MealsComponent } from './views/meals/meals.component';
 import { MealComponent } from './views/meals/meal/meal.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { MarkerService } from './marker.service';
 import { AdSliderComponent } from './views/homepage/ad-slider/ad-slider.component';
 import { CardsComponent } from './views/homepage/cards/cards.component';
@@ -34,6 +34,14 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {RegisterComponent} from './views/register/register.component';
 import { AdminComponent } from './views/admin/admin.component';
 import { ProfileComponent } from './views/profile/profile.component';
+import {JwtInterceptor} from './helpers/jwt.interceptor';
+import {ErrorInterceptor} from './helpers/error.interceptor';
+import { MealmodComponent } from './views/admin/mealmod/mealmod.component';
+import { ProductmodComponent } from './views/admin/productmod/productmod.component';
+import { CategorymodComponent } from './views/admin/categorymod/categorymod.component';
+import { AdmodComponent } from './views/admin/admod/admod.component';
+import { LocationmodComponent } from './views/admin/locationmod/locationmod.component';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -53,7 +61,12 @@ import { ProfileComponent } from './views/profile/profile.component';
     LoginComponent,
     RegisterComponent,
     AdminComponent,
-    ProfileComponent
+    ProfileComponent,
+    MealmodComponent,
+    ProductmodComponent,
+    CategorymodComponent,
+    AdmodComponent,
+    LocationmodComponent
   ],
     imports: [
         BrowserModule,
@@ -73,10 +86,13 @@ import { ProfileComponent } from './views/profile/profile.component';
         MatInputModule,
         MatTableModule,
         MatToolbarModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        MatDividerModule
     ],
   providers: [
-    MarkerService
+      { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+      { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+      MarkerService
   ],
   bootstrap: [AppComponent]
 })

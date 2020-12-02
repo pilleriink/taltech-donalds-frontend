@@ -1,4 +1,4 @@
-export interface Ingredient {
+export class Ingredient {
 
   name: string;
   removed: boolean;

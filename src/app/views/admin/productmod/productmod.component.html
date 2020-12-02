@@ -1,0 +1,39 @@
+<mat-card>
+    <h4>Add product</h4>
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput [(ngModel)]="product.name" name="name" ngDefaultControl required>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Image url</mat-label>
+            <input matInput [(ngModel)]="product.image" name="image" ngDefaultControl>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Price</mat-label>
+            <input matInput [(ngModel)]="product.price" type="number" name="price" ngDefaultControl>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Description</mat-label>
+            <textarea matInput [(ngModel)]="product.description" name="description" ngDefaultControl required></textarea>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Removable ingredients (separate by comma and space)</mat-label>
+            <textarea matInput [(ngModel)]="product.removableIngredients" name="ingredients" ngDefaultControl required></textarea>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Select category</mat-label>
+            <mat-select name="category" [(ngModel)]="product.category.name">
+                <mat-option *ngFor="let category of categories" value="{{category.name}}">{{category.name}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="primary" (click)="addProduct()">Add product</button>
+        <br>
+    </div>
+</mat-card>

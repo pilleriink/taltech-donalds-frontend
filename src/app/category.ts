@@ -5,3 +5,9 @@ export interface Category {
   name: string;
   products: Product[];
 }
+
+export class Category {
+  id = 0;
+  name = '';
+  products: Product[] = [];
+}

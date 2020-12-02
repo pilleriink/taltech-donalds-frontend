@@ -1,0 +1,58 @@
+<mat-card>
+    <h4>Add meal</h4>
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput [(ngModel)]="meal.name" name="name" ngDefaultControl required>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Image url</mat-label>
+            <input matInput [(ngModel)]="meal.image" name="image" ngDefaultControl>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Description</mat-label>
+            <textarea matInput [(ngModel)]="meal.description" name="description" ngDefaultControl required></textarea>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Select first product</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let product of products" [(ngModel)]="firstProduct" name="product" ngDefaultControl value="{{product.name}}">{{product.name}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Select second product</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let product of products" [(ngModel)]="secondProduct" name="product" ngDefaultControl value="{{product.name}}">{{product.name}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Select third product</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let product of products" [(ngModel)]="thirdProduct" name="product" ngDefaultControl value="{{product.name}}">{{product.name}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="primary" (click)="addMeal()">Add meal</button>
+        <br>
+    </div>
+</mat-card>
+
+<mat-card>
+    <h4>Delete meal</h4>
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Select meal</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let meal of meals" [(ngModel)]="mealToDelete" name="meal" ngDefaultControl value="{{meal.name}}">{{meal.name}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="primary" (click)="deleteMeal()">Delete meal</button>
+        <br>
+    </div>
+</mat-card>

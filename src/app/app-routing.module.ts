@@ -10,6 +10,13 @@ import {MealsComponent} from './views/meals/meals.component';
 import {MealComponent} from './views/meals/meal/meal.component';
 import {LoginComponent} from './views/login/login.component';
 import {RegisterComponent} from './views/register/register.component';
+import {AdminComponent} from './views/admin/admin.component';
+import {ProfileComponent} from './views/profile/profile.component';
+import {MealmodComponent} from './views/admin/mealmod/mealmod.component';
+import {ProductmodComponent} from './views/admin/productmod/productmod.component';
+import {CategorymodComponent} from './views/admin/categorymod/categorymod.component';
+import {AdmodComponent} from './views/admin/admod/admod.component';
+import {LocationmodComponent} from './views/admin/locationmod/locationmod.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/homepage', pathMatch: 'full' },
@@ -21,8 +28,13 @@ const routes: Routes = [
   { path: 'meals', component: MealsComponent},
   { path: 'meals/:id', component: MealComponent},
   { path: 'checkout', component: CheckoutComponent },
-  { path: 'admin', component: CheckoutComponent },
-  { path: 'profile', component: CheckoutComponent },
+  { path: 'admin', component: AdminComponent },
+  { path: 'admin/meals', component: MealmodComponent },
+  { path: 'admin/products', component: ProductmodComponent },
+  { path: 'admin/category', component: CategorymodComponent },
+  { path: 'admin/ads', component: AdmodComponent },
+  { path: 'admin/locations', component: LocationmodComponent },
+  { path: 'profile', component: ProfileComponent },
   { path: 'login', component: LoginComponent },
   { path:  'register', component: RegisterComponent }];
 

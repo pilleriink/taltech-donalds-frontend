@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import {Cart} from './cart';
-import {Product} from './product';
-import {Meal} from './meal';
+import {CartProduct, Product} from './product';
+import {CartMeal, Meal} from './meal';
+import {Ingredient} from './ingredient';
 
 @Injectable({
   providedIn: 'root'
@@ -20,14 +21,55 @@ export class CartService {
   }
 
   addProduct(product: Product) {
-    this.cart.products.push(product);
+    const cartProduct = this.productToCartProduct(product);
+    this.cart.products.push(cartProduct);
     this.calculatePrice();
     sessionStorage.setItem('cart', JSON.stringify(this.cart));
     this.getAndSetCart();
   }
 
+  duplicateProduct(cartProduct: CartProduct) {
+    this.cart.products.push(cartProduct);
+    this.calculatePrice();
+    sessionStorage.setItem('cart', JSON.stringify(this.cart));
+    this.getAndSetCart();
+  }
+
+  duplicateMeal(cartMeal: CartMeal) {
+    this.cart.meals.push(cartMeal);
+    this.calculatePrice();
+    sessionStorage.setItem('cart', JSON.stringify(this.cart));
+    this.getAndSetCart();
+  }
+
+  productToCartProduct(product: Product) {
+    const cartProduct = new CartProduct();
+    cartProduct.category = product.category;
+    cartProduct.description = product.description;
+    cartProduct.image = product.image;
+    cartProduct.name = product.name;
+    cartProduct.id = product.id;
+    cartProduct.price = product.price;
+    for (const ingredientName of product.removableIngredients.split(', ')) {
+      const ingredient = new Ingredient();
+      ingredient.name = ingredientName;
+      ingredient.removed = false;
+      cartProduct.removableIngredients.push(ingredient);
+    }
+    return cartProduct;
+  }
+
   addMeal(meal: Meal) {
-    this.cart.meals.push(meal);
+    const cartMeal = new CartMeal();
+    cartMeal.price = meal.price;
+    cartMeal.name = meal.name;
+    cartMeal.image = meal.image;
+    cartMeal.description = meal.description;
+    for (const product of meal.products) {
+      cartMeal.products.push(this.productToCartProduct(product));
+    }
+    cartMeal.id = meal.id;
+    this.cart.meals.push(cartMeal);
     this.calculatePrice();
     sessionStorage.setItem('cart', JSON.stringify(this.cart));
     this.getAndSetCart();
@@ -60,7 +102,7 @@ export class CartService {
       });
       this.cart.meals.forEach(cartMeal => {
         this.cart.price += cartMeal.price;
-      })
+      });
     }
   }
 }

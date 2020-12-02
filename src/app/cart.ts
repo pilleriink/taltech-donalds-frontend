@@ -1,9 +1,9 @@
-import {Product} from './product';
-import {Meal} from './meal';
+import {CartProduct, Product} from './product';
+import {CartMeal, Meal} from './meal';
 
 export class Cart {
-  products?: Product[] = [];
-  meals?: Meal[] = [];
+  products?: CartProduct[] = [];
+  meals?: CartMeal[] = [];
   price = 0;
 
   constructor() {

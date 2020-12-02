@@ -6,6 +6,8 @@ import {catchError, tap} from "rxjs/operators";
 import {Product} from "./product";
 import {environment} from "../environments/environment";
 import {Comment} from './comment';
+import {Category} from './category';
+import {Meal} from './meal';
 
 @Injectable({ providedIn: 'root' })
 export class ProductService {
@@ -26,6 +28,22 @@ export class ProductService {
         tap(_ => this.log(`fetched product id=${id}`)),
         catchError(this.handleError<Product>(`getProduct id=${id}`))
     );
+  }
+
+  getProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>(environment.apiUrl + this.productsUrl)
+        .pipe(
+            tap(_ => this.log('fetched products')),
+            catchError(this.handleError<Product[]>('getProducts', []))
+        );
+  }
+
+  sendProduct(product: Product): Observable<Product> {
+    const url = `${environment.apiUrl}${this.productsUrl}`;
+    return this.http.post<Product>(url, product, this.httpOptions)
+        .pipe(
+            catchError(this.handleError('addProduct', product))
+        );
   }
 
   addComment(productId, comment: Comment): Observable<Comment> {
