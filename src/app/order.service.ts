@@ -22,7 +22,7 @@ export class OrderService {
 
     sendOrder(order: Order): Observable<Order> {
         const url = `${environment.apiUrl}${this.orderUrl}`;
-        return this.http.post<Order>(url, order)
+        return this.http.post<Order>(url, order, this.httpOptions)
             .pipe(
                 catchError(this.handleError('sendOrder', order))
             );
