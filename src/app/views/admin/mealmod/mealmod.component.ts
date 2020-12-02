@@ -13,9 +13,6 @@ export class MealmodComponent implements OnInit {
 
   products: Product[] = [];
   meal: Meal = new Meal();
-  firstProduct: Product = new Product();
-  secondProduct: Product = new Product();
-  thirdProduct: Product = new Product();
   meals: Meal[] = [];
   mealToDelete: Meal = new Meal();
 
@@ -33,9 +30,21 @@ export class MealmodComponent implements OnInit {
 
   addMeal() {
     if (this.fieldsAreFilledMeal()) {
-      this.meal.products.push(this.firstProduct);
-      this.meal.products.push(this.secondProduct);
-      this.meal.products.push(this.thirdProduct);
+      const products = [];
+      for (const product of this.meal.products) {
+        const product1 = new Product();
+        product1.id = product.id;
+        product1.description = product.description;
+        product1.image = product.image;
+        product1.name = product.name;
+        product1.price = product.price;
+        product1.removableIngredients = product.removableIngredients;
+        product1.comments = product.comments;
+        product1.category = product.category;
+        product1.meals = product.meals;
+        products.push(product1);
+      }
+      this.meal.products = products;
       console.log(this.meal);
       return this.mealService.sendMeal(this.meal).subscribe();
     }

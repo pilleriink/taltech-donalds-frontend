@@ -17,6 +17,7 @@ export interface Product {
 }
 
 export class Product {
+  id = 0;
   price = 0;
   name = '';
   description = '';

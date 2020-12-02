@@ -23,22 +23,22 @@
         <br>
         <mat-form-field appearance="fill">
             <mat-label>Select first product</mat-label>
-            <mat-select [(ngModel)]="firstProduct" name="product">
-                <mat-option *ngFor="let product of products" value="{{product}}">{{product.name}}</mat-option>
+            <mat-select [(ngModel)]="meal.products[0]" name="product">
+                <mat-option *ngFor="let product of products" [value]="product">{{product.name}}</mat-option>
             </mat-select>
         </mat-form-field>
         <br>
         <mat-form-field appearance="fill">
             <mat-label>Select second product</mat-label>
-            <mat-select [(ngModel)]="secondProduct" name="product">
-                <mat-option *ngFor="let product of products" value="{{product}}">{{product.name}}</mat-option>
+            <mat-select [(ngModel)]="meal.products[1]" name="product">
+                <mat-option *ngFor="let product of products" [value]="product">{{product.name}}</mat-option>
             </mat-select>
         </mat-form-field>
         <br>
         <mat-form-field appearance="fill">
             <mat-label>Select third product</mat-label>
-            <mat-select [(ngModel)]="thirdProduct" name="product">
-                <mat-option *ngFor="let product of products" value="{{product}}">{{product.name}}</mat-option>
+            <mat-select [(ngModel)]="meal.products[2]" name="product">
+                <mat-option *ngFor="let product of products" [value]="product">{{product.name}}</mat-option>
             </mat-select>
         </mat-form-field>
         <br>
