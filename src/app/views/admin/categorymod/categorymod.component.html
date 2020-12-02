@@ -1,1 +1,12 @@
-<p>categorymod works!</p>
+<mat-card>
+    <h4>Add category</h4>
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput [(ngModel)]="category.name" name="name" ngDefaultControl required>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="primary" (click)="addCategory()">Add category</button>
+        <br>
+    </div>
+</mat-card>

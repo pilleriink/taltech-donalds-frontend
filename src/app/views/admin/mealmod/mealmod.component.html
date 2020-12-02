@@ -7,6 +7,11 @@
         </mat-form-field>
         <br>
         <mat-form-field appearance="fill">
+            <mat-label>Price</mat-label>
+            <input matInput [(ngModel)]="meal.price" type="number" name="price" ngDefaultControl>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
             <mat-label>Image url</mat-label>
             <input matInput [(ngModel)]="meal.image" name="image" ngDefaultControl>
         </mat-form-field>
@@ -18,22 +23,22 @@
         <br>
         <mat-form-field appearance="fill">
             <mat-label>Select first product</mat-label>
-            <mat-select>
-                <mat-option *ngFor="let product of products" [(ngModel)]="firstProduct" name="product" ngDefaultControl value="{{product.name}}">{{product.name}}</mat-option>
+            <mat-select [(ngModel)]="firstProduct" name="product">
+                <mat-option *ngFor="let product of products" value="{{product}}">{{product.name}}</mat-option>
             </mat-select>
         </mat-form-field>
         <br>
         <mat-form-field appearance="fill">
             <mat-label>Select second product</mat-label>
-            <mat-select>
-                <mat-option *ngFor="let product of products" [(ngModel)]="secondProduct" name="product" ngDefaultControl value="{{product.name}}">{{product.name}}</mat-option>
+            <mat-select [(ngModel)]="secondProduct" name="product">
+                <mat-option *ngFor="let product of products" value="{{product}}">{{product.name}}</mat-option>
             </mat-select>
         </mat-form-field>
         <br>
         <mat-form-field appearance="fill">
             <mat-label>Select third product</mat-label>
-            <mat-select>
-                <mat-option *ngFor="let product of products" [(ngModel)]="thirdProduct" name="product" ngDefaultControl value="{{product.name}}">{{product.name}}</mat-option>
+            <mat-select [(ngModel)]="thirdProduct" name="product">
+                <mat-option *ngFor="let product of products" value="{{product}}">{{product.name}}</mat-option>
             </mat-select>
         </mat-form-field>
         <br>
@@ -47,8 +52,8 @@
     <div class="example-container">
         <mat-form-field appearance="fill">
             <mat-label>Select meal</mat-label>
-            <mat-select>
-                <mat-option *ngFor="let meal of meals" [(ngModel)]="mealToDelete" name="meal" ngDefaultControl value="{{meal.name}}">{{meal.name}}</mat-option>
+            <mat-select [(ngModel)]="mealToDelete.id" name="meal">
+                <mat-option *ngFor="let meal of meals" value="{{meal.id}}">{{meal.id}}</mat-option>
             </mat-select>
         </mat-form-field>
         <br>

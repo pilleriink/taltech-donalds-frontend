@@ -45,9 +45,9 @@ export class MealService {
             );
     }
 
-    deleteMeal(meal: Meal): void {
+    deleteMeal(meal: Meal): Observable<Meal>{
         const url = `${environment.apiUrl}${this.mealsUrl}`;
-        this.http.delete(url + "/" + meal.id)
+        return this.http.delete<Meal>(url + "/" + meal.id, this.httpOptions)
         .pipe(catchError(this.handleError('mealOrder', meal)));
     }
 

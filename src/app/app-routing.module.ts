@@ -31,7 +31,7 @@ const routes: Routes = [
   { path: 'admin', component: AdminComponent },
   { path: 'admin/meals', component: MealmodComponent },
   { path: 'admin/products', component: ProductmodComponent },
-  { path: 'admin/category', component: CategorymodComponent },
+  { path: 'admin/categories', component: CategorymodComponent },
   { path: 'admin/ads', component: AdmodComponent },
   { path: 'admin/locations', component: LocationmodComponent },
   { path: 'profile', component: ProfileComponent },

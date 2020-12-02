@@ -32,15 +32,18 @@ export class MealmodComponent implements OnInit {
   }
 
   addMeal() {
-    console.log(this.meal);
     if (this.fieldsAreFilledMeal()) {
-      this.meal.price = (this.firstProduct.price + this.secondProduct.price + this.thirdProduct.price) * 0.9;
+      this.meal.products.push(this.firstProduct);
+      this.meal.products.push(this.secondProduct);
+      this.meal.products.push(this.thirdProduct);
+      console.log(this.meal);
       return this.mealService.sendMeal(this.meal).subscribe();
     }
   }
 
   deleteMeal() {
-    this.mealService.deleteMeal(this.mealToDelete);
+    console.log(this.mealToDelete);
+    return this.mealService.deleteMeal(this.mealToDelete).subscribe();
   }
 
   fieldsAreFilledMeal(): boolean {

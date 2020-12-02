@@ -5,6 +5,8 @@ import {Observable, of} from "rxjs";
 import {catchError, tap} from "rxjs/operators";
 import {Category} from "./category";
 import {environment} from "../environments/environment";
+import {Comment} from './comment';
+import {Product} from './product';
 
 @Injectable({ providedIn: 'root' })
 export class CategoryService {
@@ -33,6 +35,14 @@ export class CategoryService {
         tap(_ => this.log('fetched categories')),
         catchError(this.handleError<Category[]>('getCategories', []))
       );
+  }
+
+  addCategory(category: Category): Observable<Category> {
+    const url = `${environment.apiUrl}${this.categoriesUrl}`;
+    return this.http.post<Category>(url, category, this.httpOptions)
+        .pipe(
+            catchError(this.handleError('addCategory', category))
+        );
   }
 
 

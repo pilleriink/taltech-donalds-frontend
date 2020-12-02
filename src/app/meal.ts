@@ -10,7 +10,6 @@ export interface Meal {
 }
 
 export class Meal {
-    id = null;
     name = '';
     price = 0;
     description = '';
