@@ -23,6 +23,7 @@ export class MealmodComponent implements OnInit {
     this.productService.getProducts().subscribe(data => {
       this.products = data;
     });
+
     this.mealService.getMeals().subscribe(data => {
       this.meals = data;
     });
