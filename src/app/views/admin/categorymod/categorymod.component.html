@@ -10,3 +10,18 @@
         <br>
     </div>
 </mat-card>
+
+<mat-card>
+    <h4>Delete category</h4>
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Select category</mat-label>
+            <mat-select [(ngModel)]="categoryToDelete.id" name="meal">
+                <mat-option *ngFor="let category of categories" [value]="category.id">{{category.name}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="primary" (click)="deleteCategory()">Delete category</button>
+        <br>
+    </div>
+</mat-card>

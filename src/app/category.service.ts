@@ -45,6 +45,12 @@ export class CategoryService {
         );
   }
 
+  deleteCategory(category: Category): Observable<Category>{
+    const url = `${environment.apiUrl}${this.categoriesUrl}`;
+    return this.http.delete<Category>(url + "/" + category.id, this.httpOptions)
+        .pipe(catchError(this.handleError('category to delete', category)));
+  }
+
 
   /**
    * Handle Http operation that failed.

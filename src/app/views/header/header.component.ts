@@ -33,8 +33,7 @@ export class HeaderComponent implements OnInit {
   }
 
   logout(): void {
-    localStorage.clear();
-    this.authenticationService.currentUserSubject.next(null);
+    this.authenticationService.logout();
   }
 
 }

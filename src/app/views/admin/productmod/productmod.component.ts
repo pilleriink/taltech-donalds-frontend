@@ -17,6 +17,7 @@ export class ProductmodComponent implements OnInit {
   products: Product[] = [];
   meals: Meal[] = [];
   categories: Category[] = [];
+  productToDelete: Product = new Product();
 
   constructor(private productService: ProductService, private categoryService: CategoryService) { }
 
@@ -31,14 +32,19 @@ export class ProductmodComponent implements OnInit {
 
   addProduct() {
     console.log(this.product);
-    if (this.fieldsAreFilledMeal()) {
-      return this.productService.sendProduct(this.product).subscribe();
+    if (this.fieldsAreFilled()) {
+      return this.productService.sendProduct(this.product).subscribe(() => location.reload());
     }
   }
 
-  fieldsAreFilledMeal(): boolean {
+  fieldsAreFilled(): boolean {
     return this.product.description !== ''
         && this.product.name !== '';
+  }
+
+  deleteProduct() {
+    console.log(this.productToDelete);
+    return this.productService.deleteProduct(this.productToDelete).subscribe(() => location.reload());
   }
 
 }

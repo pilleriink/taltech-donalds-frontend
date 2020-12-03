@@ -37,3 +37,18 @@
         <br>
     </div>
 </mat-card>
+
+<mat-card>
+    <h4>Delete product</h4>
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Select product</mat-label>
+            <mat-select [(ngModel)]="productToDelete.id" name="meal">
+                <mat-option *ngFor="let product of products" [value]="product.id">{{product.name}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="primary" (click)="deleteProduct()">Delete product</button>
+        <br>
+    </div>
+</mat-card>

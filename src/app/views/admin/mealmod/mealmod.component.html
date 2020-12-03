@@ -53,7 +53,7 @@
         <mat-form-field appearance="fill">
             <mat-label>Select meal</mat-label>
             <mat-select [(ngModel)]="mealToDelete.id" name="meal">
-                <mat-option *ngFor="let meal of meals" value="{{meal.id}}">{{meal.id}}</mat-option>
+                <mat-option *ngFor="let meal of meals" [value]="meal.id">{{meal.name}}</mat-option>
             </mat-select>
         </mat-form-field>
         <br>

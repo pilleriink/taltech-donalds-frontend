@@ -46,13 +46,13 @@ export class MealmodComponent implements OnInit {
       }
       this.meal.products = products;
       console.log(this.meal);
-      return this.mealService.sendMeal(this.meal).subscribe();
+      return this.mealService.sendMeal(this.meal).subscribe(() => location.reload());
     }
   }
 
   deleteMeal() {
     console.log(this.mealToDelete);
-    return this.mealService.deleteMeal(this.mealToDelete).subscribe();
+    return this.mealService.deleteMeal(this.mealToDelete).subscribe(() => location.reload());
   }
 
   fieldsAreFilledMeal(): boolean {

@@ -46,6 +46,12 @@ export class ProductService {
         );
   }
 
+  deleteProduct(product: Product): Observable<Product>{
+    const url = `${environment.apiUrl}${this.productsUrl}`;
+    return this.http.delete<Product>(url + "/" + product.id, this.httpOptions)
+        .pipe(catchError(this.handleError('product to delete', product)));
+  }
+
   addComment(productId, comment: Comment): Observable<Comment> {
     const url = `${environment.apiUrl}${this.productsUrl}/${productId}/comments`;
     return this.http.post<Comment>(url, comment)
