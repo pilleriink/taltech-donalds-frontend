@@ -34,7 +34,7 @@ export class CategorymodComponent implements OnInit {
 
   deleteCategory() {
     console.log(this.categoryToDelete);
-    return this.categoryService.deleteCategory(this.categoryToDelete).subscribe(() => location.reload());
+    return this.categoryService.deleteCategory(this.categoryToDelete).subscribe();
   }
 
 }

@@ -7,6 +7,7 @@ import {MessageService} from './message.service';
 import {environment} from '../environments/environment';
 import {catchError, tap} from 'rxjs/operators';
 import {Location} from './location';
+import {Advertisement} from './advertisement';
 
 @Injectable({
     providedIn: 'root'
@@ -32,6 +33,20 @@ export class MarkerService {
                 tap(_ => this.log('fetched categories')),
                 catchError(this.handleError<Location[]>('getCategories', []))
             );
+    }
+
+    addLocation(location: Location): Observable<Location> {
+        const url = `${environment.apiUrl}${this.locationsUrl}`;
+        return this.http.post<Location>(url, location, this.httpOptions)
+            .pipe(
+                catchError(this.handleError('addLocation', location))
+            );
+    }
+
+    deleteLocation(location: Location): Observable<Location>{
+        const url = `${environment.apiUrl}${this.locationsUrl}`;
+        return this.http.delete<Location>(url + "/" + location.id)
+            .pipe(catchError(this.handleError('location to delete', location)));
     }
 
     makeCapitalMarkers(map: L.Map): void {

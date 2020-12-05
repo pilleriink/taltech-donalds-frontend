@@ -1,1 +1,42 @@
-<p>locationmod works!</p>
+<mat-card>
+    <h4>Add location</h4>
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput [(ngModel)]="location.name" name="name" ngDefaultControl required>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Address</mat-label>
+            <input matInput [(ngModel)]="location.address" type="text" name="address" ngDefaultControl>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Longitude</mat-label>
+            <input matInput [(ngModel)]="location.lon" type="number" name="longitude" ngDefaultControl>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Latitude</mat-label>
+            <input matInput [(ngModel)]="location.lat" type="number" name="latitude" ngDefaultControl>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="primary" (click)="addLocation()">Add location</button>
+        <br>
+    </div>
+</mat-card>
+
+<mat-card>
+    <h4>Delete location</h4>
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Select location</mat-label>
+            <mat-select [(ngModel)]="locationToDelete.id" name="meal">
+                <mat-option *ngFor="let location of locations" [value]="location.id">{{location.name}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="primary" (click)="deleteLocation()">Delete location</button>
+        <br>
+    </div>
+</mat-card>

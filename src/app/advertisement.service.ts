@@ -5,6 +5,7 @@ import {Observable, of} from "rxjs";
 import {catchError, tap} from "rxjs/operators";
 import {Advertisement} from './advertisement';
 import {environment} from '../environments/environment';
+import {Category} from './category';
 
 @Injectable({ providedIn: 'root' })
 export class AdvertisementService {
@@ -25,6 +26,20 @@ export class AdvertisementService {
             tap(_ => this.log('fetched ads')),
             catchError(this.handleError<Advertisement[]>('getAds', []))
         );
+  }
+
+  addAd(ad: Advertisement): Observable<Advertisement> {
+    const url = `${environment.apiUrl}${this.adsUrl}`;
+    return this.http.post<Advertisement>(url, ad, this.httpOptions)
+        .pipe(
+            catchError(this.handleError('addAd', ad))
+        );
+  }
+
+  deleteAd(ad: Advertisement): Observable<Advertisement>{
+    const url = `${environment.apiUrl}${this.adsUrl}`;
+    return this.http.delete<Advertisement>(url + "/" + ad.id, this.httpOptions)
+        .pipe(catchError(this.handleError('ad to delete', ad)));
   }
 
 
