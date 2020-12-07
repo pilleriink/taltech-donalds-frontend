@@ -1,1 +1,18 @@
-<p>profile works!</p>
+<div class="user-profile">
+    <div class="person-icon">
+        <img alt="profile-image" [src]="profileImage" style="max-width: 100%; max-height:
+         100%;">
+    </div>
+    <div class="user-profile-name">
+        <label>Name: </label>
+        <div class="user-profile-name-value">{{user?.username}}</div>
+    </div>
+    <div class="user-profile-email">
+        <label>Email: </label>
+        <div class="user-profile-email-value">{{user?.email}}</div>
+    </div>
+    <div class="user-profile-password">
+        <label>Password: </label>
+        <div class="user-profile-password-value">{{user?.password}}</div>
+    </div>
+</div>
