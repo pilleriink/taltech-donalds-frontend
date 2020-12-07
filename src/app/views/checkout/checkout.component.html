@@ -91,6 +91,13 @@
             <br>
 
             <mat-form-field appearance="fill" class="form">
+                <mat-label >Insert coupon</mat-label>
+                <input matInput name="coupon" [(ngModel)]="coupon.name">
+                <p class="error-msg">{{controlCoupon()}}</p>
+            </mat-form-field>
+            <br>
+
+            <mat-form-field appearance="fill" class="form">
                 <mat-label>Location</mat-label>
                 <mat-select name="location" [(ngModel)]="order.location" required>
                     <mat-option *ngFor="let location of locations" [value]="location">{{location.name}}</mat-option>

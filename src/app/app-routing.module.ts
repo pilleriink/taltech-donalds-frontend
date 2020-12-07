@@ -17,6 +17,7 @@ import {ProductmodComponent} from './views/admin/productmod/productmod.component
 import {CategorymodComponent} from './views/admin/categorymod/categorymod.component';
 import {AdmodComponent} from './views/admin/admod/admod.component';
 import {LocationmodComponent} from './views/admin/locationmod/locationmod.component';
+import {CouponComponent} from './views/admin/coupon/coupon.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/homepage', pathMatch: 'full' },
@@ -34,6 +35,7 @@ const routes: Routes = [
   { path: 'admin/categories', component: CategorymodComponent },
   { path: 'admin/ads', component: AdmodComponent },
   { path: 'admin/locations', component: LocationmodComponent },
+  { path: 'admin/coupons', component: CouponComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'login', component: LoginComponent },
   { path:  'register', component: RegisterComponent }];

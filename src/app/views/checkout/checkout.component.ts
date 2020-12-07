@@ -6,8 +6,9 @@ import {MarkerService} from '../../marker.service';
 import {Location} from '../../location';
 import {OrderService} from '../../order.service';
 import {Router} from '@angular/router';
-import {Meal} from '../../meal';
-import {Product} from '../../product';
+import {CouponComponent} from '../admin/coupon/coupon.component';
+import {CouponService} from '../../coupon.service';
+import {Coupon} from '../../coupon';
 
 export interface PeriodicElement {
     name: string;
@@ -29,15 +30,19 @@ export class CheckoutComponent implements OnInit {
     locations: Location[];
     buttonPressed = false;
     mealProducts: OrderProduct[];
+    coupon: Coupon = new Coupon();
+    coupons: Coupon[] = [];
 
 
     constructor(public cartService: CartService,
                 private markerService: MarkerService,
                 private orderService: OrderService,
-                private router: Router) {}
+                private router: Router,
+                private couponService: CouponService) {}
 
     ngOnInit() {
         this.markerService.getLocations().subscribe(data => this.locations = data);
+        this.couponService.getCoupons().subscribe(data => this.coupons = data);
         this.order.price = this.cartService.cart.price;
         for (const product of this.cartService.cart.products) {
             this.order.orderProducts.push(new OrderProduct(product.name, product.price, product.removableIngredients.filter(y => y.removed).map(x => x.name).join(", ")));
@@ -55,6 +60,9 @@ export class CheckoutComponent implements OnInit {
         if (this.fieldsAreFilled() && !this.buttonPressed) {
             console.log(this.order);
             this.buttonPressed = true;
+            if (this.checkCoupon() && this.coupon.discount !== 0) {
+                this.order.price = this.order.price * (this.coupon.discount / 100);
+            }
             this.orderService.sendOrder(this.order).subscribe(() => {
                 this.cartService.clearProducts();
                 this.router.navigate(['/homepage']);
@@ -66,12 +74,29 @@ export class CheckoutComponent implements OnInit {
         return this.order.email !== ''
             && this.order.location !== null
             && this.order.price !== 0
-            && this.order.email.match("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$") !== null;
+            && this.order.email.match('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$') !== null
+            && this.checkCoupon();
+    }
+
+    checkCoupon() {
+        for (const coupon1 of this.coupons) {
+            if (this.coupon.name === coupon1.name) {
+                this.coupon = coupon1;
+                return true;
+            }
+        }
+        return this.coupon.name === '';
+    }
+
+    controlCoupon() {
+        if (!this.checkCoupon()) {
+            return 'Coupon doesn\'t exist';
+        }
     }
 
     controlEmail() {
         if (this.order.email === '') { return 'Insert email!'; }
-        if (this.order.email.match("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$") === null) {return 'Incorrect email!'}
+        if (this.order.email.match("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$") === null) {return 'Incorrect email!'; }
     }
 
     controlLocation() {

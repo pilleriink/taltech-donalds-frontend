@@ -1,0 +1,32 @@
+<mat-card>
+    <h4>Add coupon</h4>
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput [(ngModel)]="coupon.name" name="name" ngDefaultControl required>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Discount %</mat-label>
+            <input matInput [(ngModel)]="coupon.discount" type="number" name="name" ngDefaultControl required>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="primary" (click)="addCoupon()">Add coupon</button>
+        <br>
+    </div>
+</mat-card>
+
+<mat-card>
+    <h4>Delete coupon</h4>
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Select coupon</mat-label>
+            <mat-select [(ngModel)]="couponToDelete.id" name="meal">
+                <mat-option *ngFor="let coupon of coupons" [value]="coupon.id">{{coupon.name}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="primary" (click)="deleteCoupon()">Delete category</button>
+        <br>
+    </div>
+</mat-card>

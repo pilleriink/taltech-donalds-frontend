@@ -42,6 +42,7 @@ import { CategorymodComponent } from './views/admin/categorymod/categorymod.comp
 import { AdmodComponent } from './views/admin/admod/admod.component';
 import { LocationmodComponent } from './views/admin/locationmod/locationmod.component';
 import {MatDividerModule} from '@angular/material/divider';
+import { CouponComponent } from './views/admin/coupon/coupon.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import {MatDividerModule} from '@angular/material/divider';
     ProductmodComponent,
     CategorymodComponent,
     AdmodComponent,
-    LocationmodComponent
+    LocationmodComponent,
+    CouponComponent
   ],
     imports: [
         BrowserModule,
