@@ -1,15 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {AuthenticationService} from '../../authentication.service';
+import {UserService} from '../../user.service';
+import {User} from '../../user';
 
 @Component({
-  selector: 'app-profile',
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
+    selector: 'app-friends-userprofile',
+    styleUrls: ['profile.component.scss'],
+    templateUrl: 'profile.component.html'
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+    profileImage: any = '../../../assets/images/person_edit.png';
 
-  ngOnInit(): void {
-  }
+    user: User;
+    constructor(private authService: AuthenticationService,
+                private userService: UserService) {
+    }
 
+    ngOnInit() {
+        const userId = this.authService.currentUserSubject.getValue().id;
+        this.userService.getUserById(userId).subscribe( data => this.user = data);
+    }
 }
