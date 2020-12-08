@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { HeaderComponent } from './header.component';
 import {RouterTestingModule} from "@angular/router/testing";
 import {CategoryService} from "../../category.service";
+import {AuthenticationService} from "../../authentication.service";
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;

@@ -22,7 +22,7 @@
 
     <mat-card-actions>
         <div class="example-flex-container">
-            <div class="example-button-container">
+            <div class="example-button-container" *ngIf="authenticationService.currentUserValue">
                 <button  (click)="cartService.addMeal(meal)" mat-fab color="accent" aria-label="Add to cart">
                     <mat-icon>add_shopping_cart</mat-icon>
                 </button>

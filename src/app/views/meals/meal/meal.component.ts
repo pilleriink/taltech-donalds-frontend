@@ -7,6 +7,7 @@ import {CartService} from '../../../cart.service';
 import {HttpClient} from '@angular/common/http';
 import {Meal} from '../../../meal';
 import {MealService} from '../../../meal.service';
+import {AuthenticationService} from "../../../authentication.service";
 
 @Component({
   selector: 'app-meal',
@@ -24,7 +25,8 @@ export class MealComponent implements OnInit {
               private mealService: MealService,
               public cartService: CartService,
               private http: HttpClient,
-              private router: Router) { }
+              private router: Router,
+              public authenticationService: AuthenticationService) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) =>  {
