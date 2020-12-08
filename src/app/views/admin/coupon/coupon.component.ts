@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Coupon} from '../../../coupon';
 import {CouponService} from '../../../coupon.service';
 

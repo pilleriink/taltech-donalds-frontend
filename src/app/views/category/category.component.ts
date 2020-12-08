@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, ParamMap} from "@angular/router";
-import {Category} from "../../category";
-import {CategoryService} from "../../category.service";
-import {CartService} from "../../cart.service";
-import {MatCardModule} from '@angular/material/card';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, ParamMap} from '@angular/router';
+import {Category} from '../../category';
+import {CategoryService} from '../../category.service';
+import {CartService} from '../../cart.service';
 
 
 @Component({

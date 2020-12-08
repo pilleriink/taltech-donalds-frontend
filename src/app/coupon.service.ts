@@ -1,20 +1,18 @@
-import {Injectable} from "@angular/core";
-import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {MessageService} from "./message.service";
-import {Observable, of} from "rxjs";
-import {catchError, tap} from "rxjs/operators";
-import {environment} from "../environments/environment";
-import {Comment} from './comment';
-import {Product} from './product';
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {MessageService} from './message.service';
+import {Observable, of} from 'rxjs';
+import {catchError, tap} from 'rxjs/operators';
+import {environment} from '../environments/environment';
 import {Coupon} from './coupon';
 
-@Injectable({ providedIn: 'root' })
+@Injectable({providedIn: 'root'})
 export class CouponService {
 
     private couponsUrl = 'api/coupons';
 
     httpOptions = {
-        headers: new HttpHeaders({ 'Content-Type': 'application/json'})
+        headers: new HttpHeaders({'Content-Type': 'application/json'})
     };
 
     constructor(
@@ -39,7 +37,7 @@ export class CouponService {
 
     deleteCoupon(coupon: Coupon): Observable<Coupon>{
         const url = `${environment.apiUrl}${this.couponsUrl}`;
-        return this.http.delete<Coupon>(url + "/" + coupon.id, this.httpOptions)
+        return this.http.delete<Coupon>(url + '/' + coupon.id, this.httpOptions)
             .pipe(catchError(this.handleError('coupon to delete', coupon)));
     }
 

@@ -1,5 +1,5 @@
-import {CartProduct, Product} from './product';
-import {CartMeal, Meal} from './meal';
+import {CartProduct} from './product';
+import {CartMeal} from './meal';
 
 export class Cart {
   products?: CartProduct[] = [];

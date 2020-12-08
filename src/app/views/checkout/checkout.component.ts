@@ -6,7 +6,6 @@ import {MarkerService} from '../../marker.service';
 import {Location} from '../../location';
 import {OrderService} from '../../order.service';
 import {Router} from '@angular/router';
-import {CouponComponent} from '../admin/coupon/coupon.component';
 import {CouponService} from '../../coupon.service';
 import {Coupon} from '../../coupon';
 
@@ -45,12 +44,12 @@ export class CheckoutComponent implements OnInit {
         this.couponService.getCoupons().subscribe(data => this.coupons = data);
         this.order.price = this.cartService.cart.price;
         for (const product of this.cartService.cart.products) {
-            this.order.orderProducts.push(new OrderProduct(product.name, product.price, product.removableIngredients.filter(y => y.removed).map(x => x.name).join(", ")));
+            this.order.orderProducts.push(new OrderProduct(product.name, product.price, product.removableIngredients.filter(y => y.removed).map(x => x.name).join(', ')));
         }
         for (const meal of this.cartService.cart.meals) {
             this.mealProducts = [];
             for (const mealProduct of meal.products) {
-                this.mealProducts.push(new OrderProduct(mealProduct.name, mealProduct.price, mealProduct.removableIngredients.filter(y => y.removed).map(x => x.name).join(", ")));
+                this.mealProducts.push(new OrderProduct(mealProduct.name, mealProduct.price, mealProduct.removableIngredients.filter(y => y.removed).map(x => x.name).join(', ')));
             }
             this.order.orderMeals.push(new OrderMeal(meal.name, meal.price, this.mealProducts));
         }
@@ -95,8 +94,12 @@ export class CheckoutComponent implements OnInit {
     }
 
     controlEmail() {
-        if (this.order.email === '') { return 'Insert email!'; }
-        if (this.order.email.match("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$") === null) {return 'Incorrect email!'; }
+        if (this.order.email === '') {
+            return 'Insert email!';
+        }
+        if (this.order.email.match('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$') === null) {
+            return 'Incorrect email!';
+        }
     }
 
     controlLocation() {

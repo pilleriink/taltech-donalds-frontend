@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Product} from '../../../product';
 import {Meal} from '../../../meal';
 import {ProductService} from '../../../product.service';
-import {MealService} from '../../../meal.service';
 import {Category} from '../../../category';
 import {CategoryService} from '../../../category.service';
 

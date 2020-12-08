@@ -1,20 +1,18 @@
-import {Injectable} from "@angular/core";
-import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {MessageService} from "./message.service";
-import {Observable, of} from "rxjs";
-import {catchError, tap} from "rxjs/operators";
-import {Category} from "./category";
-import {environment} from "../environments/environment";
-import {Comment} from './comment';
-import {Product} from './product';
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {MessageService} from './message.service';
+import {Observable, of} from 'rxjs';
+import {catchError, tap} from 'rxjs/operators';
+import {Category} from './category';
+import {environment} from '../environments/environment';
 
-@Injectable({ providedIn: 'root' })
+@Injectable({providedIn: 'root'})
 export class CategoryService {
 
   private categoriesUrl = 'api/categories';
 
   httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json'})
+    headers: new HttpHeaders({'Content-Type': 'application/json'})
   };
 
   constructor(
@@ -47,7 +45,7 @@ export class CategoryService {
 
   deleteCategory(category: Category): Observable<Category>{
     const url = `${environment.apiUrl}${this.categoriesUrl}`;
-    return this.http.delete<Category>(url + "/" + category.id, this.httpOptions)
+    return this.http.delete<Category>(url + '/' + category.id, this.httpOptions)
         .pipe(catchError(this.handleError('category to delete', category)));
   }
 

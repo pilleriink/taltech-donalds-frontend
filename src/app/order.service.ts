@@ -2,16 +2,15 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {MessageService} from './message.service';
 import {Observable, of} from 'rxjs';
-import {Product} from './product';
 import {environment} from '../environments/environment';
-import {catchError, tap} from 'rxjs/operators';
+import {catchError} from 'rxjs/operators';
 import {Order} from './order';
 
 @Injectable({ providedIn: 'root' })
 export class OrderService {
 
     private orderUrl = 'api/orders';
-    
+
     httpOptions = {
         headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };

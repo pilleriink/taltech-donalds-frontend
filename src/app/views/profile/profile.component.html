@@ -1,6 +1,6 @@
 <div class="user-profile">
     <div class="person-icon">
-        <img alt="profile-image" [src]="profileImage" style="max-width: 100%; max-height:
+        <img [src]="profileImage" alt="profile-image" style="max-width: 100%; max-height:
          100%;">
     </div>
     <div class="user-profile-name">
@@ -13,6 +13,39 @@
     </div>
     <div class="user-profile-password">
         <label>Password: </label>
-        <div class="user-profile-password-value">{{user?.password}}</div>
+        <div [hidden]="!passwordVisible" class="user-profile-password-value">{{user?.password}}</div>
+        <i (click)="toggleShowPassword()" [ngClass]="{'fa-eye-slash': !passwordVisible, 'fa-eye': passwordVisible}"
+           class="fa"></i>
     </div>
 </div>
+<mat-card>
+    <mat-card-title>Order history</mat-card-title>
+    <table [dataSource]="dataSource" class="mat-elevation-z8" mat-table>
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+            <th *matHeaderCellDef mat-header-cell> No.</th>
+            <td *matCellDef="let element" mat-cell> {{element.position}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+            <th *matHeaderCellDef mat-header-cell> Name</th>
+            <td *matCellDef="let element" mat-cell> {{element.name}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="weight">
+            <th *matHeaderCellDef mat-header-cell> Weight</th>
+            <td *matCellDef="let element" mat-cell> {{element.weight}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="symbol">
+            <th *matHeaderCellDef mat-header-cell> Symbol</th>
+            <td *matCellDef="let element" mat-cell> {{element.symbol}} </td>
+        </ng-container>
+
+        <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+        <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+    </table>
+</mat-card>

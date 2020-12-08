@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {Product} from '../../../product';
-import {CommentRequest} from '../../../comment';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {ProductService} from '../../../product.service';
 import {CartService} from '../../../cart.service';

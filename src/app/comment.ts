@@ -1,5 +1,3 @@
-import { Product } from './product';
-
 export interface Comment {
     id?: number;
     comment?: string;
@@ -7,5 +5,5 @@ export interface Comment {
 }
 
 export class CommentRequest {
-    comment?: string = "";
+    comment = '';
 }

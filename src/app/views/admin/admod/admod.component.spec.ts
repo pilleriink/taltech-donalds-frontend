@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { AdmodComponent } from './admod.component';
+import {AdmodComponent} from './admod.component';
 
 describe('AdmodComponent', () => {
   let component: AdmodComponent;

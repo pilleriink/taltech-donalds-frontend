@@ -1,5 +1,3 @@
-import {Ingredient} from './ingredient';
-
 export class Order {
     email = '';
     price = 0;
