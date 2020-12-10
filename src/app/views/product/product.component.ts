@@ -5,6 +5,7 @@ import {ProductService} from '../../product.service';
 import {CartService} from '../../cart.service';
 import {CommentRequest} from '../../comment';
 import {HttpClient} from '@angular/common/http';
+import {AuthenticationService} from '../../authentication.service';
 
 @Component({
     selector: 'app-product',
@@ -17,11 +18,13 @@ export class ProductComponent implements OnInit {
     commentToAdd: CommentRequest = new CommentRequest();
     defaultImage = 'https://longsshotokan.com/wp-content/uploads/2017/04/default-image-620x600.jpg';
 
-  constructor(private route: ActivatedRoute,
-              private productService: ProductService,
-              public cartService: CartService,
-              private http: HttpClient,
-              private router: Router) { }
+    constructor(private route: ActivatedRoute,
+                private productService: ProductService,
+                public cartService: CartService,
+                private http: HttpClient,
+                private router: Router,
+                public authenticationService: AuthenticationService) {
+    }
 
     ngOnInit() {
         this.route.paramMap.subscribe((params: ParamMap) => {
@@ -30,13 +33,13 @@ export class ProductComponent implements OnInit {
         });
     }
 
-  getProduct() {
-    this.productService.getProductById(this.productId).subscribe(
-        data => {
-          this.product = data;
-        }
-    );
-  }
+    getProduct() {
+        this.productService.getProductById(this.productId).subscribe(
+            data => {
+                this.product = data;
+            }
+        );
+    }
 
     addComment() {
         this.productService.addComment(this.productId, this.commentToAdd).subscribe(
