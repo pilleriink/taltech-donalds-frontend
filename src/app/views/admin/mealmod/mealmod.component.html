@@ -4,11 +4,13 @@
         <mat-form-field appearance="fill">
             <mat-label>Name</mat-label>
             <input matInput [(ngModel)]="meal.name" name="name" ngDefaultControl required>
+            <p class="error-msg">{{controlName()}}</p>
         </mat-form-field>
         <br>
         <mat-form-field appearance="fill">
             <mat-label>Price</mat-label>
             <input matInput [(ngModel)]="meal.price" type="number" name="price" ngDefaultControl>
+            <p class="error-msg">{{controlPrice()}}</p>
         </mat-form-field>
         <br>
         <mat-form-field appearance="fill">
@@ -19,6 +21,7 @@
         <mat-form-field appearance="fill">
             <mat-label>Description</mat-label>
             <textarea matInput [(ngModel)]="meal.description" name="description" ngDefaultControl required></textarea>
+            <p class="error-msg">{{controlDescription()}}</p>
         </mat-form-field>
         <br>
         <mat-form-field appearance="fill">
@@ -40,6 +43,7 @@
             <mat-select [(ngModel)]="meal.products[2]" name="product">
                 <mat-option *ngFor="let product of products" [value]="product">{{product.name}}</mat-option>
             </mat-select>
+            <p class="error-msg">{{controlProduct()}}</p>
         </mat-form-field>
         <br>
         <button mat-raised-button color="primary" (click)="addMeal()">Add meal</button>
@@ -55,6 +59,7 @@
             <mat-select [(ngModel)]="mealToDelete.id" name="meal">
                 <mat-option *ngFor="let meal of meals" [value]="meal.id">{{meal.name}}</mat-option>
             </mat-select>
+            <p class="error-msg">{{controlMeal()}}</p>
         </mat-form-field>
         <br>
         <button mat-raised-button color="primary" (click)="deleteMeal()">Delete meal</button>

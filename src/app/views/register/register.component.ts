@@ -31,7 +31,6 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(userPassword) {
-    console.log(userPassword);
     this.userService.register(userPassword)
         .pipe(first())
         .subscribe(

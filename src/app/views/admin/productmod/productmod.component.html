@@ -4,6 +4,7 @@
         <mat-form-field appearance="fill">
             <mat-label>Name</mat-label>
             <input matInput [(ngModel)]="product.name" name="name" ngDefaultControl required>
+            <p class="error-msg">{{controlName()}}</p>
         </mat-form-field>
         <br>
         <mat-form-field appearance="fill">
@@ -14,11 +15,13 @@
         <mat-form-field appearance="fill">
             <mat-label>Price</mat-label>
             <input matInput [(ngModel)]="product.price" type="number" name="price" ngDefaultControl>
+            <p class="error-msg">{{controlPrice()}}</p>
         </mat-form-field>
         <br>
         <mat-form-field appearance="fill">
             <mat-label>Description</mat-label>
             <textarea matInput [(ngModel)]="product.description" name="description" ngDefaultControl required></textarea>
+            <p class="error-msg">{{controlDescription()}}</p>
         </mat-form-field>
         <br>
         <mat-form-field appearance="fill">
@@ -28,9 +31,10 @@
         <br>
         <mat-form-field appearance="fill">
             <mat-label>Select category</mat-label>
-            <mat-select name="category" [(ngModel)]="product.category.name">
-                <mat-option *ngFor="let category of categories" value="{{category.name}}">{{category.name}}</mat-option>
+            <mat-select name="category" [(ngModel)]="product.category.id">
+                <mat-option *ngFor="let category of categories" [value]="category.id">{{category.name}}</mat-option>
             </mat-select>
+            <p class="error-msg">{{controlCategory()}}</p>
         </mat-form-field>
         <br>
         <button mat-raised-button color="primary" (click)="addProduct()">Add product</button>
@@ -46,6 +50,7 @@
             <mat-select [(ngModel)]="productToDelete.id" name="meal">
                 <mat-option *ngFor="let product of products" [value]="product.id">{{product.name}}</mat-option>
             </mat-select>
+            <p class="error-msg">{{controlProduct()}}</p>
         </mat-form-field>
         <br>
         <button mat-raised-button color="primary" (click)="deleteProduct()">Delete product</button>

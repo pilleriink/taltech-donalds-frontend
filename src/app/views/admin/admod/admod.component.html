@@ -4,16 +4,19 @@
         <mat-form-field appearance="fill">
             <mat-label>Name (big ad must contain 'big' and small ad 'small')</mat-label>
             <input matInput [(ngModel)]="ad.alt" name="name" ngDefaultControl required>
+            <p class="error-msg">{{controlName()}}</p>
         </mat-form-field>
         <br>
         <mat-form-field appearance="fill">
             <mat-label>Image link</mat-label>
             <input matInput [(ngModel)]="ad.image" type="url" name="price" ngDefaultControl>
+            <p class="error-msg">{{controlImage()}}</p>
         </mat-form-field>
         <br>
         <mat-form-field appearance="fill">
             <mat-label>Ad redirect url (for example products/1 or cart)</mat-label>
             <input matInput [(ngModel)]="ad.link" name="link" ngDefaultControl>
+            <p class="error-msg">{{controlUrl()}}</p>
         </mat-form-field>
         <br>
         <button mat-raised-button color="primary" (click)="addAd()">Add advertisement</button>
@@ -29,6 +32,7 @@
             <mat-select [(ngModel)]="adToDelete.id" name="meal">
                 <mat-option *ngFor="let ad of ads" [value]="ad.id">{{ad.alt}}</mat-option>
             </mat-select>
+            <p class="error-msg">{{controlAd()}}</p>
         </mat-form-field>
         <br>
         <button mat-raised-button color="primary" (click)="deleteAd()">Delete advertisement</button>

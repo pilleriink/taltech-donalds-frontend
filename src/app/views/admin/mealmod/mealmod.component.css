@@ -1,0 +1,6 @@
+.error-msg {
+    position: absolute;
+    top: 38px;
+    font-size: 0.8rem;
+    color: darkred;
+}
