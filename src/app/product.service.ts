@@ -1,13 +1,11 @@
-import {Injectable} from "@angular/core";
-import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {MessageService} from "./message.service";
-import {Observable, of} from "rxjs";
-import {catchError, tap} from "rxjs/operators";
-import {Product} from "./product";
-import {environment} from "../environments/environment";
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {MessageService} from './message.service';
+import {Observable, of} from 'rxjs';
+import {catchError, tap} from 'rxjs/operators';
+import {Product} from './product';
+import {environment} from '../environments/environment';
 import {Comment} from './comment';
-import {Category} from './category';
-import {Meal} from './meal';
 
 @Injectable({ providedIn: 'root' })
 export class ProductService {
@@ -48,7 +46,7 @@ export class ProductService {
 
   deleteProduct(product: Product): Observable<Product>{
     const url = `${environment.apiUrl}${this.productsUrl}`;
-    return this.http.delete<Product>(url + "/" + product.id, this.httpOptions)
+    return this.http.delete<Product>(url + '/' + product.id, this.httpOptions)
         .pipe(catchError(this.handleError('product to delete', product)));
   }
 

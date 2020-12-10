@@ -6,6 +6,7 @@ import {CartService} from '../../cart.service';
 import {Comment, CommentRequest} from '../../comment' ;
 import { HttpClient } from "@angular/common/http";
 import {Router} from '@angular/router';
+import {AuthenticationService} from "../../authentication.service";
 
 @Component({
   selector: 'app-product',
@@ -22,7 +23,8 @@ export class ProductComponent implements OnInit {
               private productService: ProductService,
               public cartService: CartService,
               private http: HttpClient,
-              private router: Router) { }
+              private router: Router,
+              public authenticationService: AuthenticationService) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) =>  {

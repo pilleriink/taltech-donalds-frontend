@@ -3,7 +3,7 @@ import {ActivatedRoute, ParamMap} from "@angular/router";
 import {Category} from "../../category";
 import {CategoryService} from "../../category.service";
 import {CartService} from "../../cart.service";
-import {MatCardModule} from '@angular/material/card';
+import {AuthenticationService} from "../../authentication.service";
 
 
 @Component({
@@ -18,7 +18,9 @@ export class CategoryComponent implements OnInit {
   defaultImage = 'https://longsshotokan.com/wp-content/uploads/2017/04/default-image-620x600.jpg';
 
   constructor(private route: ActivatedRoute,
-              private categoryService: CategoryService, public cartService: CartService) { }
+              private categoryService: CategoryService,
+              public cartService: CartService,
+              public authenticationService: AuthenticationService) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) =>  {

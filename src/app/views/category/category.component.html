@@ -18,11 +18,11 @@
         <mat-card-actions>
           <div class="example-flex-container">
             <div class="example-button-container">
-              <button (click)="cartService.addProduct(product)" mat-fab color="accent" aria-label="Add to cart">
-                <mat-icon>add_shopping_cart</mat-icon>
-              </button>
-              <button class="info-button" routerLink="/products/{{product.id}}" mat-fab color="primary" aria-label="Add to cart">
+              <button routerLink="/products/{{product.id}}" mat-fab color="primary" aria-label="Add to cart">
                 <mat-icon>info</mat-icon>
+              </button>
+              <button class="info-button" *ngIf="authenticationService.currentUserValue" (click)="cartService.addProduct(product)" mat-fab color="accent" aria-label="Add to cart">
+                <mat-icon>add_shopping_cart</mat-icon>
               </button>
             </div>
           </div>
