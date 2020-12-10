@@ -8,6 +8,8 @@ import {OrderService} from '../../order.service';
 import {Router} from '@angular/router';
 import {CouponService} from '../../coupon.service';
 import {Coupon} from '../../coupon';
+import {AuthenticationService} from '../../authentication.service';
+import {UserService} from '../../user.service';
 
 export interface PeriodicElement {
     name: string;
@@ -37,7 +39,10 @@ export class CheckoutComponent implements OnInit {
                 private markerService: MarkerService,
                 private orderService: OrderService,
                 private router: Router,
-                private couponService: CouponService) {}
+                private couponService: CouponService,
+                private authService: AuthenticationService,
+                private userService: UserService) {
+    }
 
     ngOnInit() {
         this.markerService.getLocations().subscribe(data => this.locations = data);
@@ -53,6 +58,8 @@ export class CheckoutComponent implements OnInit {
             }
             this.order.orderMeals.push(new OrderMeal(meal.name, meal.price, this.mealProducts));
         }
+        const userId = this.authService.currentUserSubject.getValue().id;
+        this.userService.getUserById(userId).subscribe(data => this.order.user = data);
     }
 
     sendOrder() {

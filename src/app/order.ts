@@ -2,6 +2,7 @@ export class Order {
     email = '';
     price = 0;
     location = null;
+    user = null;
     orderProducts: OrderProduct[] = [];
     orderMeals: OrderMeal[] = [];
 }

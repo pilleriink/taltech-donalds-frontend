@@ -2,13 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {AuthenticationService} from '../../authentication.service';
 import {UserService} from '../../user.service';
 import {User} from '../../user';
-
-export interface PeriodicElement {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
-}
+import {OrderService} from '../../order.service';
 
 @Component({
     selector: 'app-userprofile',
@@ -20,24 +14,13 @@ export class ProfileComponent implements OnInit {
 
     user: User;
     passwordVisible = false;
+    dataSource;
+    displayedColumns: string[] = ['position', 'price', 'orderProducts', 'location'];
 
     constructor(private authService: AuthenticationService,
-                private userService: UserService) {
+                private userService: UserService,
+                public orderService: OrderService) {
     }
-
-    displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-    dataSource: PeriodicElement[] = [
-        {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-        {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-        {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-        {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-        {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-        {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-        {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-        {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-        {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-        {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
-    ];
 
     toggleShowPassword() {
         this.passwordVisible = !this.passwordVisible;
@@ -46,5 +29,6 @@ export class ProfileComponent implements OnInit {
     ngOnInit() {
         const userId = this.authService.currentUserSubject.getValue().id;
         this.userService.getUserById(userId).subscribe(data => this.user = data);
+        this.orderService.getOrderByUser(userId).subscribe(data => this.dataSource = data);
     }
 }

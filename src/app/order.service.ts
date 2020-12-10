@@ -3,7 +3,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {MessageService} from './message.service';
 import {Observable, of} from 'rxjs';
 import {environment} from '../environments/environment';
-import {catchError} from 'rxjs/operators';
+import {catchError, tap} from 'rxjs/operators';
 import {Order} from './order';
 
 @Injectable({ providedIn: 'root' })
@@ -17,13 +17,23 @@ export class OrderService {
 
     constructor(
         private http: HttpClient,
-        private messageService: MessageService) { }
+        private messageService: MessageService) {
+    }
 
     sendOrder(order: Order): Observable<Order> {
         const url = `${environment.apiUrl}${this.orderUrl}`;
         return this.http.post<Order>(url, order, this.httpOptions)
             .pipe(
                 catchError(this.handleError('sendOrder', order))
+            );
+    }
+
+    getOrderByUser(id: number): Observable<Order> {
+        const url = `${environment.apiUrl}${this.orderUrl}/user/${id}`;
+        return this.http.get<Order>(url)
+            .pipe(
+                tap(_ => this.log('fetched user order')),
+                catchError(this.handleError<Order>('getOrderByUser',))
             );
     }
 
