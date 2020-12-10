@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { LocationmodComponent } from './locationmod.component';
+import {LocationmodComponent} from './locationmod.component';
 
 describe('LocationmodComponent', () => {
   let component: LocationmodComponent;

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Advertisement} from '../../../advertisement';
 import {AdvertisementService} from '../../../advertisement.service';
@@ -21,9 +21,9 @@ export class AdSliderComponent implements OnInit {
   ngOnInit() {
     this.adService.getAds().subscribe(
         data => {
-          this.ads = data;
-          this.data = data.toString();
-          this.bigAds = this.getBigAds();
+            this.ads = data;
+            this.data = data.toString();
+            this.bigAds = this.getBigAds();
             console.log(this.ads);
             console.log('DATA: ' + this.data);
             console.log(data);

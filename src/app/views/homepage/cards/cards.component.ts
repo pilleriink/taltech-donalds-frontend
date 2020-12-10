@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {AdvertisementService} from '../../../advertisement.service';
 import {Advertisement} from '../../../advertisement';

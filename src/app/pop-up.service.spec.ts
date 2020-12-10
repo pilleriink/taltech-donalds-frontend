@@ -1,6 +1,4 @@
-
-
-import { PopUpService } from './pop-up.service';
+import {PopUpService} from './pop-up.service';
 import {TestBed} from '@angular/core/testing';
 
 describe('PopUpService', () => {
