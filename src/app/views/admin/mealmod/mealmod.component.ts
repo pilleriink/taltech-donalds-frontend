@@ -54,7 +54,7 @@ export class MealmodComponent implements OnInit {
 
     deleteMeal() {
         console.log(this.mealToDelete);
-        if (this.mealToDelete.id === 0) {
+        if (this.mealToDelete.id !== 0) {
             return this.mealService.deleteMeal(this.mealToDelete).subscribe(() => location.reload());
         }
     }

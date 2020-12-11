@@ -1,7 +1,7 @@
 import {CartProduct, Product} from './product';
 
 export interface Meal {
-    id: any;
+    id: number;
     name: string;
     price: number;
     description: string;
@@ -10,6 +10,7 @@ export interface Meal {
 }
 
 export class Meal {
+    id = 0;
     name = '';
     price = 0;
     description = '';
