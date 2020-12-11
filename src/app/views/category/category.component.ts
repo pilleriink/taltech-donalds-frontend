@@ -1,10 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, ParamMap} from "@angular/router";
-import {Category} from "../../category";
-import {CategoryService} from "../../category.service";
-import {CartService} from "../../cart.service";
-import {AuthenticationService} from "../../authentication.service";
-
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, ParamMap} from '@angular/router';
+import {Category} from '../../category';
+import {CategoryService} from '../../category.service';
+import {CartService} from '../../cart.service';
+import {AuthenticationService} from '../../authentication.service';
 
 @Component({
   selector: 'app-category',
@@ -20,7 +19,8 @@ export class CategoryComponent implements OnInit {
   constructor(private route: ActivatedRoute,
               private categoryService: CategoryService,
               public cartService: CartService,
-              public authenticationService: AuthenticationService) { }
+              public authenticationService: AuthenticationService) {
+  }
 
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) =>  {

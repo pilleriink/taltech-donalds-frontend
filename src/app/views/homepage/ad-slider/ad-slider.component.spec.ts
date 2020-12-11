@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
 
-import { AdSliderComponent } from './ad-slider.component';
+import {AdSliderComponent} from './ad-slider.component';
 
 describe('AdSliderComponent', () => {
   let component: AdSliderComponent;

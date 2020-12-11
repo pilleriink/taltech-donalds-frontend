@@ -35,15 +35,23 @@
     .user-profile-password{
         text-align: left;
         margin-top: 20px;
-        .user-profile-password-value{
+
+        .user-profile-password-value {
             display: inline-block;
             margin-left: 10px;
         }
-        .user-profile-password-btn{
+
+        .user-profile-password-btn {
             margin-left: 154px;
         }
     }
-    .user-profile-btn{
+
+    .user-profile-btn {
         margin-top: 20px;
     }
 }
+
+table {
+    width: 100%;
+}
+

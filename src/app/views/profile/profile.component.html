@@ -1,6 +1,6 @@
 <div class="user-profile">
     <div class="person-icon">
-        <img alt="profile-image" [src]="profileImage" style="max-width: 100%; max-height:
+        <img [src]="profileImage" alt="profile-image" style="max-width: 100%; max-height:
          100%;">
     </div>
     <div class="user-profile-name">
@@ -13,6 +13,35 @@
     </div>
     <div class="user-profile-password">
         <label>Password: </label>
-        <div class="user-profile-password-value">{{user?.password}}</div>
+        <div [hidden]="!passwordVisible" class="user-profile-password-value">{{user?.password}}</div>
+        <i (click)="toggleShowPassword()" [ngClass]="{'fa-eye-slash': !passwordVisible, 'fa-eye': passwordVisible}"
+           class="fa"></i>
     </div>
 </div>
+<mat-card>
+    <mat-card-title>Order history</mat-card-title>
+    <table [dataSource]="dataSource" class="mat-elevation-z8" mat-table>
+        <ng-container matColumnDef="position">
+            <th *matHeaderCellDef class="header" mat-header-cell> No.</th>
+            <td *matCellDef="let i=index" mat-cell> {{i + 1}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="orderProducts">
+            <th *matHeaderCellDef mat-header-cell> Order Products</th>
+            <td *matCellDef="let element" mat-cell> {{element.orderProducts}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="price">
+            <th *matHeaderCellDef mat-header-cell> Price</th>
+            <td *matCellDef="let element" mat-cell> {{element.price}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="location">
+            <th *matHeaderCellDef mat-header-cell>Location</th>
+            <td *matCellDef="let element" mat-cell> {{element.location}} </td>
+        </ng-container>
+
+        <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+        <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+    </table>
+</mat-card>

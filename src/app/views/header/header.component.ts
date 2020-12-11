@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import {Category} from "../../category";
-import {CategoryService} from "../../category.service";
-import {CartService} from "../../cart.service";
+import {Component, OnInit} from '@angular/core';
+import {Category} from '../../category';
+import {CategoryService} from '../../category.service';
+import {CartService} from '../../cart.service';
 import {AuthenticationService} from '../../authentication.service';
 import {Router} from '@angular/router';
 

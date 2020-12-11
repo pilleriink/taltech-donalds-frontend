@@ -1,19 +1,18 @@
-import {Injectable} from "@angular/core";
-import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {MessageService} from "./message.service";
-import {Observable, of} from "rxjs";
-import {catchError, tap} from "rxjs/operators";
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {MessageService} from './message.service';
+import {Observable, of} from 'rxjs';
+import {catchError, tap} from 'rxjs/operators';
 import {Advertisement} from './advertisement';
 import {environment} from '../environments/environment';
-import {Category} from './category';
 
-@Injectable({ providedIn: 'root' })
+@Injectable({providedIn: 'root'})
 export class AdvertisementService {
 
   private adsUrl = 'api/ads';
 
   httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    headers: new HttpHeaders({'Content-Type': 'application/json'})
   };
 
   constructor(
@@ -38,7 +37,7 @@ export class AdvertisementService {
 
   deleteAd(ad: Advertisement): Observable<Advertisement>{
     const url = `${environment.apiUrl}${this.adsUrl}`;
-    return this.http.delete<Advertisement>(url + "/" + ad.id, this.httpOptions)
+    return this.http.delete<Advertisement>(url + '/' + ad.id, this.httpOptions)
         .pipe(catchError(this.handleError('ad to delete', ad)));
   }
 

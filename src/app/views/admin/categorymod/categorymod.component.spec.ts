@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { CategorymodComponent } from './categorymod.component';
+import {CategorymodComponent} from './categorymod.component';
 
 describe('CategorymodComponent', () => {
   let component: CategorymodComponent;

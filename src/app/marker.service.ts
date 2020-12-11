@@ -1,13 +1,12 @@
-import { Observable, of } from 'rxjs';
+import {Observable, of} from 'rxjs';
 import * as L from 'leaflet';
-import { PopUpService } from './pop-up.service';
+import {PopUpService} from './pop-up.service';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {MessageService} from './message.service';
 import {environment} from '../environments/environment';
 import {catchError, tap} from 'rxjs/operators';
 import {Location} from './location';
-import {Advertisement} from './advertisement';
 
 @Injectable({
     providedIn: 'root'
@@ -45,7 +44,7 @@ export class MarkerService {
 
     deleteLocation(location: Location): Observable<Location>{
         const url = `${environment.apiUrl}${this.locationsUrl}`;
-        return this.http.delete<Location>(url + "/" + location.id)
+        return this.http.delete<Location>(url + '/' + location.id)
             .pipe(catchError(this.handleError('location to delete', location)));
     }
 
