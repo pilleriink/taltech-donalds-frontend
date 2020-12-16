@@ -1,5 +1,6 @@
 stages:
   - build
+  - publish
   - deploy
 
 build donald:
@@ -11,32 +12,34 @@ build donald:
   artifacts:
     paths:
       - dist
-  tags:
-    - donald
   script:
     - npm install
     - npm run build
+  tags:
+    - build
+
+publish docker image:
+  image: docker:19.03
+  stage: publish
+  before_script:
+    - mkdir -p ~/.docker
+    - echo $DOCKER_AUTH > ~/.docker/config.json
+    - docker login
+  script:
+    - docker build -t taltech-donald-frontend .
+    - docker tag taltech-donald songmeo/taltech-donald-frontend
+    - docker push songmeo/taltech-donald-frontend
+  tags:
+    - build
 
 deploy donald:
   stage: deploy
-  only:
-    refs:
-      - master
-  tags:
-    - donald
+  before_script:
+    - mkdir -p ~/.docker
+    - echo $DOCKER_AUTH > ~/.docker/config.json
   script:
-    - mkdir -p ~/front-deployment
-    - rm -rf ~/front-deployment/*
-    - cp -r dist/. ~/front-deployment
-
-deploy dev-donald:
-  stage: deploy
-  only:
-    refs:
-      - feature/login-page
+    - docker-compose down
+    - docker-compose pull
+    - docker-compose up -d
   tags:
-    - donald
-  script:
-    - mkdir -p ~/dev-front-deployment
-    - rm -rf ~/dev-front-deployment/*
-    - cp -r dist/. ~/dev-front-deployment
+    - prod
