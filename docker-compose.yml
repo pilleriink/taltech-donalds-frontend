@@ -1,6 +1,0 @@
-version: '3'
-services:
-  donald:
-    image: songmeo/taltech-donald-frontend:latest
-    ports:
-      - 4200:4200
