@@ -10,6 +10,7 @@ RUN npm install
 COPY . .
 COPY ./docker-entrypoint.sh .
 RUN chmod +x docker-entrypoint.sh
+RUN apk update && apk add bash
 
 ENTRYPOINT ["/opt/taltech-donald-frontend/docker-entrypoint.sh"]
 EXPOSE 4200
