@@ -9,5 +9,5 @@ COPY package.json package-lock.json ./
 RUN npm install
 COPY . .
 
-ENTRYPOINT ["/opt/taltech-donald/docker-entrypoint.sh"]
+ENTRYPOINT ["/opt/taltech-donald-frontend/docker-entrypoint.sh"]
 
