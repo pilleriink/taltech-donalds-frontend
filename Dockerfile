@@ -9,4 +9,5 @@ COPY package.json package-lock.json ./
 RUN npm install
 COPY . .
 
-RUN npm run build
+ENTRYPOINT ["/opt/taltech-donald/docker-entrypoint.sh"]
+
