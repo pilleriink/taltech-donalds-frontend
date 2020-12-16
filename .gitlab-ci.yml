@@ -27,7 +27,7 @@ publish docker image:
     - docker login
   script:
     - docker build -t taltech-donald-frontend .
-    - docker tag taltech-donald songmeo/taltech-donald-frontend
+    - docker tag taltech-donald-frontend songmeo/taltech-donald-frontend
     - docker push songmeo/taltech-donald-frontend
   tags:
     - build
