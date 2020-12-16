@@ -6,4 +6,4 @@ WORKDIR=/opt/taltech-donald-frontend/
 
 cd $WORKDIR
 
-/usr/bin/env npm build ng serve
+/usr/bin/env npm run ng serve
