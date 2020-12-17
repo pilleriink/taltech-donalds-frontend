@@ -1,4 +1,4 @@
-FROM node:12-alpine
+FROM node:15.4.0-buster
 
 RUN set -eux; \
     mkdir -p /opt/taltech-donald-frontend
