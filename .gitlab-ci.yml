@@ -1,0 +1,45 @@
+stages:
+  - build
+  - publish
+  - deploy
+
+build:
+  stage: build
+  image: node:15.4.0-buster
+  cache:
+    paths:
+      - node_modules
+  artifacts:
+    paths:
+      - dist
+  script:
+    - npm install
+    - npm run build
+  tags:
+    - build
+
+publish:
+  image: docker:19.03
+  stage: publish
+  before_script:
+    - mkdir -p ~/.docker
+    - echo $DOCKER_AUTH > ~/.docker/config.json
+    - docker login
+  script:
+    - docker build -t taltech-donald-frontend .
+    - docker tag taltech-donald-frontend songmeo/taltech-donald-frontend
+    - docker push songmeo/taltech-donald-frontend
+  tags:
+    - build
+
+deploy:
+  stage: deploy
+  before_script:
+    - mkdir -p ~/.docker
+    - echo $DOCKER_AUTH > ~/.docker/config.json
+  script:
+    - docker-compose down
+    - docker-compose pull
+    - docker-compose up -d
+  tags:
+    - prod
