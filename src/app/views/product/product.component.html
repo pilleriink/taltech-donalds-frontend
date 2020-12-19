@@ -33,7 +33,7 @@
         {{ comment.comment }}
     </p>
   </mat-card-content>
-  <mat-card-actions>
+  <mat-card-actions *ngIf="authenticationService.currentUserValue">
     <form #form="ngForm" (submit)="addComment(); form.reset()">
       <!--
       {{form.value | json }}
