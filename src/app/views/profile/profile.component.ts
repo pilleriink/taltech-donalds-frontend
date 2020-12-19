@@ -10,7 +10,6 @@ import {OrderService} from '../../order.service';
     templateUrl: 'profile.component.html'
 })
 export class ProfileComponent implements OnInit {
-    profileImage: any = '../../../assets/images/person_edit.png';
 
     user: User;
     passwordVisible = false;
@@ -22,13 +21,12 @@ export class ProfileComponent implements OnInit {
                 public orderService: OrderService) {
     }
 
-    toggleShowPassword() {
-        this.passwordVisible = !this.passwordVisible;
-    }
-
     ngOnInit() {
         const userId = this.authService.currentUserSubject.getValue().id;
         this.userService.getUserById(userId).subscribe(data => this.user = data);
-        this.orderService.getOrderByUser(userId).subscribe(data => this.dataSource = data);
+        this.orderService.getOrderByUser(userId).subscribe(data => {
+            this.dataSource = data;
+            console.log(data);
+        });
     }
 }

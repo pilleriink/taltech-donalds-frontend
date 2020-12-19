@@ -1,8 +1,4 @@
 <div class="user-profile">
-    <div class="person-icon">
-        <img [src]="profileImage" alt="profile-image" style="max-width: 100%; max-height:
-         100%;">
-    </div>
     <div class="user-profile-name">
         <label>Name: </label>
         <div class="user-profile-name-value">{{user?.username}}</div>
@@ -10,12 +6,6 @@
     <div class="user-profile-email">
         <label>Email: </label>
         <div class="user-profile-email-value">{{user?.email}}</div>
-    </div>
-    <div class="user-profile-password">
-        <label>Password: </label>
-        <div [hidden]="!passwordVisible" class="user-profile-password-value">{{user?.password}}</div>
-        <i (click)="toggleShowPassword()" [ngClass]="{'fa-eye-slash': !passwordVisible, 'fa-eye': passwordVisible}"
-           class="fa"></i>
     </div>
 </div>
 <mat-card>
@@ -28,12 +18,19 @@
 
         <ng-container matColumnDef="orderProducts">
             <th *matHeaderCellDef mat-header-cell> Order Products</th>
-            <td *matCellDef="let element" mat-cell> {{element.orderProducts}} </td>
+            <td *matCellDef="let element" mat-cell>
+                <p *ngFor="let product of element.orderProducts">
+                    {{product}}
+                </p>
+                <p *ngFor="let meal of element.orderMeals">
+                    {{meal}}
+                </p>
+            </td>
         </ng-container>
 
         <ng-container matColumnDef="price">
             <th *matHeaderCellDef mat-header-cell> Price</th>
-            <td *matCellDef="let element" mat-cell> {{element.price}} </td>
+            <td *matCellDef="let element" mat-cell> {{element.price | currency: "€"}} </td>
         </ng-container>
 
         <ng-container matColumnDef="location">

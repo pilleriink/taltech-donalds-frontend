@@ -1,6 +1,4 @@
-.card {
-    margin-left: 25%;
-}
+
 
 .example-flex-container {
     display: flex;
@@ -16,9 +14,6 @@
     height: 80px;
 }
 
-.info-button {
-    margin-left: 20px;
-}
 
 h1 {
     text-align: center;
@@ -32,6 +27,6 @@ h1 {
 .proceed {
     height: 40px;
     width: 300px;
-    margin: 15px 40%;
+    margin: 15px;
     font-size: 25px;
 }

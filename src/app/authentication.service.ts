@@ -3,6 +3,8 @@ import {BehaviorSubject, Observable} from 'rxjs';
 import {User} from './user';
 import {UserService} from './user.service';
 import {map} from 'rxjs/operators';
+import {CartService} from './cart.service';
+import {Cart} from './cart';
 
 
 @Injectable({
@@ -12,7 +14,8 @@ export class AuthenticationService {
     public currentUserSubject: BehaviorSubject<User>;
     public currentUser: Observable<User>;
 
-    constructor(private userService: UserService) {
+    constructor(private userService: UserService,
+                private cartService: CartService) {
         this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
         this.currentUser = this.currentUserSubject.asObservable();
     }
@@ -33,7 +36,9 @@ export class AuthenticationService {
 
     logout() {
         // remove user from local storage and set current user to null
-        localStorage.removeItem('currentUser');
+        localStorage.clear();
+        sessionStorage.clear();
         this.currentUserSubject.next(null);
+        this.cartService.cart = new Cart();
     }
 }

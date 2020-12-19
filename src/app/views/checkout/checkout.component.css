@@ -4,13 +4,13 @@ h3 {
 }
 
 .checkout {
-    margin-left: 25%;
-    width: 50%;
+    margin: auto;
+    width: 300px;
 }
 
 table {
-    width: 50%;
-    margin-left: 25%;
+    width: 80%;
+    margin-left: 10%;
 }
 
 .image {
@@ -24,8 +24,8 @@ table {
 }
 
 .footer {
-    width: 50%;
-    margin-left: 25%;
+    width: 80%;
+    margin-left: 10%;
     margin-bottom: 50px;
     text-align: right;
 }
@@ -39,7 +39,7 @@ table {
 }
 
 .card-div {
-    margin-left: 25%;
+    margin-left: 10%;
 }
 
 .error-msg {
